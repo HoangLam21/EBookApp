@@ -4,9 +4,9 @@ package com.plcoding.e_book.di
 import android.app.Application
 import com.plcoding.e_book.data.manager.LocalUserManagerImpl
 import com.plcoding.e_book.domain.manager.LocalUserManager
-import com.plcoding.e_book.domain.usecases.AppEntryUseCases
-import com.plcoding.e_book.domain.usecases.ReadAppEntry
-import com.plcoding.e_book.domain.usecases.SaveAppEntry
+import com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases
+import com.plcoding.e_book.domain.usecases.app_entry.ReadAppEntry
+import com.plcoding.e_book.domain.usecases.app_entry.SaveAppEntry
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.plcoding.e_book.domain.usecases
+package com.plcoding.e_book.domain.usecases.app_entry
 
 import com.plcoding.e_book.domain.manager.LocalUserManager
 import kotlinx.coroutines.flow.Flow
