@@ -1,7 +1,12 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+
+    id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 }
+
+
 
 android {
     namespace = "com.plcoding.e_book"
@@ -59,6 +64,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.datastore.preferences.core.jvm)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -68,5 +74,32 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation("androidx.navigation:navigation-compose:2.7.7")
+    //Dagger Hilt
+//Splash Api
+    implementation ("androidx.core:core-splashscreen:1.0.1")
 
+
+
+    //Dagger Hilt
+    implementation ("com.google.dagger:hilt-android:2.49")
+    kapt ("com.google.dagger:hilt-compiler:2.49")
+
+    //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+    //Kotlinx Serialization
+    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+    implementation ("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
+    //Datastore
+    implementation ("androidx.datastore:datastore-preferences:1.0.0")
+
+    //Compose Foundation
+    implementation ("androidx.compose.foundation:foundation:1.4.3")
+
+    //Accompanist
+    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta")
 }
