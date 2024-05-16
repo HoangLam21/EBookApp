@@ -4,8 +4,8 @@ plugins {
 
     id("com.google.dagger.hilt.android")
     id("kotlin-kapt")
+    id ("kotlin-parcelize")
 }
-
 
 
 android {
@@ -73,23 +73,23 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation("androidx.navigation:navigation-compose:2.7.7")
-    //Dagger Hilt
-//Splash Api
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.4")
+
+    //Splash Api
     implementation ("androidx.core:core-splashscreen:1.0.1")
 
-
+    //Compose Navigation
+    implementation ("androidx.navigation:navigation-compose:2.6.0")
 
     //Dagger Hilt
     implementation ("com.google.dagger:hilt-android:2.49")
     kapt ("com.google.dagger:hilt-compiler:2.49")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+
 
     //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-
-    //Kotlinx Serialization
-    implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
-    implementation ("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
     //Coil
     implementation("io.coil-kt:coil-compose:2.4.0")
@@ -102,4 +102,13 @@ dependencies {
 
     //Accompanist
     implementation ("com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta")
+
+    //Paging 3
+    implementation ("androidx.paging:paging-runtime:3.1.1")
+    implementation ("androidx.paging:paging-compose:3.2.0-rc01")
+
+    //Room
+    implementation ("androidx.room:room-runtime:2.6.1")
+    kapt ("androidx.room:room-compiler:2.6.1")
+    implementation ("androidx.room:room-ktx:2.6.1")
 }

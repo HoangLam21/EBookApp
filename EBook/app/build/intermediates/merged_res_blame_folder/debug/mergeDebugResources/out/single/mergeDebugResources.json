@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_preferences.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.plcoding.e_book.app-debug-4:/drawable_default_img.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-6:/drawable/default_img.jpg"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_logo.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\font_poppins_regular.ttf.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\font\\poppins_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_starfull.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\starfull.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_thumbnail1.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\thumbnail1.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_network_error.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_network_error.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_bookyoumaylike2.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\bookyoumaylike2.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_bookmark.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_bookmark.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_search_document.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_search_document.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_onboarding1.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\onboarding1.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_star.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\star.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_onboarding3.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\onboarding3.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_little_women_vintage_classics.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\little_women_vintage_classics.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_star_full.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\star_full.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\font_poppins_semibold.ttf.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\font\\poppins_semibold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_notfound.jpg.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\notfound.jpg"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_close.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_bookyoumaylike1.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\bookyoumaylike1.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_network.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_network.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_splash.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_onboarding2.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\onboarding2.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_time.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_thumbnail2.png.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\thumbnail2.png"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\drawable_ic_back_arrow.xml.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\drawable\\ic_back_arrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-4:\\font_poppins_bold.ttf.flat",
+        "source": "C:\\Users\\BAO ANH\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-6:\\font\\poppins_bold.ttf"
+    }
+]

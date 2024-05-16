@@ -4,4 +4,8 @@ object Constants {
     const val USER_SETTINGS = "userSetting"
 
     const val APP_ENTRY = "appEntry"
+
+    const val BASE_URL = "https://charismatic-illumination-test.up.railway.app/BookStore/"
+
+    const val BOOKS_DATABASE_NAME = "books_db"
 }
