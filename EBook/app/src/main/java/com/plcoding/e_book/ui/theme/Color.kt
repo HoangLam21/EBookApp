@@ -13,3 +13,7 @@ val Pink40 = Color(0xFF7D5260)
 
 val PrimaryKeyColor = Color(0xFF513820)
 val SecondaryKeyColor = Color(0xFFEEECE9)
+val GrayText = Color(0xFFCBCBCB)
+
+
+

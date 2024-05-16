@@ -1,0 +1,35 @@
+com.plcoding.e_book.test.app-androidTest-0 C:\RealDataVersion\EBook\app\build\generated\res\resValues\androidTest\debug
+com.plcoding.e_book.test.app-mergeDebugAndroidTestResources-1 C:\RealDataVersion\EBook\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.plcoding.e_book.test.app-mergeDebugAndroidTestResources-2 C:\RealDataVersion\EBook\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.plcoding.e_book.test.app-debugAndroidTest-3 C:\RealDataVersion\EBook\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.plcoding.e_book.test.app-emoji2-1.4.0-4 C:\Users\BAO ANH\.gradle\caches\transforms-3\010e4c0b57613c9f8f5c476f921f4621\transformed\emoji2-1.4.0\res
+com.plcoding.e_book.test.app-ui-unit-release-5 C:\Users\BAO ANH\.gradle\caches\transforms-3\0126c395802ef421e1e1df1c90c71673\transformed\ui-unit-release\res
+com.plcoding.e_book.test.app-annotation-experimental-1.4.0-6 C:\Users\BAO ANH\.gradle\caches\transforms-3\26373d53b52db3e54f95385e0dbf8152\transformed\annotation-experimental-1.4.0\res
+com.plcoding.e_book.test.app-startup-runtime-1.1.1-7 C:\Users\BAO ANH\.gradle\caches\transforms-3\43b47c3c4ee60f5999bd3f771fa717bd\transformed\startup-runtime-1.1.1\res
+com.plcoding.e_book.test.app-customview-poolingcontainer-1.0.0-8 C:\Users\BAO ANH\.gradle\caches\transforms-3\4cf7ef237815fc513f51bd92b804187b\transformed\customview-poolingcontainer-1.0.0\res
+com.plcoding.e_book.test.app-savedstate-1.2.1-9 C:\Users\BAO ANH\.gradle\caches\transforms-3\5c566b57123d8c16e7ab7c71c82b198e\transformed\savedstate-1.2.1\res
+com.plcoding.e_book.test.app-core-runtime-2.2.0-10 C:\Users\BAO ANH\.gradle\caches\transforms-3\6c0c60208bbab12cba181c9dcf4217a6\transformed\core-runtime-2.2.0\res
+com.plcoding.e_book.test.app-lifecycle-viewmodel-savedstate-2.7.0-11 C:\Users\BAO ANH\.gradle\caches\transforms-3\755ce537eee52d67a0fb5eec43d3839f\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.plcoding.e_book.test.app-ui-graphics-release-12 C:\Users\BAO ANH\.gradle\caches\transforms-3\76fedf7212108f9414ec5a829bf37030\transformed\ui-graphics-release\res
+com.plcoding.e_book.test.app-ui-release-13 C:\Users\BAO ANH\.gradle\caches\transforms-3\8249dbe004c445c648e5120418388ef4\transformed\ui-release\res
+com.plcoding.e_book.test.app-lifecycle-livedata-core-2.7.0-14 C:\Users\BAO ANH\.gradle\caches\transforms-3\8dd7797632203a7fa9309290709d76bd\transformed\lifecycle-livedata-core-2.7.0\res
+com.plcoding.e_book.test.app-runtime-saveable-release-15 C:\Users\BAO ANH\.gradle\caches\transforms-3\8dfe9883945fcb76fe42649840c0844f\transformed\runtime-saveable-release\res
+com.plcoding.e_book.test.app-ui-geometry-release-16 C:\Users\BAO ANH\.gradle\caches\transforms-3\92c7f483c1d1e829ebca39356c0b4cef\transformed\ui-geometry-release\res
+com.plcoding.e_book.test.app-ui-util-release-17 C:\Users\BAO ANH\.gradle\caches\transforms-3\930ff83810e7a08c0a9b537ead00c4d8\transformed\ui-util-release\res
+com.plcoding.e_book.test.app-profileinstaller-1.3.1-18 C:\Users\BAO ANH\.gradle\caches\transforms-3\959510336140c075378563475d18884f\transformed\profileinstaller-1.3.1\res
+com.plcoding.e_book.test.app-savedstate-ktx-1.2.1-19 C:\Users\BAO ANH\.gradle\caches\transforms-3\970dae612edde70b1db09d31382fcb6a\transformed\savedstate-ktx-1.2.1\res
+com.plcoding.e_book.test.app-ui-text-release-20 C:\Users\BAO ANH\.gradle\caches\transforms-3\abca2ef57d4c43bcdc9701677bd5db74\transformed\ui-text-release\res
+com.plcoding.e_book.test.app-ui-test-release-21 C:\Users\BAO ANH\.gradle\caches\transforms-3\adaa71b4482a72d74516670483cc24a0\transformed\ui-test-release\res
+com.plcoding.e_book.test.app-activity-1.9.0-22 C:\Users\BAO ANH\.gradle\caches\transforms-3\b059ff585953262bde96f3fdd30a1584\transformed\activity-1.9.0\res
+com.plcoding.e_book.test.app-ui-test-junit4-release-23 C:\Users\BAO ANH\.gradle\caches\transforms-3\b6259d097800e45c0f37788ac8de5c92\transformed\ui-test-junit4-release\res
+com.plcoding.e_book.test.app-activity-compose-1.9.0-24 C:\Users\BAO ANH\.gradle\caches\transforms-3\bb2ae55128fa1e6914f150a2c095d736\transformed\activity-compose-1.9.0\res
+com.plcoding.e_book.test.app-activity-ktx-1.9.0-25 C:\Users\BAO ANH\.gradle\caches\transforms-3\bd010aea73d0c018c9748e593be38862\transformed\activity-ktx-1.9.0\res
+com.plcoding.e_book.test.app-lifecycle-process-2.7.0-26 C:\Users\BAO ANH\.gradle\caches\transforms-3\c83888eb409309a6e8a233936ef2f209\transformed\lifecycle-process-2.7.0\res
+com.plcoding.e_book.test.app-lifecycle-viewmodel-2.7.0-27 C:\Users\BAO ANH\.gradle\caches\transforms-3\cabb9db57c025367f945131c7194af20\transformed\lifecycle-viewmodel-2.7.0\res
+com.plcoding.e_book.test.app-core-1.5.0-28 C:\Users\BAO ANH\.gradle\caches\transforms-3\cc6402408ad3a0d5086330a35bd455c9\transformed\core-1.5.0\res
+com.plcoding.e_book.test.app-core-ktx-1.13.1-29 C:\Users\BAO ANH\.gradle\caches\transforms-3\cde91bd25766ccd1404c7861c1bd2b50\transformed\core-ktx-1.13.1\res
+com.plcoding.e_book.test.app-lifecycle-viewmodel-ktx-2.7.0-30 C:\Users\BAO ANH\.gradle\caches\transforms-3\d0ac842e75632b49e201d508800a5772\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.plcoding.e_book.test.app-runtime-release-31 C:\Users\BAO ANH\.gradle\caches\transforms-3\db39d49bfce5e2e05eafb41084163bcd\transformed\runtime-release\res
+com.plcoding.e_book.test.app-core-1.13.1-32 C:\Users\BAO ANH\.gradle\caches\transforms-3\de518e099813003ecf208dd395e0fd2d\transformed\core-1.13.1\res
+com.plcoding.e_book.test.app-lifecycle-runtime-2.7.0-33 C:\Users\BAO ANH\.gradle\caches\transforms-3\deda7aa0582d8695a2c3e172a32bcad1\transformed\lifecycle-runtime-2.7.0\res
+com.plcoding.e_book.test.app-lifecycle-runtime-ktx-2.7.0-34 C:\Users\BAO ANH\.gradle\caches\transforms-3\ef657ff39937b5af465d3925661fd18c\transformed\lifecycle-runtime-ktx-2.7.0\res

@@ -2,6 +2,12 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="ViewUnpaidBScreen">
+        <State />
+      </entry>
+      <entry key="ViewyMLCard">
+        <State />
+      </entry>
       <entry key="app">
         <State />
       </entry>

@@ -2,15 +2,32 @@ package com.plcoding.e_book.di
 
 
 import android.app.Application
+import androidx.room.Room
+import com.plcoding.e_book.data.local.BooksDao
+import com.plcoding.e_book.data.local.BooksDatabse
+import com.plcoding.e_book.data.local.BooksTypeConvertor
 import com.plcoding.e_book.data.manager.LocalUserManagerImpl
+import com.plcoding.e_book.data.remote.BooksApi
+import com.plcoding.e_book.data.repository.BooksResponsetoryImpl
 import com.plcoding.e_book.domain.manager.LocalUserManager
+import com.plcoding.e_book.domain.repository.BooksResponsitory
 import com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases
 import com.plcoding.e_book.domain.usecases.app_entry.ReadAppEntry
 import com.plcoding.e_book.domain.usecases.app_entry.SaveAppEntry
+import com.plcoding.e_book.domain.usecases.book.BooksUseCase
+import com.plcoding.e_book.domain.usecases.books.DeleteBooks
+import com.plcoding.e_book.domain.usecases.books.GetBooks
+import com.plcoding.e_book.domain.usecases.books.SelectBook
+import com.plcoding.e_book.domain.usecases.books.SelectBooks
+import com.plcoding.e_book.domain.usecases.books.UpsertBooks
+import com.plcoding.e_book.util.Constants
+import com.plcoding.e_book.util.Constants.BOOKS_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -33,4 +50,62 @@ object AppModule {
         readAppEntry = ReadAppEntry(localUserManager),
         saveAppEntry = SaveAppEntry(localUserManager)
     )
+
+    @Provides
+    @Singleton
+    fun provideBooksApi(): BooksApi {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(BooksApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideBooksRepository(
+        booksApi: BooksApi,
+        booksDao: BooksDao
+    ): BooksResponsitory = BooksResponsetoryImpl(booksApi,booksDao)
+
+
+    @Provides
+    @Singleton
+    fun provideBooksUseCases(
+        booksResponsitory: BooksResponsitory,
+        booksDao: BooksDao
+
+    ): BooksUseCase{
+        return BooksUseCase(
+            getBooks = GetBooks(booksResponsitory),
+            upsertBooks = UpsertBooks(booksResponsitory),
+            deleteBooks = DeleteBooks(booksResponsitory),
+            selectBooks = SelectBooks(booksResponsitory),
+            selectBook = SelectBook(booksResponsitory)
+        )
+    }
+
+    @Provides
+    @Singleton
+    fun provideBooksDatabase(
+        application: Application
+    ): BooksDatabse{
+        return Room.databaseBuilder(
+            context = application,
+            klass = BooksDatabse::class.java,
+            name = BOOKS_DATABASE_NAME
+        ).addTypeConverter(BooksTypeConvertor())
+            .fallbackToDestructiveMigration()
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideBooksDao(
+        booksDatabase: BooksDatabse
+    ): BooksDao = booksDatabase.booksDao
+
+
+
+
+
 }
