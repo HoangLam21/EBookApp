@@ -22,6 +22,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.plcoding.e_book.R
 import com.plcoding.e_book.domain.model.Books.Result
+import com.plcoding.e_book.presentation.Account.Account
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel
 import com.plcoding.e_book.presentation.book.DetailsEvent
 import com.plcoding.e_book.presentation.book.UnpaidBookDetailsScreen
@@ -54,7 +55,7 @@ fun BooksNavigator() {
     selectedItem = remember(key1 = backstackState) {
         when(backstackState?.destination?.route){
             Route.HomeScreen.route -> 0
-            Route.SearchScreen.route -> 1
+            Route.AccountScreen.route -> 1
             Route.BookmarkScreen.route -> 2
             else -> 0
         }
@@ -64,6 +65,7 @@ fun BooksNavigator() {
         backstackState?.destination?.route == Route.HomeScreen.route
                 || backstackState?.destination?.route == Route.SearchScreen.route
                 ||backstackState?.destination?.route == Route.BookmarkScreen.route
+                ||backstackState?.destination?.route==Route.AccountScreen.route
     }
 
     Scaffold(
@@ -82,7 +84,7 @@ fun BooksNavigator() {
 
                             1 -> navigateToTab(
                                 navController = navController,
-                                route = Route.SearchScreen.route
+                                route = Route.AccountScreen.route
                             )
 
                             2 -> navigateToTab(
@@ -105,9 +107,10 @@ fun BooksNavigator() {
 
             composable(route = Route.HomeScreen.route) { backStackEntry ->
                 val viewModel: HomeViewModel = hiltViewModel()
-                val resultitem = viewModel.books.collectAsLazyPagingItems()
+                val resultitem = viewModel.book.collectAsLazyPagingItems()
+                val category = viewModel.category.collectAsLazyPagingItems()
                 HomeScreen(
-                    resultitem = resultitem,
+                    books = resultitem,
                     navigateToSearch = {
                         navigateToTab(
                             navController = navController,
@@ -117,7 +120,7 @@ fun BooksNavigator() {
                     navigateToDetail = {
                             result ->
                         navigateToDetails(navController = navController, result = result)
-                    }
+                    }, category=category
                 )
             }
             Log.d("da vo viewmd","111")
@@ -155,6 +158,9 @@ fun BooksNavigator() {
                 val state = viewModel.state.value
                 FavouriteBookScreen(state = state,
                     navigateToDetails = {result -> navigateToDetails(navController =navController, result = result)  })
+            }
+            composable(route=Route.AccountScreen.route){
+                Account()
             }
         }
 

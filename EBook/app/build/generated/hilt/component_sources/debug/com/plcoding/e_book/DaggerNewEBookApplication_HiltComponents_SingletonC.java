@@ -10,17 +10,23 @@ import androidx.lifecycle.ViewModel;
 import com.plcoding.e_book.data.local.BooksDao;
 import com.plcoding.e_book.data.local.BooksDatabse;
 import com.plcoding.e_book.data.remote.BooksApi;
+import com.plcoding.e_book.data.remote.CategoryApi;
 import com.plcoding.e_book.di.AppModule_ProvideAppEntryUseCasesFactory;
 import com.plcoding.e_book.di.AppModule_ProvideBooksApiFactory;
 import com.plcoding.e_book.di.AppModule_ProvideBooksDaoFactory;
 import com.plcoding.e_book.di.AppModule_ProvideBooksDatabaseFactory;
 import com.plcoding.e_book.di.AppModule_ProvideBooksRepositoryFactory;
 import com.plcoding.e_book.di.AppModule_ProvideBooksUseCasesFactory;
+import com.plcoding.e_book.di.AppModule_ProvideCategoryApiFactory;
+import com.plcoding.e_book.di.AppModule_ProvideCategoryRepositoryFactory;
+import com.plcoding.e_book.di.AppModule_ProvideCategoryUseCasesFactory;
 import com.plcoding.e_book.di.AppModule_ProvideLocalUserManagerFactory;
 import com.plcoding.e_book.domain.manager.LocalUserManager;
 import com.plcoding.e_book.domain.repository.BooksResponsitory;
+import com.plcoding.e_book.domain.repository.CategoryRepository;
 import com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases;
 import com.plcoding.e_book.domain.usecases.book.BooksUseCase;
+import com.plcoding.e_book.domain.usecases.category.CategoryUseCase;
 import com.plcoding.e_book.mainActivity.MainActivity;
 import com.plcoding.e_book.mainActivity.MainViewModel;
 import com.plcoding.e_book.mainActivity.MainViewModel_HiltModules_KeyModule_ProvideFactory;
@@ -478,7 +484,7 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
           return (T) new FavouriteBookViewModel(singletonCImpl.provideBooksUseCasesProvider.get());
 
           case 2: // com.plcoding.e_book.presentation.home.HomeViewModel 
-          return (T) new HomeViewModel(singletonCImpl.provideBooksUseCasesProvider.get());
+          return (T) new HomeViewModel(singletonCImpl.provideBooksUseCasesProvider.get(), singletonCImpl.provideCategoryUseCasesProvider.get());
 
           case 3: // com.plcoding.e_book.mainActivity.MainViewModel 
           return (T) new MainViewModel(singletonCImpl.provideAppEntryUseCasesProvider.get());
@@ -576,6 +582,12 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
     private Provider<BooksUseCase> provideBooksUseCasesProvider;
 
+    private Provider<CategoryApi> provideCategoryApiProvider;
+
+    private Provider<CategoryRepository> provideCategoryRepositoryProvider;
+
+    private Provider<CategoryUseCase> provideCategoryUseCasesProvider;
+
     private Provider<LocalUserManager> provideLocalUserManagerProvider;
 
     private Provider<AppEntryUseCases> provideAppEntryUseCasesProvider;
@@ -593,8 +605,11 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
       this.provideBooksDaoProvider = DoubleCheck.provider(new SwitchingProvider<BooksDao>(singletonCImpl, 3));
       this.provideBooksRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<BooksResponsitory>(singletonCImpl, 1));
       this.provideBooksUseCasesProvider = DoubleCheck.provider(new SwitchingProvider<BooksUseCase>(singletonCImpl, 0));
-      this.provideLocalUserManagerProvider = DoubleCheck.provider(new SwitchingProvider<LocalUserManager>(singletonCImpl, 6));
-      this.provideAppEntryUseCasesProvider = DoubleCheck.provider(new SwitchingProvider<AppEntryUseCases>(singletonCImpl, 5));
+      this.provideCategoryApiProvider = DoubleCheck.provider(new SwitchingProvider<CategoryApi>(singletonCImpl, 7));
+      this.provideCategoryRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<CategoryRepository>(singletonCImpl, 6));
+      this.provideCategoryUseCasesProvider = DoubleCheck.provider(new SwitchingProvider<CategoryUseCase>(singletonCImpl, 5));
+      this.provideLocalUserManagerProvider = DoubleCheck.provider(new SwitchingProvider<LocalUserManager>(singletonCImpl, 9));
+      this.provideAppEntryUseCasesProvider = DoubleCheck.provider(new SwitchingProvider<AppEntryUseCases>(singletonCImpl, 8));
     }
 
     @Override
@@ -645,10 +660,19 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
           case 4: // com.plcoding.e_book.data.local.BooksDatabse 
           return (T) AppModule_ProvideBooksDatabaseFactory.provideBooksDatabase(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
 
-          case 5: // com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases 
+          case 5: // com.plcoding.e_book.domain.usecases.category.CategoryUseCase 
+          return (T) AppModule_ProvideCategoryUseCasesFactory.provideCategoryUseCases(singletonCImpl.provideCategoryRepositoryProvider.get());
+
+          case 6: // com.plcoding.e_book.domain.repository.CategoryRepository 
+          return (T) AppModule_ProvideCategoryRepositoryFactory.provideCategoryRepository(singletonCImpl.provideCategoryApiProvider.get());
+
+          case 7: // com.plcoding.e_book.data.remote.CategoryApi 
+          return (T) AppModule_ProvideCategoryApiFactory.provideCategoryApi();
+
+          case 8: // com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases 
           return (T) AppModule_ProvideAppEntryUseCasesFactory.provideAppEntryUseCases(singletonCImpl.provideLocalUserManagerProvider.get());
 
-          case 6: // com.plcoding.e_book.domain.manager.LocalUserManager 
+          case 9: // com.plcoding.e_book.domain.manager.LocalUserManager 
           return (T) AppModule_ProvideLocalUserManagerFactory.provideLocalUserManager(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);

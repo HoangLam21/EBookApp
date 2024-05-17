@@ -23,5 +23,7 @@ sealed class Route(
 
     object BooksNavigatorScreen : Route(route = "booksNavigator")
 
+    object AccountScreen : Route(route="accountScreen")
+
 
 }

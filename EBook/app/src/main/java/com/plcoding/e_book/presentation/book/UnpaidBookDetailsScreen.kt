@@ -64,7 +64,7 @@ import com.plcoding.e_book.domain.model.Books.Language
 import com.plcoding.e_book.domain.model.Books.Provider
 import com.plcoding.e_book.domain.model.Books.Publisher
 import com.plcoding.e_book.domain.model.Books.Result
-import com.plcoding.e_book.presentation.common.BookList
+import com.plcoding.e_book.presentation.common.BooksList
 import com.plcoding.e_book.presentation.navgragh.Route
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
@@ -367,7 +367,7 @@ fun UnpaidBookDetailsScreen(
 
                 Spacer(modifier = Modifier.height(Dimens.IndicatorSize))
 
-                BookList(
+                BooksList(
 
                     resultitem = resultitem,
                     onClick = {

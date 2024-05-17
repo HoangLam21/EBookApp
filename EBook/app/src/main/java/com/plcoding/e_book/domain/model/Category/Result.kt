@@ -1,4 +1,4 @@
-package com.plcoding.e_book.data.remote.dto
+package com.plcoding.e_book.domain.model.Category
 
 data class Result(
     val createAt: String,

@@ -8,9 +8,12 @@ import com.plcoding.e_book.data.local.BooksDatabse
 import com.plcoding.e_book.data.local.BooksTypeConvertor
 import com.plcoding.e_book.data.manager.LocalUserManagerImpl
 import com.plcoding.e_book.data.remote.BooksApi
+import com.plcoding.e_book.data.remote.CategoryApi
 import com.plcoding.e_book.data.repository.BooksResponsetoryImpl
+import com.plcoding.e_book.data.repository.CategoryRepositoryImpl
 import com.plcoding.e_book.domain.manager.LocalUserManager
 import com.plcoding.e_book.domain.repository.BooksResponsitory
+import com.plcoding.e_book.domain.repository.CategoryRepository
 import com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases
 import com.plcoding.e_book.domain.usecases.app_entry.ReadAppEntry
 import com.plcoding.e_book.domain.usecases.app_entry.SaveAppEntry
@@ -20,6 +23,8 @@ import com.plcoding.e_book.domain.usecases.books.GetBooks
 import com.plcoding.e_book.domain.usecases.books.SelectBook
 import com.plcoding.e_book.domain.usecases.books.SelectBooks
 import com.plcoding.e_book.domain.usecases.books.UpsertBooks
+import com.plcoding.e_book.domain.usecases.category.CategoryUseCase
+import com.plcoding.e_book.domain.usecases.category.GetCategory
 import com.plcoding.e_book.util.Constants
 import com.plcoding.e_book.util.Constants.BOOKS_DATABASE_NAME
 import dagger.Module
@@ -105,6 +110,33 @@ object AppModule {
     ): BooksDao = booksDatabase.booksDao
 
 
+    @Provides
+    @Singleton
+    fun provideCategoryApi(): CategoryApi {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(CategoryApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCategoryRepository(
+        categoryApi: CategoryApi
+    ): CategoryRepository = CategoryRepositoryImpl(categoryApi)
+
+
+    @Provides
+    @Singleton
+    fun provideCategoryUseCases(
+        categoryRepository: CategoryRepository
+
+    ): CategoryUseCase{
+        return CategoryUseCase(
+            getCategory = GetCategory(categoryRepository),
+
+        )
+    }
 
 
 
