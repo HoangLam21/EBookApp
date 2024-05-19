@@ -14,4 +14,4 @@ data class Provider(
     val representativename: String,
     val updateAt: String,
     val updateBy: String
-):Parcelable
+): Parcelable

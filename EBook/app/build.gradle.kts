@@ -1,3 +1,4 @@
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -65,17 +66,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.datastore.preferences.core.jvm)
-    implementation("androidx.paging:paging-compose-android:3.3.0")
-
-    implementation("com.squareup.okhttp3:okhttp:4.6.0")
-    implementation("commons-codec:commons-codec:1.14")
-    implementation(libs.androidx.appcompat)
-    implementation(fileTree(mapOf(
-        "dir" to "C:\\SCHOOL\\MOBILE\\zalopay",
-        "include" to listOf("*.aar", "*.jar"),
-        "exclude" to listOf("")
-    )))
-
+    implementation(libs.androidx.material3.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -101,6 +92,7 @@ dependencies {
     //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("androidx.compose.material3:material3:1.2.1")
 
     //Coil
     implementation("io.coil-kt:coil-compose:2.4.0")
@@ -122,10 +114,5 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.6.1")
     kapt ("androidx.room:room-compiler:2.6.1")
     implementation ("androidx.room:room-ktx:2.6.1")
-
-    //zalo
-    implementation("com.squareup.okhttp3:okhttp:4.6.0")
-    implementation("commons-codec:commons-codec:1.14")
-
 
 }

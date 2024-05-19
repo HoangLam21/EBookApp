@@ -1,9 +1,6 @@
 package com.plcoding.e_book.presentation.book
 
 import android.content.Intent
-import android.graphics.BitmapFactory
-import android.util.Log
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -63,21 +60,16 @@ import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import com.plcoding.e_book.ui.theme.SecondaryKeyColor
 import java.text.SimpleDateFormat
-import com.plcoding.e_book.domain.model.Books.Result
-import androidx.compose.ui.graphics.asImageBitmap
 
 @Composable
 fun UnpaidBookDetailsScreen(
-    result: Result,
+    result: com.plcoding.e_book.domain.model.Books.Result,
     event: (DetailsEvent) -> Unit,
     navigateUp: ()-> Unit,
-   resultitem: LazyPagingItems<Result>,
-    navigateToDetail: (Result) -> Unit,
-    navigateUpgrade: ()->Unit
+   resultitem: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+    navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
 ) {
-
     val context = LocalContext.current
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -108,8 +100,6 @@ fun UnpaidBookDetailsScreen(
             )
         ) {
             item {
-
-
                 Row (modifier = Modifier.fillMaxWidth()){
                     Column(modifier = Modifier
                         .weight(1f)
@@ -125,8 +115,6 @@ fun UnpaidBookDetailsScreen(
                         )
                         Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
 
-
-                        //Log.d("${result.galleryManage.thumbnail}")
                         AsyncImage(model = ImageRequest.Builder(context=context).data(result.createBy).build(),
                             contentDescription = null,
                             modifier = Modifier
@@ -171,9 +159,9 @@ fun UnpaidBookDetailsScreen(
                             Text(text = result.title,
                                 style = MaterialTheme.typography.bodySmall,
                                 color = PrimaryKeyColor,
-                                fontWeight = FontWeight.Medium,
+                                fontWeight = FontWeight.Bold,
                                 fontSize = Dimens.BookName,
-                                maxLines = 2,
+                                maxLines = 3,
                                 overflow = TextOverflow.Ellipsis,
                                 modifier = Modifier.padding(start = Dimens.IndicatorSize, top =  Dimens.IndicatorSize)
 
@@ -261,16 +249,16 @@ fun UnpaidBookDetailsScreen(
 
 
 
-                            Button(onClick = navigateUpgrade,
+                            Button(onClick = {},
                                 Modifier
                                     .fillMaxWidth()
                                     .padding(Dimens.ExtraSmallPadding2),
-                                colors = ButtonDefaults.buttonColors(PrimaryKeyColor)) {
+                                colors = ButtonDefaults.buttonColors(Color.White)) {
 
                                 Text(text = "Mua VIP",
                                     style = MaterialTheme.typography.bodySmall,
                                     fontWeight = FontWeight.Bold,
-                                    color = Color.White
+                                    color = PrimaryKeyColor
                                 )
                             }
                         }
@@ -278,58 +266,37 @@ fun UnpaidBookDetailsScreen(
                 }
                 Spacer(modifier = Modifier.height(Dimens.MediumPadding1))
 
-                Row (horizontalArrangement = Arrangement.Start, verticalAlignment = Alignment.Top, modifier = Modifier.fillMaxWidth()) {
+                Row (horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.Top, modifier = Modifier.fillMaxWidth()){
 
-                    Column(
-                        modifier = Modifier
-                            .height(50.dp)
-                            .padding(end = 10.dp)
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(modifier = Modifier.width(235.dp).height(50.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically){
                             Text(text = "${result.hot.toFloat()}")
                             Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
 
                             RatingBar(rating = result.hot.toFloat(), spaceBetween = 3.dp)
 
-                            Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
+                        }
+                        Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
 
-
-                            Text(
-                                text = "/ ${result.hot} Lượt đánh giá",
-                                color = GrayText,
-                                fontSize = Dimens.SmallText
-                            )
-
+                        Text(text = "${result.hot} Lượt đánh giá",color = GrayText, fontSize = SmallText)
+                    }
+                    Row(horizontalArrangement = Arrangement.Start, verticalAlignment = Alignment.CenterVertically,modifier =  Modifier.height(20.dp)) {
+                        Text(text = "Bình luận",fontSize = SmallText, color = PrimaryKeyColor)
+                        IconButton(onClick = {}) {
+                            Icon(imageVector = Icons.Default.ArrowForward, contentDescription = null, tint = PrimaryKeyColor)
 
                         }
-                        //Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
+
 
                     }
+
+
                 }
+                Spacer(modifier = Modifier.height(Dimens.MediumPadding1))
 
 
-                Text(text = "Thông tin chi tiết ",color = PrimaryKeyColor,fontWeight = FontWeight.Bold, fontSize = Dimens.MediumText )
+                Text(text = "Thông tin chi tiết ",color = PrimaryKeyColor,fontWeight = FontWeight.Bold, fontSize =MediumText )
                 Spacer(modifier = Modifier.height(Dimens.IndicatorSize),)
-
-
-
-                Row{
-                    Text(text = "Nhà xuất bản:",
-                        style = MaterialTheme.typography.bodySmall,
-                        fontWeight = FontWeight.Bold,
-                        color = PrimaryKeyColor
-                    )
-                    Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
-
-                    result.provider?.let {
-                        Text(text = it.providername,
-                            style = MaterialTheme.typography.bodySmall,
-                            color = PrimaryKeyColor
-                        )
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(Dimens.IndicatorSize))
 
                 Row{
                     Text(text = "Ngày xuất bản:",
@@ -337,7 +304,7 @@ fun UnpaidBookDetailsScreen(
                         fontWeight = FontWeight.Bold,
                         color = PrimaryKeyColor
                     )
-                    Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
+                    Spacer(modifier = Modifier.width(SmallIconSize))
 
                     Text(text = "${convertToDayMonthYear(result.publication_date)}",
                         style = MaterialTheme.typography.bodySmall,
@@ -353,7 +320,7 @@ fun UnpaidBookDetailsScreen(
                         fontWeight = FontWeight.Bold,
                         color = PrimaryKeyColor
                     )
-                    Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
+                    Spacer(modifier = Modifier.width(SmallIconSize))
 
                     Text(text = "${result.num_pages} trang",
                         style = MaterialTheme.typography.bodySmall,
@@ -368,7 +335,7 @@ fun UnpaidBookDetailsScreen(
                         withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
                             append("Trích dẫn: ")
                         }
-                        Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
+                        Spacer(modifier = Modifier.width(SmallIconSize))
 
                         append(result.description)
 
@@ -500,10 +467,6 @@ fun convertToDayMonthYear(dateString: String): String {
 
     return targetFormat.format(date)
 }
-
-
-
-
 //
 //@Preview(showBackground = true)
 //@Composable

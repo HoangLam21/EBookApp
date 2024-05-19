@@ -33,4 +33,4 @@ data class Result(
     val updateAt: String,
     val updateBy: String,
     val category: Category?
-):Parcelable
+): Parcelable

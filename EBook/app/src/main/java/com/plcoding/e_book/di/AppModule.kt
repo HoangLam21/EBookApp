@@ -6,6 +6,8 @@ import androidx.room.Room
 import com.plcoding.e_book.data.local.BooksDao
 import com.plcoding.e_book.data.local.BooksDatabse
 import com.plcoding.e_book.data.local.BooksTypeConvertor
+import com.plcoding.e_book.data.local.CategoryDao
+import com.plcoding.e_book.data.local.CategoryDatabase
 import com.plcoding.e_book.data.manager.LocalUserManagerImpl
 import com.plcoding.e_book.data.remote.BooksApi
 import com.plcoding.e_book.data.remote.CategoryApi
@@ -25,8 +27,11 @@ import com.plcoding.e_book.domain.usecases.books.SelectBooks
 import com.plcoding.e_book.domain.usecases.books.UpsertBooks
 import com.plcoding.e_book.domain.usecases.category.CategoryUseCase
 import com.plcoding.e_book.domain.usecases.category.GetCategory
+import com.plcoding.e_book.domain.usecases.category.SelectCategories
+import com.plcoding.e_book.domain.usecases.category.SelectCategory
 import com.plcoding.e_book.util.Constants
 import com.plcoding.e_book.util.Constants.BOOKS_DATABASE_NAME
+import com.plcoding.e_book.util.Constants.CATEGORY_DATABASE_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -122,22 +127,43 @@ object AppModule {
     @Provides
     @Singleton
     fun provideCategoryRepository(
-        categoryApi: CategoryApi
-    ): CategoryRepository = CategoryRepositoryImpl(categoryApi)
+        categoryApi: CategoryApi,
+        categoryDao: CategoryDao
+    ): CategoryRepository = CategoryRepositoryImpl(categoryApi, categoryDao)
 
 
     @Provides
     @Singleton
     fun provideCategoryUseCases(
-        categoryRepository: CategoryRepository
+        categoryRepository: CategoryRepository,
+        categoryDao: CategoryDao
 
     ): CategoryUseCase{
         return CategoryUseCase(
             getCategory = GetCategory(categoryRepository),
+            selectCategories = SelectCategories(categoryRepository),
+            selectCategory = SelectCategory(categoryRepository)
 
         )
     }
 
+    @Provides
+    @Singleton
+    fun provideCategoryDatabase(application: Application): CategoryDatabase {
+        return Room.databaseBuilder(
+            application,
+            CategoryDatabase::class.java,
+            CATEGORY_DATABASE_NAME
+        ).fallbackToDestructiveMigration()
+            .build()
+    }
 
+
+
+    @Provides
+    @Singleton
+    fun provideCategoryDao(
+       categoryDatabase: CategoryDatabase
+    ):CategoryDao=categoryDatabase.categoryDao
 
 }

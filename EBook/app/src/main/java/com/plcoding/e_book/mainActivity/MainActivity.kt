@@ -1,10 +1,6 @@
 package com.plcoding.e_book.mainActivity
 
-import android.content.Intent
 import android.os.Bundle
-import android.os.Environment
-import android.os.StrictMode
-import android.os.StrictMode.ThreadPolicy
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -18,11 +14,12 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.plcoding.e_book.presentation.navgragh.NavGragh
 import com.plcoding.e_book.ui.theme.EBookTheme
 import dagger.hilt.android.AndroidEntryPoint
-import vn.zalopay.sdk.ZaloPaySDK
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val viewModel by viewModels<MainViewModel>()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +34,9 @@ class MainActivity : ComponentActivity() {
                     .fillMaxSize()) {
                     val startDestination = viewModel.startDestination
                     NavGragh(startDestination = startDestination)
+                    //CommentListScreen(onNavigate = {}, navigateUp = {})
+                    //CommentScreen(viewModel = commentViewModel, navigateUp = {})
+
 
 
 
@@ -44,5 +44,4 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
 }

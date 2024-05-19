@@ -17,7 +17,7 @@ import com.plcoding.e_book.domain.model.Category.Result
 
 @Composable
 fun CategoriesList(
-    category: LazyPagingItems<Result>,
+    category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>,
     onClick: (com.plcoding.e_book.domain.model.Category.Result) -> Unit
 ) {
     val handlerPagingResult = handlePagingResult(category = category)

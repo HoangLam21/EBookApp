@@ -8,4 +8,6 @@ object Constants {
     const val BASE_URL = "https://bookstorebackend-production-7f54.up.railway.app/BookStore/"
 
     const val BOOKS_DATABASE_NAME = "books_db"
+
+    const val CATEGORY_DATABASE_NAME = "category_db"
 }

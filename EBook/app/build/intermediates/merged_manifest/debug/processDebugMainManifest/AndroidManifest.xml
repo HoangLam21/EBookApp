@@ -21,10 +21,6 @@
         <intent>
             <action android:name="android.intent.action.SEND" />
         </intent>
-
-        <package android:name="vn.com.vng.zalopay.sb1" />
-        <package android:name="vn.com.vng.zalopay" />
-        <package android:name="com.zing.zalo" />
     </queries>
 
     <permission
@@ -64,10 +60,6 @@
             android:directBootAware="true"
             android:exported="false" />
 
-        <activity
-            android:name="androidx.compose.ui.tooling.PreviewActivity"
-            android:exported="true" />
-
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.plcoding.e_book.androidx-startup"
@@ -85,6 +77,9 @@
 
         <activity
             android:name="androidx.activity.ComponentActivity"
+            android:exported="true" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />
 
         <receiver

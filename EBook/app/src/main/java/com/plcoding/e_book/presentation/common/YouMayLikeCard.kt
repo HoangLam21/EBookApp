@@ -22,14 +22,22 @@ import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.plcoding.e_book.R
+import com.plcoding.e_book.domain.model.Books.Author
+import com.plcoding.e_book.domain.model.Books.Category
+import com.plcoding.e_book.domain.model.Books.Feedback
+import com.plcoding.e_book.domain.model.Books.GalleryManage
+import com.plcoding.e_book.domain.model.Books.Language
+import com.plcoding.e_book.domain.model.Books.Provider
+import com.plcoding.e_book.domain.model.Books.Publisher
 import com.plcoding.e_book.domain.model.Books.Result
-
+import com.plcoding.e_book.ui.theme.EBookTheme
 
 @Composable
 fun YouMayLikeCard(
    modifier: Modifier = Modifier,
-    result: Result,
+    result: com.plcoding.e_book.domain.model.Books.Result,
     onClick:()-> Unit
 ) {
     val context = LocalContext.current
@@ -55,6 +63,7 @@ fun YouMayLikeCard(
             // Ví dụ: R.drawable.default_image
             ImageRequest.Builder(context).data(R.drawable.default_img).build()
         }
+
         AsyncImage(
             modifier = Modifier
                 .width(160.dp)
@@ -95,66 +104,98 @@ fun YouMayLikeCard(
 //    EBookTheme {
 //        YouMayLikeCard(
 //            result = Result(
-//                id =1,
-//                title= "Lam Ban Voi Bau Troi",
-//                num_pages= 100,
-//                publication_date= "2024-05-15T12:40:57.775+00:00",
-//                bookQuantity = 50,
-//                price= 90000,
-//                discount = 5000, // Sửa thành dấu '=' thay vì ':'
-//                description= "string",
-//                hot= 5,
-//                total_pay= 85000,
-//                available= 1,
-//                createAt= "2024-05-15T12:41:41.543+00:00",
-//                updateAt= "2024-05-15T12:41:41.543+00:00",
-//                createBy = "https://i.pinimg.com/564x/e8/70/13/e87013a8fad26985bdaf8c072f126418.jpg",
-//                updateBy= "admin",
-//                authors= listOf(
+//                authors = listOf(
 //                    Author(
-//                        createAt= "2024-05-15T12:28:20.477+00:00",
-//                        updateAt= "2024-05-15T12:28:20.477+00:00",
-//                        createBy= "admin",
-//                        updateBy= "admin",
-//                        id= 1,
-//                        author_name= "Nguyen Nhat Anh"
-//                    )
-//                ),
-//                publisher= Publisher(
-//                    createAt= "2024-05-15T12:35:45.549+00:00",
-//                    updateAt= "2024-05-15T12:35:45.549+00:00",
-//                    createBy= "admin",
-//                    updateBy= "admin",
-//                    id= 1,
-//                    publisher_name= "NXB Tuoi Tre"
-//                ),
-//                language= Language(
-//                    createAt= "2024-05-15T12:30:01.647+00:00",
-//                    updateAt= "2024-05-15T12:30:01.647+00:00",
-//                    createBy= "admin",
-//                    updateBy= "admin",
-//                    id = 1, // Sửa thành dấu '=' thay vì ':'
-//                    language_name= "Tieng Viet"
-//                ),
-//                galleryManage= listOf(
-//                    Gallery(
-//                        book_id = 1,
-//                        thumbnail = "https://i.pinimg.com/564x/e8/70/13/e87013a8fad26985bdaf8c072f126418.jpg",
-//                        description = "Tải Ebook Làm Bạn Với Bầu Trời PDF. Download ngay! Mua sách gốc tại đây. Một câu chuyện giản dị, chứa đầy bất ngờ cho tới trang cuối cùng. Và đẹp lộng lẫy, vì lòng vị tha và tình yêu thương, khiến mắt rưng rưng vì một nỗi mừng vui hân hoan. Cuốn sách như một đốm lửa thắp lên lòng khát khao sống tốt trên đời. Viết về điều tốt đã không dễ, viết sao cho người đọc có thể đón nhận đầy cảm xúc tích cực, và muốn được hưởng, được làm những điều tốt dù nhỏ bé mới thật là khó. Làm bạn với bầu trời của"
+//                        author_name = "Author Name 1",
+//                        createAt = "",
+//                        createBy = "",
+//                        id = 0,
+//                        updateAt = "",
+//                        updateBy = ""
 //                    ),
-//
-//
+//                    Author(
+//                        author_name = "Author Name 1",
+//                        createAt = "",
+//                        createBy = "",
+//                        id = 1,
+//                        updateAt = "",
+//                        updateBy = ""
+//                    ),
 //                ),
+//                available = 0,
+//                bookQuantity = 0.0,
+//                category =  Category(
+//                    avatar = "",
+//                    createAt = "",
+//                    createBy = "",
+//                    hot = 0,
+//                    id=0,
+//                    name="Truyen",
+//                    updateAt = "",
+//                    updateBy = "",
+//                ), // Assuming category is not provided in the given data
+//                createAt = "",
+//                createBy = "",
+//                description = "",
+//                discount = 0,
+//                feedback = Feedback(
+//                    createAt = "",
+//                    createBy = "",
+//                    feedback_comment="",
+//                    id=0,
+//                    rating = 1,
+//                    updateBy = "",
+//                    updateAt = "",
+//                ), // Assuming feedback is not provided in the given data
+//                galleryManage = listOf(
+//                    GalleryManage(
+//                        createBy = "",
+//                        createAt = "",
+//                        description = "",
+//                        id = 0,
+//                        thumbnail = "",
+//                        updateAt = "",
+//                        updateBy = "",
+//                    ),
+//                ),
+//                hot = 0,
+//                id = 0,
+//                isebook = false,
+//                isvip = false,
+//                language = Language(
+//                    createAt = "",
+//                    createBy = "",
+//                    id = 0,
+//                    language_name = "",
+//                    updateAt = "",
+//                    updateBy = ""
+//                ),
+//                num_pages = 0,
+//                price = 0,
 //                provider = Provider(
-//                    createAt= "2024-05-15T12:34:07.484+00:00",
-//                    updateAt= "2024-05-15T12:34:07.484+00:00",
-//                    createBy= "admin",
-//                    updateBy= "admin",
-//                    id= 1,
-//                    providername= "Cong ty TNHH Tien Phong",
-//                    address= "44, Hoang Mai, Hoang Kiem, Ha Noi",
-//                    representativename= "Nguyen Tan Duc"
+//                    address = "",
+//                    createAt = "",
+//                    createBy = "",
+//                    id = 0,
+//                    providername = "",
+//                    representativename = "",
+//                    updateAt = "",
+//                    updateBy = ""
 //                ),
+//                publication_date = "",
+//                publisher = Publisher(
+//                    createAt = "",
+//                    createBy = "",
+//                    id = 0,
+//                    publisher_name = "",
+//                    updateAt = "",
+//                    updateBy = ""
+//                ),
+//                readingsession = 0,
+//                title = "LittleWomen",
+//                total_pay = 1,
+//                updateAt = "",
+//                updateBy = ""
 //            ),
 //            onClick = {}
 //        )

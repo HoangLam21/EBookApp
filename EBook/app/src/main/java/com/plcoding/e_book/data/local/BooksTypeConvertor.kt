@@ -109,8 +109,6 @@
 
 
 package com.plcoding.e_book.data.local
-import android.widget.Gallery
-import com.plcoding.e_book.domain.model.Books.Result
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
@@ -123,6 +121,7 @@ import com.plcoding.e_book.domain.model.Books.GalleryManage
 import com.plcoding.e_book.domain.model.Books.Language
 import com.plcoding.e_book.domain.model.Books.Provider
 import com.plcoding.e_book.domain.model.Books.Publisher
+import com.plcoding.e_book.domain.model.Books.Result
 
 @ProvidedTypeConverter
 class BooksTypeConvertor {
@@ -223,4 +222,5 @@ class BooksTypeConvertor {
         val gson = Gson()
         return gson.fromJson(publisherString, Publisher::class.java)
     }
+
 }

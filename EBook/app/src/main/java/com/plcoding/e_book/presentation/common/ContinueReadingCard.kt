@@ -28,6 +28,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.plcoding.e_book.R
+import com.plcoding.e_book.domain.model.Books.Author
+import com.plcoding.e_book.domain.model.Books.Category
+import com.plcoding.e_book.domain.model.Books.Feedback
+import com.plcoding.e_book.domain.model.Books.GalleryManage
+import com.plcoding.e_book.domain.model.Books.Language
+import com.plcoding.e_book.domain.model.Books.Provider
+import com.plcoding.e_book.domain.model.Books.Publisher
+import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.ui.theme.EBookTheme
 
 @Composable
@@ -82,16 +90,9 @@ fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,
                     modifier = Modifier
                         .padding(start = 10.dp, top =45.dp)
                         .width(150.dp),
-                    fontSize = 15.sp, maxLines = 1,overflow = TextOverflow.Ellipsis
+                    fontSize = 16.sp, maxLines = 1,overflow = TextOverflow.Ellipsis
                 )
-                Text(
-                    fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
-                    text = book.createAt,
-                    color = Color(android.graphics.Color.parseColor("#7d6a58")),
-                    modifier = Modifier
-                        .padding(start = 10.dp),
-                    fontSize = 10.sp
-                )
+                AuthorsText(authors = book.authors)
             }
 
         }
@@ -101,7 +102,7 @@ fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,
 
 
 }
-//
+
 //@Preview(showBackground = true)
 //@Composable
 //fun ContinueReadingCardPreview(){
@@ -126,21 +127,45 @@ fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,
 //                ),
 //            ),
 //            available = 0,
-//            bookQuantity = 0,
-//            createAt = "louis may cott",
+//            bookQuantity = 0.0,
+//            category =  Category(
+//                avatar = "",
+//                createAt = "",
+//                createBy = "",
+//                hot = 0,
+//                id=0,
+//                name="Truyen",
+//                updateAt = "",
+//                updateBy = "",
+//            ), // Assuming category is not provided in the given data
+//            createAt = "",
 //            createBy = "",
 //            description = "",
 //            discount = 0,
+//            feedback = Feedback(
+//                createAt = "",
+//                createBy = "",
+//                feedback_comment="",
+//                id=0,
+//                rating = 1,
+//                updateBy = "",
+//                updateAt = "",
+//            ), // Assuming feedback is not provided in the given data
 //            galleryManage = listOf(
-//                Gallery(
-//                    book_id = 1,
-//                    thumbnail = "https://i.pinimg.com/564x/e8/70/13/e87013a8fad26985bdaf8c072f126418.jpg",
-//                    description = "Tải Ebook Làm Bạn Với Bầu Trời PDF. Download ngay! Mua sách gốc tại đây. Một câu chuyện giản dị, chứa đầy bất ngờ cho tới trang cuối cùng. Và đẹp lộng lẫy, vì lòng vị tha và tình yêu thương, khiến mắt rưng rưng vì một nỗi mừng vui hân hoan. Cuốn sách như một đốm lửa thắp lên lòng khát khao sống tốt trên đời. Viết về điều tốt đã không dễ, viết sao cho người đọc có thể đón nhận đầy cảm xúc tích cực, và muốn được hưởng, được làm những điều tốt dù nhỏ bé mới thật là khó. Làm bạn với bầu trời của"
+//                GalleryManage(
+//                    createBy = "",
+//                    createAt = "",
+//                    description = "",
+//                    id = 0,
+//                    thumbnail = "",
+//                    updateAt = "",
+//                    updateBy = "",
 //                ),
-//
 //            ),
 //            hot = 0,
 //            id = 0,
+//            isebook = false,
+//            isvip = false,
 //            language = Language(
 //                createAt = "",
 //                createBy = "",
@@ -170,6 +195,7 @@ fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,
 //                updateAt = "",
 //                updateBy = ""
 //            ),
+//            readingsession = 0,
 //            title = "LittleWomen",
 //            total_pay = 1,
 //            updateAt = "",

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.plcoding.e_book.app-debug-4:/font_fontawesome6brandsregular400.otf.flat",
+        "source": "com.plcoding.e_book.app-main-6:/font/fontawesome6brandsregular400.otf"
+    },
+    {
         "merged": "com.plcoding.e_book.app-debug-4:/layout_activity_main.xml.flat",
         "source": "com.plcoding.e_book.app-main-6:/layout/activity_main.xml"
     },
@@ -46,6 +50,14 @@
     {
         "merged": "com.plcoding.e_book.app-debug-4:/drawable_img8.jpg.flat",
         "source": "com.plcoding.e_book.app-main-6:/drawable/img8.jpg"
+    },
+    {
+        "merged": "com.plcoding.e_book.app-debug-4:/font_fontawesome6freesolid900.otf.flat",
+        "source": "com.plcoding.e_book.app-main-6:/font/fontawesome6freesolid900.otf"
+    },
+    {
+        "merged": "com.plcoding.e_book.app-debug-4:/font_fontawesome6freeregular400.otf.flat",
+        "source": "com.plcoding.e_book.app-main-6:/font/fontawesome6freeregular400.otf"
     },
     {
         "merged": "com.plcoding.e_book.app-debug-4:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -212,10 +224,6 @@
         "source": "com.plcoding.e_book.app-main-6:/drawable/ic_preferences.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-4:/drawable_diamond.png.flat",
-        "source": "com.plcoding.e_book.app-main-6:/drawable/diamond.png"
-    },
-    {
         "merged": "com.plcoding.e_book.app-debug-4:/drawable_img13.jpg.flat",
         "source": "com.plcoding.e_book.app-main-6:/drawable/img13.jpg"
     },
@@ -278,10 +286,6 @@
     {
         "merged": "com.plcoding.e_book.app-debug-4:/mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "com.plcoding.e_book.app-main-6:/mipmap-xhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.plcoding.e_book.app-debug-4:/drawable_upgradeaccount.png.flat",
-        "source": "com.plcoding.e_book.app-main-6:/drawable/upgradeaccount.png"
     },
     {
         "merged": "com.plcoding.e_book.app-debug-4:/drawable_img12.jpg.flat",

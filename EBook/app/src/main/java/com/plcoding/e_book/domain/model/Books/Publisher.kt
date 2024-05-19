@@ -12,4 +12,4 @@ data class Publisher(
     val publisher_name: String,
     val updateAt: String,
     val updateBy: String
-):Parcelable
+): Parcelable

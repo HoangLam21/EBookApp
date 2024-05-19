@@ -12,4 +12,4 @@ data class Author(
     @PrimaryKey val id: Int? = null,
     val updateAt: String,
     val updateBy: String
-):Parcelable
+): Parcelable
