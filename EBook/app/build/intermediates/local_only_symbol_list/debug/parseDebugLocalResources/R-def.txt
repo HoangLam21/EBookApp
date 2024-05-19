@@ -69,6 +69,9 @@ font cormorantgaramondmediumitalic
 font cormorantgaramondregular
 font cormorantgaramondsemibold
 font cormorantgaramondsemibolditalic
+font fontawesome6brandsregular400
+font fontawesome6freeregular400
+font fontawesome6freesolid900
 font poppins_bold
 font poppins_regular
 font poppins_semibold

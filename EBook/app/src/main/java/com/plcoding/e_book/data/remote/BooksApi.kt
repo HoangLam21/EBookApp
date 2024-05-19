@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface BooksApi {
-    @GET("book/all")
+    @GET("ebook/all")
     suspend fun getBooks(
         @Query("page") page: Int,
         @Query("source") sources: String,

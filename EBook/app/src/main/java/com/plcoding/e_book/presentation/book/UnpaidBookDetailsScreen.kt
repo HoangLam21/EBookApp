@@ -33,7 +33,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.nativeCanvas
@@ -46,26 +45,17 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
-import com.plcoding.e_book.Dimens.IconSize
 import com.plcoding.e_book.Dimens.MediumText
 import com.plcoding.e_book.Dimens.SmallIconSize
 import com.plcoding.e_book.Dimens.SmallText
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Author
-import com.plcoding.e_book.domain.model.Books.Gallery
-import com.plcoding.e_book.domain.model.Books.Language
-import com.plcoding.e_book.domain.model.Books.Provider
-import com.plcoding.e_book.domain.model.Books.Publisher
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.common.BooksList
-import com.plcoding.e_book.presentation.navgragh.Route
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import com.plcoding.e_book.ui.theme.SecondaryKeyColor
@@ -73,11 +63,11 @@ import java.text.SimpleDateFormat
 
 @Composable
 fun UnpaidBookDetailsScreen(
-    result: Result,
+    result: com.plcoding.e_book.domain.model.Books.Result,
     event: (DetailsEvent) -> Unit,
     navigateUp: ()-> Unit,
-   resultitem: LazyPagingItems<Result>,
-    navigateToDetail: (Result) -> Unit,
+   resultitem: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+    navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
 ) {
     val context = LocalContext.current
     Column(

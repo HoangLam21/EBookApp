@@ -12,14 +12,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import com.plcoding.e_book.Dimens.MediumPadding1
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.common.BooksListDT
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 
 @Composable
 fun FavouriteBookScreen(
     state: FavouriteBookState,
-    navigateToDetails: (Result) ->Unit
+    navigateToDetails: (com.plcoding.e_book.domain.model.Books.Result) ->Unit
 ) {
     Column(
         modifier = Modifier

@@ -7,10 +7,10 @@ import com.plcoding.e_book.domain.model.Books.Result
 class BooksPagingSource(
     private val booksApi: BooksApi,
     private val sources: String
-): PagingSource<Int, Result>() {
+): PagingSource<Int, com.plcoding.e_book.domain.model.Books.Result>() {
 
     private var totalBooksCount = 0;
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Result> {
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, com.plcoding.e_book.domain.model.Books.Result> {
         val page = params.key?: 1
         return try {
             val booksResponse = booksApi.getBooks(sources = sources, page = page)

@@ -34,6 +34,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.R
 import com.plcoding.e_book.ui.theme.EBookTheme
@@ -46,7 +47,7 @@ fun Modifier.shimmerEffect(): Modifier = composed {
             repeatMode = RepeatMode.Reverse
         )
     ).value
-    this.then(background(color = colorResource(id = R.color.teal_700).copy(alpha = alpha)))
+    this.then(background(color = Color(android.graphics.Color.parseColor("#b9afa6")).copy(alpha=alpha)))
 }
 
 
@@ -54,7 +55,7 @@ fun Modifier.shimmerEffect(): Modifier = composed {
 fun BookCardShimmerEffect(){
     Box(
         modifier = Modifier
-            .width(160.dp)
+            .width(220.dp)
             .border(
                 width = 1.dp,
                 color = Color(android.graphics.Color.parseColor("#eeebe9")),
@@ -87,7 +88,7 @@ fun BookCardShimmerEffect(){
                 modifier = Modifier
                     .padding(start = 5.dp)
                     .height(20.dp)
-                    .width(120.dp)
+                    .width(210.dp)
                     .clip(RoundedCornerShape(4.dp))
                     .align(Alignment.Start)
                     .shimmerEffect(),
@@ -99,40 +100,39 @@ fun BookCardShimmerEffect(){
                     .padding(start = 5.dp)
                     .clip(RoundedCornerShape(4.dp))
                     .height(20.dp)
-                    .width(100.dp)
+                    .width(210.dp)
                     .align(Alignment.Start)
                     .shimmerEffect(),
             )
             Spacer(modifier = Modifier.height(5.dp))
 
 
-
-            Box(
-
-                modifier = Modifier
-                    .padding(end = 5.dp)
-                    .height(20.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .width(50.dp)
-                    .align(Alignment.End)
-                    .shimmerEffect(),
-
-                )
-            Spacer(modifier = Modifier.height(5.dp))
-            Row{
-                Spacer(modifier = Modifier.width(5.dp))
+            Row {
                 Box(
-                    modifier = Modifier
 
-                        .height(40.dp)
+                    modifier = Modifier
+                        .padding(end = 5.dp, start=5.dp)
+                        .height(20.dp)
                         .clip(RoundedCornerShape(4.dp))
-                        .shimmerEffect()
-                        .width(150.dp)
-                )
-                Spacer(modifier = Modifier.width(5.dp))
+                        .width(70.dp)
+                        .shimmerEffect(),
+
+                    )
+                Spacer(modifier = Modifier.width(80.dp))
+                Box(
+
+                    modifier = Modifier
+                        .padding(end = 5.dp)
+                        .height(20.dp)
+                        .clip(RoundedCornerShape(4.dp))
+                        .width(70.dp)
+                        .shimmerEffect(),
+
+                    )
             }
 
-            Spacer(modifier = Modifier.height(3.dp))
+
+            Spacer(modifier = Modifier.height(5.dp))
         }
 
     }
@@ -261,19 +261,13 @@ fun HotBookCardShimmerEffect(){
             Spacer(modifier = Modifier.height(5.dp))
             Box(modifier = Modifier.height(30.dp).width(150.dp).shimmerEffect()
             )
-            Button(onClick = { /*TODO*/ },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(android.graphics.Color.parseColor("#513820"))
-                ), modifier = Modifier
+            Spacer(modifier = Modifier.height(3.dp))
+            Box( modifier = Modifier.padding(start=0.dp).align(Alignment.CenterHorizontally).shimmerEffect())
+            Box( modifier = Modifier
                     .padding(top = 30.dp, start = 50.dp)
-                    .height(37.dp)
+                    .height(37.dp).width(70.dp).shimmerEffect()
 
-            ) {
-                Text(text = "Upgrade now",
-                    fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
-                    color = Color(android.graphics.Color.parseColor("#ffffff")),)
-
-            }
+            )
         }
         Box(
             contentAlignment = Alignment.Center
@@ -318,5 +312,127 @@ fun ContinueReadingCardShimmerEffectReview(){
 fun HotBookCardShimmerEffectReview(){
     EBookTheme {
         HotBookCardShimmerEffect()
+    }
+}
+
+@Composable
+fun BookCardCategoryShimmerEffect(){
+    Box(
+        modifier = Modifier
+            .fillMaxWidth(1f)
+            .height(130.dp)
+            .border(
+                width = 1.dp,
+                color = Color(android.graphics.Color.parseColor("#eeebe9")),
+                shape = RoundedCornerShape(10.dp)
+            )
+            .background(
+                color = Color(android.graphics.Color.parseColor("#eeebe9")),
+                shape = RoundedCornerShape(10.dp)
+            ),
+    ) {
+        Row{
+            Box(modifier= Modifier
+                .height(160.dp)
+                .fillMaxWidth(0.3f)
+                .clip(
+                    MaterialTheme.shapes.medium
+                )){
+                Box(
+                    modifier = Modifier
+                        .height(120.dp)
+                        .width(70.dp)
+                        .align(Alignment.Center)
+                        .shimmerEffect()
+                        .padding(top = 5.dp, bottom = 5.dp)
+                )
+//                    AsyncImage(model = ImageRequest.Builder(context).data(book.).build(), contentDescription = null,
+//                        modifier= Modifier
+//                            .height(160.dp)
+//                            .clip(
+//                                MaterialTheme.shapes.medium
+//                            )
+//                    )
+            }
+            Column(modifier = Modifier.width(250.dp)) {
+                Spacer(modifier = Modifier.height(5.dp))
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .width(160.dp)
+                        .align(Alignment.CenterHorizontally),
+                ) {
+
+
+                }
+                Spacer(modifier = Modifier.height(2.dp))
+                Box(
+                    modifier = Modifier
+                        .padding(start = 5.dp)
+                        .height(20.dp)
+                        .shimmerEffect()
+                        .width(180.dp),
+
+                    )
+                Spacer(modifier = Modifier.height(2.dp))
+                Box(
+                    modifier = Modifier
+                        .padding(start = 5.dp)
+                        .height(20.dp)
+                        .shimmerEffect()
+                        .width(180.dp),
+
+                    )
+                Spacer(modifier = Modifier.height(2.dp))
+
+
+
+                Box(
+
+                    modifier = Modifier
+                        .align(Alignment.End)
+                        .width(40.dp)
+                        .shimmerEffect()
+                        .height(20.dp)
+                        .padding(end = 5.dp),
+                )
+                Spacer(modifier = Modifier.height(2.dp))
+                Row(modifier = Modifier.fillMaxWidth(1f)) {
+                    Box(
+                        modifier = Modifier
+                            .height(45.dp)
+                            .padding(start = 5.dp, top = 5.dp, end = 5.dp, bottom = 5.dp)
+                            .fillMaxWidth(0.5f)
+                            .shimmerEffect()
+                    )
+
+
+                    Box(
+                        modifier = Modifier
+                            .height(45.dp)
+                            .padding(start = 5.dp, top = 5.dp, end = 5.dp, bottom = 5.dp)
+                            .fillMaxWidth(0.5f)
+                            .shimmerEffect()
+                    )
+
+                }
+
+                Spacer(modifier = Modifier.height(3.dp))
+            }
+
+        }
+
+
+
+    }
+
+
+}
+
+@Preview(showBackground = true)
+@Composable
+fun BookCardCategoryShimmerEffectReview(){
+    EBookTheme {
+        BookCardCategoryShimmerEffect()
     }
 }
