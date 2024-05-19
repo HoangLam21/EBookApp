@@ -20,14 +20,14 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.Account.Account
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel
 import com.plcoding.e_book.presentation.book.DetailsEvent
 import com.plcoding.e_book.presentation.book.UnpaidBookDetailsScreen
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigation
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigationItem
+import com.plcoding.e_book.presentation.category.CategoryScreen
+import com.plcoding.e_book.presentation.category.CategoryViewModel
 import com.plcoding.e_book.presentation.favourite_book.FavouriteBookScreen
 import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel
 import com.plcoding.e_book.presentation.home.HomeScreen
@@ -39,9 +39,9 @@ fun BooksNavigator() {
 
     val bottomNavigationItems = remember {
         listOf(
-            BooksBottomNavigationItem(icon = R.drawable.ic_home, text = "Home") ,
-            BooksBottomNavigationItem(icon = R.drawable.ic_search, text = "Search"),
-            BooksBottomNavigationItem(icon = R.drawable.ic_bookmark, text = "Bookmark")
+            BooksBottomNavigationItem(icon = "\uf015") ,
+            BooksBottomNavigationItem(icon = "\uf02d"),
+            BooksBottomNavigationItem(icon = "\uf007")
 
         )
     }
@@ -55,8 +55,8 @@ fun BooksNavigator() {
     selectedItem = remember(key1 = backstackState) {
         when(backstackState?.destination?.route){
             Route.HomeScreen.route -> 0
-            Route.AccountScreen.route -> 1
-            Route.BookmarkScreen.route -> 2
+            Route.BookmarkScreen.route -> 1
+            Route.AccountScreen.route -> 2
             else -> 0
         }
     }
@@ -84,12 +84,12 @@ fun BooksNavigator() {
 
                             1 -> navigateToTab(
                                 navController = navController,
-                                route = Route.AccountScreen.route
+                                route = Route.BookmarkScreen.route
                             )
 
                             2 -> navigateToTab(
                                 navController = navController,
-                                route = Route.BookmarkScreen.route
+                                route = Route.AccountScreen.route
                             )
                         }
                     }
@@ -120,7 +120,16 @@ fun BooksNavigator() {
                     navigateToDetail = {
                             result ->
                         navigateToDetails(navController = navController, result = result)
-                    }, category=category
+                    }, category=category,
+                    navigateToCategory = {
+                        navigateToTab(
+                            navController=navController,
+                            route=Route.CategoryScreen.route
+                        )
+                    }, navigateToLike = {
+                        navigateToTab(navController=navController,
+                            route=Route.FavoriteScreen.route)
+                    }
                 )
             }
             Log.d("da vo viewmd","111")
@@ -136,7 +145,7 @@ fun BooksNavigator() {
                     viewModel.onEvent(DetailsEvent.RemoveSideEffect)
 
                 }
-                navController.previousBackStackEntry?.savedStateHandle?.get<Result>("book")?.let{
+                navController.previousBackStackEntry?.savedStateHandle?.get<com.plcoding.e_book.domain.model.Books.Result>("book")?.let{
                         result ->
                     UnpaidBookDetailsScreen(
                         result = result,
@@ -152,6 +161,24 @@ fun BooksNavigator() {
             }
 
 
+            composable(route = Route.CategoryScreen.route) {
+                val viewModelBook: CategoryViewModel = hiltViewModel()
+                val viewModelCategory: CategoryViewModel= hiltViewModel()
+                val stateBook=
+                CategoryScreen(
+                    books = viewModelBook.book.collectAsLazyPagingItems(),
+                    category = viewModelCategory.category.collectAsLazyPagingItems(),
+                    navigateUp = {navController.navigateUp()}
+                )
+            }
+
+            composable(route = Route.FavoriteScreen.route) {
+                val viewModel: FavouriteBookViewModel = hiltViewModel()
+                val state = viewModel.state.value
+                val stateBook=
+                    FavouriteBookScreen(state = state,
+                        navigateToDetails = {result -> navigateToDetails(navController =navController, result = result)  })
+            }
 
             composable(route = Route.BookmarkScreen.route){
                 val viewModel: FavouriteBookViewModel = hiltViewModel()
@@ -182,7 +209,7 @@ private fun navigateToTab(navController: NavController, route: String){
 
 }
 
-private fun navigateToDetails(navController: NavController, result: Result) {
+private fun navigateToDetails(navController: NavController, result: com.plcoding.e_book.domain.model.Books.Result) {
     navController.currentBackStackEntry?.savedStateHandle?.set("book", result)
     navController.navigate(
         route = Route.DetailsScreen.route

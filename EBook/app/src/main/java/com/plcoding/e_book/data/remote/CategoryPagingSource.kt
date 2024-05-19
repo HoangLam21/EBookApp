@@ -2,7 +2,6 @@ package com.plcoding.e_book.data.remote
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.plcoding.e_book.domain.model.Books.Result
 
 class CategoryPagingSource(
     private val categoryApi: CategoryApi,

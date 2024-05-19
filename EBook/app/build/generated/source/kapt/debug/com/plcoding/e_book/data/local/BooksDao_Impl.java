@@ -13,14 +13,15 @@ import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.plcoding.e_book.domain.model.Books.Author;
-import com.plcoding.e_book.domain.model.Books.Gallery;
+import com.plcoding.e_book.domain.model.Books.Category;
+import com.plcoding.e_book.domain.model.Books.Feedback;
+import com.plcoding.e_book.domain.model.Books.GalleryManage;
 import com.plcoding.e_book.domain.model.Books.Language;
 import com.plcoding.e_book.domain.model.Books.Provider;
 import com.plcoding.e_book.domain.model.Books.Publisher;
 import com.plcoding.e_book.domain.model.Books.Result;
 import java.lang.Class;
 import java.lang.Exception;
-import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -49,7 +50,7 @@ public final class BooksDao_Impl implements BooksDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `Result` (`authors`,`available`,`bookQuantity`,`createAt`,`createBy`,`description`,`discount`,`galleryManage`,`hot`,`id`,`language`,`num_pages`,`price`,`provider`,`publication_date`,`publisher`,`title`,`total_pay`,`updateAt`,`updateBy`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `Result` (`authors`,`available`,`bookQuantity`,`category`,`createAt`,`createBy`,`description`,`discount`,`feedback`,`galleryManage`,`hot`,`id`,`isebook`,`isvip`,`language`,`num_pages`,`price`,`provider`,`publication_date`,`publisher`,`readingsession`,`title`,`total_pay`,`updateAt`,`updateBy`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -62,75 +63,88 @@ public final class BooksDao_Impl implements BooksDao {
           statement.bindString(1, _tmp);
         }
         statement.bindLong(2, entity.getAvailable());
-        statement.bindLong(3, entity.getBookQuantity());
-        if (entity.getCreateAt() == null) {
+        statement.bindDouble(3, entity.getBookQuantity());
+        final String _tmp_1 = __booksTypeConvertor().categoryToString(entity.getCategory());
+        if (_tmp_1 == null) {
           statement.bindNull(4);
         } else {
-          statement.bindString(4, entity.getCreateAt());
+          statement.bindString(4, _tmp_1);
         }
-        if (entity.getCreateBy() == null) {
+        if (entity.getCreateAt() == null) {
           statement.bindNull(5);
         } else {
-          statement.bindString(5, entity.getCreateBy());
+          statement.bindString(5, entity.getCreateAt());
         }
-        if (entity.getDescription() == null) {
+        if (entity.getCreateBy() == null) {
           statement.bindNull(6);
         } else {
-          statement.bindString(6, entity.getDescription());
+          statement.bindString(6, entity.getCreateBy());
         }
-        statement.bindLong(7, entity.getDiscount());
-        final String _tmp_1 = __booksTypeConvertor().galleryToString(entity.getGalleryManage());
-        if (_tmp_1 == null) {
-          statement.bindNull(8);
+        if (entity.getDescription() == null) {
+          statement.bindNull(7);
         } else {
-          statement.bindString(8, _tmp_1);
+          statement.bindString(7, entity.getDescription());
         }
-        statement.bindLong(9, entity.getHot());
-        if (entity.getId() == null) {
+        statement.bindLong(8, entity.getDiscount());
+        final String _tmp_2 = __booksTypeConvertor().feedbackToString(entity.getFeedback());
+        if (_tmp_2 == null) {
+          statement.bindNull(9);
+        } else {
+          statement.bindString(9, _tmp_2);
+        }
+        final String _tmp_3 = __booksTypeConvertor().galleryToString(entity.getGalleryManage());
+        if (_tmp_3 == null) {
           statement.bindNull(10);
         } else {
-          statement.bindLong(10, entity.getId());
+          statement.bindString(10, _tmp_3);
         }
-        final String _tmp_2 = __booksTypeConvertor().fromLanguage(entity.getLanguage());
-        if (_tmp_2 == null) {
-          statement.bindNull(11);
-        } else {
-          statement.bindString(11, _tmp_2);
-        }
-        statement.bindLong(12, entity.getNum_pages());
-        statement.bindLong(13, entity.getPrice());
-        final String _tmp_3 = __booksTypeConvertor().providerToString(entity.getProvider());
-        if (_tmp_3 == null) {
-          statement.bindNull(14);
-        } else {
-          statement.bindString(14, _tmp_3);
-        }
-        if (entity.getPublication_date() == null) {
+        statement.bindLong(11, entity.getHot());
+        statement.bindLong(12, entity.getId());
+        final int _tmp_4 = entity.getIsebook() ? 1 : 0;
+        statement.bindLong(13, _tmp_4);
+        final int _tmp_5 = entity.getIsvip() ? 1 : 0;
+        statement.bindLong(14, _tmp_5);
+        final String _tmp_6 = __booksTypeConvertor().fromLanguage(entity.getLanguage());
+        if (_tmp_6 == null) {
           statement.bindNull(15);
         } else {
-          statement.bindString(15, entity.getPublication_date());
+          statement.bindString(15, _tmp_6);
         }
-        final String _tmp_4 = __booksTypeConvertor().publisherToString(entity.getPublisher());
-        if (_tmp_4 == null) {
-          statement.bindNull(16);
+        statement.bindLong(16, entity.getNum_pages());
+        statement.bindLong(17, entity.getPrice());
+        final String _tmp_7 = __booksTypeConvertor().providerToString(entity.getProvider());
+        if (_tmp_7 == null) {
+          statement.bindNull(18);
         } else {
-          statement.bindString(16, _tmp_4);
+          statement.bindString(18, _tmp_7);
         }
-        if (entity.getTitle() == null) {
-          statement.bindNull(17);
-        } else {
-          statement.bindString(17, entity.getTitle());
-        }
-        statement.bindLong(18, entity.getTotal_pay());
-        if (entity.getUpdateAt() == null) {
+        if (entity.getPublication_date() == null) {
           statement.bindNull(19);
         } else {
-          statement.bindString(19, entity.getUpdateAt());
+          statement.bindString(19, entity.getPublication_date());
         }
-        if (entity.getUpdateBy() == null) {
+        final String _tmp_8 = __booksTypeConvertor().publisherToString(entity.getPublisher());
+        if (_tmp_8 == null) {
           statement.bindNull(20);
         } else {
-          statement.bindString(20, entity.getUpdateBy());
+          statement.bindString(20, _tmp_8);
+        }
+        statement.bindLong(21, entity.getReadingsession());
+        if (entity.getTitle() == null) {
+          statement.bindNull(22);
+        } else {
+          statement.bindString(22, entity.getTitle());
+        }
+        statement.bindLong(23, entity.getTotal_pay());
+        if (entity.getUpdateAt() == null) {
+          statement.bindNull(24);
+        } else {
+          statement.bindString(24, entity.getUpdateAt());
+        }
+        if (entity.getUpdateBy() == null) {
+          statement.bindNull(25);
+        } else {
+          statement.bindString(25, entity.getUpdateBy());
         }
       }
     };
@@ -144,11 +158,7 @@ public final class BooksDao_Impl implements BooksDao {
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement,
           @NonNull final Result entity) {
-        if (entity.getId() == null) {
-          statement.bindNull(1);
-        } else {
-          statement.bindLong(1, entity.getId());
-        }
+        statement.bindLong(1, entity.getId());
       }
     };
   }
@@ -202,19 +212,24 @@ public final class BooksDao_Impl implements BooksDao {
           final int _cursorIndexOfAuthors = CursorUtil.getColumnIndexOrThrow(_cursor, "authors");
           final int _cursorIndexOfAvailable = CursorUtil.getColumnIndexOrThrow(_cursor, "available");
           final int _cursorIndexOfBookQuantity = CursorUtil.getColumnIndexOrThrow(_cursor, "bookQuantity");
+          final int _cursorIndexOfCategory = CursorUtil.getColumnIndexOrThrow(_cursor, "category");
           final int _cursorIndexOfCreateAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createAt");
           final int _cursorIndexOfCreateBy = CursorUtil.getColumnIndexOrThrow(_cursor, "createBy");
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
           final int _cursorIndexOfDiscount = CursorUtil.getColumnIndexOrThrow(_cursor, "discount");
+          final int _cursorIndexOfFeedback = CursorUtil.getColumnIndexOrThrow(_cursor, "feedback");
           final int _cursorIndexOfGalleryManage = CursorUtil.getColumnIndexOrThrow(_cursor, "galleryManage");
           final int _cursorIndexOfHot = CursorUtil.getColumnIndexOrThrow(_cursor, "hot");
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfIsebook = CursorUtil.getColumnIndexOrThrow(_cursor, "isebook");
+          final int _cursorIndexOfIsvip = CursorUtil.getColumnIndexOrThrow(_cursor, "isvip");
           final int _cursorIndexOfLanguage = CursorUtil.getColumnIndexOrThrow(_cursor, "language");
           final int _cursorIndexOfNumPages = CursorUtil.getColumnIndexOrThrow(_cursor, "num_pages");
           final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
           final int _cursorIndexOfProvider = CursorUtil.getColumnIndexOrThrow(_cursor, "provider");
           final int _cursorIndexOfPublicationDate = CursorUtil.getColumnIndexOrThrow(_cursor, "publication_date");
           final int _cursorIndexOfPublisher = CursorUtil.getColumnIndexOrThrow(_cursor, "publisher");
+          final int _cursorIndexOfReadingsession = CursorUtil.getColumnIndexOrThrow(_cursor, "readingsession");
           final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");
           final int _cursorIndexOfTotalPay = CursorUtil.getColumnIndexOrThrow(_cursor, "total_pay");
           final int _cursorIndexOfUpdateAt = CursorUtil.getColumnIndexOrThrow(_cursor, "updateAt");
@@ -232,8 +247,16 @@ public final class BooksDao_Impl implements BooksDao {
             _tmpAuthors = __booksTypeConvertor().stringToAuthors(_tmp);
             final int _tmpAvailable;
             _tmpAvailable = _cursor.getInt(_cursorIndexOfAvailable);
-            final int _tmpBookQuantity;
-            _tmpBookQuantity = _cursor.getInt(_cursorIndexOfBookQuantity);
+            final double _tmpBookQuantity;
+            _tmpBookQuantity = _cursor.getDouble(_cursorIndexOfBookQuantity);
+            final Category _tmpCategory;
+            final String _tmp_1;
+            if (_cursor.isNull(_cursorIndexOfCategory)) {
+              _tmp_1 = null;
+            } else {
+              _tmp_1 = _cursor.getString(_cursorIndexOfCategory);
+            }
+            _tmpCategory = __booksTypeConvertor().stringToCategory(_tmp_1);
             final String _tmpCreateAt;
             if (_cursor.isNull(_cursorIndexOfCreateAt)) {
               _tmpCreateAt = null;
@@ -254,42 +277,54 @@ public final class BooksDao_Impl implements BooksDao {
             }
             final int _tmpDiscount;
             _tmpDiscount = _cursor.getInt(_cursorIndexOfDiscount);
-            final List<Gallery> _tmpGalleryManage;
-            final String _tmp_1;
-            if (_cursor.isNull(_cursorIndexOfGalleryManage)) {
-              _tmp_1 = null;
-            } else {
-              _tmp_1 = _cursor.getString(_cursorIndexOfGalleryManage);
-            }
-            _tmpGalleryManage = __booksTypeConvertor().stringToGallery(_tmp_1);
-            final int _tmpHot;
-            _tmpHot = _cursor.getInt(_cursorIndexOfHot);
-            final Integer _tmpId;
-            if (_cursor.isNull(_cursorIndexOfId)) {
-              _tmpId = null;
-            } else {
-              _tmpId = _cursor.getInt(_cursorIndexOfId);
-            }
-            final Language _tmpLanguage;
+            final Feedback _tmpFeedback;
             final String _tmp_2;
-            if (_cursor.isNull(_cursorIndexOfLanguage)) {
+            if (_cursor.isNull(_cursorIndexOfFeedback)) {
               _tmp_2 = null;
             } else {
-              _tmp_2 = _cursor.getString(_cursorIndexOfLanguage);
+              _tmp_2 = _cursor.getString(_cursorIndexOfFeedback);
             }
-            _tmpLanguage = __booksTypeConvertor().toLanguage(_tmp_2);
+            _tmpFeedback = __booksTypeConvertor().stringToFeedback(_tmp_2);
+            final List<GalleryManage> _tmpGalleryManage;
+            final String _tmp_3;
+            if (_cursor.isNull(_cursorIndexOfGalleryManage)) {
+              _tmp_3 = null;
+            } else {
+              _tmp_3 = _cursor.getString(_cursorIndexOfGalleryManage);
+            }
+            _tmpGalleryManage = __booksTypeConvertor().stringToGallery(_tmp_3);
+            final int _tmpHot;
+            _tmpHot = _cursor.getInt(_cursorIndexOfHot);
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final boolean _tmpIsebook;
+            final int _tmp_4;
+            _tmp_4 = _cursor.getInt(_cursorIndexOfIsebook);
+            _tmpIsebook = _tmp_4 != 0;
+            final boolean _tmpIsvip;
+            final int _tmp_5;
+            _tmp_5 = _cursor.getInt(_cursorIndexOfIsvip);
+            _tmpIsvip = _tmp_5 != 0;
+            final Language _tmpLanguage;
+            final String _tmp_6;
+            if (_cursor.isNull(_cursorIndexOfLanguage)) {
+              _tmp_6 = null;
+            } else {
+              _tmp_6 = _cursor.getString(_cursorIndexOfLanguage);
+            }
+            _tmpLanguage = __booksTypeConvertor().toLanguage(_tmp_6);
             final int _tmpNum_pages;
             _tmpNum_pages = _cursor.getInt(_cursorIndexOfNumPages);
             final int _tmpPrice;
             _tmpPrice = _cursor.getInt(_cursorIndexOfPrice);
             final Provider _tmpProvider;
-            final String _tmp_3;
+            final String _tmp_7;
             if (_cursor.isNull(_cursorIndexOfProvider)) {
-              _tmp_3 = null;
+              _tmp_7 = null;
             } else {
-              _tmp_3 = _cursor.getString(_cursorIndexOfProvider);
+              _tmp_7 = _cursor.getString(_cursorIndexOfProvider);
             }
-            _tmpProvider = __booksTypeConvertor().stringToProvider(_tmp_3);
+            _tmpProvider = __booksTypeConvertor().stringToProvider(_tmp_7);
             final String _tmpPublication_date;
             if (_cursor.isNull(_cursorIndexOfPublicationDate)) {
               _tmpPublication_date = null;
@@ -297,13 +332,15 @@ public final class BooksDao_Impl implements BooksDao {
               _tmpPublication_date = _cursor.getString(_cursorIndexOfPublicationDate);
             }
             final Publisher _tmpPublisher;
-            final String _tmp_4;
+            final String _tmp_8;
             if (_cursor.isNull(_cursorIndexOfPublisher)) {
-              _tmp_4 = null;
+              _tmp_8 = null;
             } else {
-              _tmp_4 = _cursor.getString(_cursorIndexOfPublisher);
+              _tmp_8 = _cursor.getString(_cursorIndexOfPublisher);
             }
-            _tmpPublisher = __booksTypeConvertor().stringToPublisher(_tmp_4);
+            _tmpPublisher = __booksTypeConvertor().stringToPublisher(_tmp_8);
+            final int _tmpReadingsession;
+            _tmpReadingsession = _cursor.getInt(_cursorIndexOfReadingsession);
             final String _tmpTitle;
             if (_cursor.isNull(_cursorIndexOfTitle)) {
               _tmpTitle = null;
@@ -324,7 +361,7 @@ public final class BooksDao_Impl implements BooksDao {
             } else {
               _tmpUpdateBy = _cursor.getString(_cursorIndexOfUpdateBy);
             }
-            _item = new Result(_tmpAuthors,_tmpAvailable,_tmpBookQuantity,_tmpCreateAt,_tmpCreateBy,_tmpDescription,_tmpDiscount,_tmpGalleryManage,_tmpHot,_tmpId,_tmpLanguage,_tmpNum_pages,_tmpPrice,_tmpProvider,_tmpPublication_date,_tmpPublisher,_tmpTitle,_tmpTotal_pay,_tmpUpdateAt,_tmpUpdateBy);
+            _item = new Result(_tmpAuthors,_tmpAvailable,_tmpBookQuantity,_tmpCategory,_tmpCreateAt,_tmpCreateBy,_tmpDescription,_tmpDiscount,_tmpFeedback,_tmpGalleryManage,_tmpHot,_tmpId,_tmpIsebook,_tmpIsvip,_tmpLanguage,_tmpNum_pages,_tmpPrice,_tmpProvider,_tmpPublication_date,_tmpPublisher,_tmpReadingsession,_tmpTitle,_tmpTotal_pay,_tmpUpdateAt,_tmpUpdateBy);
             _result.add(_item);
           }
           return _result;
@@ -356,19 +393,24 @@ public final class BooksDao_Impl implements BooksDao {
           final int _cursorIndexOfAuthors = CursorUtil.getColumnIndexOrThrow(_cursor, "authors");
           final int _cursorIndexOfAvailable = CursorUtil.getColumnIndexOrThrow(_cursor, "available");
           final int _cursorIndexOfBookQuantity = CursorUtil.getColumnIndexOrThrow(_cursor, "bookQuantity");
+          final int _cursorIndexOfCategory = CursorUtil.getColumnIndexOrThrow(_cursor, "category");
           final int _cursorIndexOfCreateAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createAt");
           final int _cursorIndexOfCreateBy = CursorUtil.getColumnIndexOrThrow(_cursor, "createBy");
           final int _cursorIndexOfDescription = CursorUtil.getColumnIndexOrThrow(_cursor, "description");
           final int _cursorIndexOfDiscount = CursorUtil.getColumnIndexOrThrow(_cursor, "discount");
+          final int _cursorIndexOfFeedback = CursorUtil.getColumnIndexOrThrow(_cursor, "feedback");
           final int _cursorIndexOfGalleryManage = CursorUtil.getColumnIndexOrThrow(_cursor, "galleryManage");
           final int _cursorIndexOfHot = CursorUtil.getColumnIndexOrThrow(_cursor, "hot");
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfIsebook = CursorUtil.getColumnIndexOrThrow(_cursor, "isebook");
+          final int _cursorIndexOfIsvip = CursorUtil.getColumnIndexOrThrow(_cursor, "isvip");
           final int _cursorIndexOfLanguage = CursorUtil.getColumnIndexOrThrow(_cursor, "language");
           final int _cursorIndexOfNumPages = CursorUtil.getColumnIndexOrThrow(_cursor, "num_pages");
           final int _cursorIndexOfPrice = CursorUtil.getColumnIndexOrThrow(_cursor, "price");
           final int _cursorIndexOfProvider = CursorUtil.getColumnIndexOrThrow(_cursor, "provider");
           final int _cursorIndexOfPublicationDate = CursorUtil.getColumnIndexOrThrow(_cursor, "publication_date");
           final int _cursorIndexOfPublisher = CursorUtil.getColumnIndexOrThrow(_cursor, "publisher");
+          final int _cursorIndexOfReadingsession = CursorUtil.getColumnIndexOrThrow(_cursor, "readingsession");
           final int _cursorIndexOfTitle = CursorUtil.getColumnIndexOrThrow(_cursor, "title");
           final int _cursorIndexOfTotalPay = CursorUtil.getColumnIndexOrThrow(_cursor, "total_pay");
           final int _cursorIndexOfUpdateAt = CursorUtil.getColumnIndexOrThrow(_cursor, "updateAt");
@@ -385,8 +427,16 @@ public final class BooksDao_Impl implements BooksDao {
             _tmpAuthors = __booksTypeConvertor().stringToAuthors(_tmp);
             final int _tmpAvailable;
             _tmpAvailable = _cursor.getInt(_cursorIndexOfAvailable);
-            final int _tmpBookQuantity;
-            _tmpBookQuantity = _cursor.getInt(_cursorIndexOfBookQuantity);
+            final double _tmpBookQuantity;
+            _tmpBookQuantity = _cursor.getDouble(_cursorIndexOfBookQuantity);
+            final Category _tmpCategory;
+            final String _tmp_1;
+            if (_cursor.isNull(_cursorIndexOfCategory)) {
+              _tmp_1 = null;
+            } else {
+              _tmp_1 = _cursor.getString(_cursorIndexOfCategory);
+            }
+            _tmpCategory = __booksTypeConvertor().stringToCategory(_tmp_1);
             final String _tmpCreateAt;
             if (_cursor.isNull(_cursorIndexOfCreateAt)) {
               _tmpCreateAt = null;
@@ -407,42 +457,54 @@ public final class BooksDao_Impl implements BooksDao {
             }
             final int _tmpDiscount;
             _tmpDiscount = _cursor.getInt(_cursorIndexOfDiscount);
-            final List<Gallery> _tmpGalleryManage;
-            final String _tmp_1;
-            if (_cursor.isNull(_cursorIndexOfGalleryManage)) {
-              _tmp_1 = null;
-            } else {
-              _tmp_1 = _cursor.getString(_cursorIndexOfGalleryManage);
-            }
-            _tmpGalleryManage = __booksTypeConvertor().stringToGallery(_tmp_1);
-            final int _tmpHot;
-            _tmpHot = _cursor.getInt(_cursorIndexOfHot);
-            final Integer _tmpId;
-            if (_cursor.isNull(_cursorIndexOfId)) {
-              _tmpId = null;
-            } else {
-              _tmpId = _cursor.getInt(_cursorIndexOfId);
-            }
-            final Language _tmpLanguage;
+            final Feedback _tmpFeedback;
             final String _tmp_2;
-            if (_cursor.isNull(_cursorIndexOfLanguage)) {
+            if (_cursor.isNull(_cursorIndexOfFeedback)) {
               _tmp_2 = null;
             } else {
-              _tmp_2 = _cursor.getString(_cursorIndexOfLanguage);
+              _tmp_2 = _cursor.getString(_cursorIndexOfFeedback);
             }
-            _tmpLanguage = __booksTypeConvertor().toLanguage(_tmp_2);
+            _tmpFeedback = __booksTypeConvertor().stringToFeedback(_tmp_2);
+            final List<GalleryManage> _tmpGalleryManage;
+            final String _tmp_3;
+            if (_cursor.isNull(_cursorIndexOfGalleryManage)) {
+              _tmp_3 = null;
+            } else {
+              _tmp_3 = _cursor.getString(_cursorIndexOfGalleryManage);
+            }
+            _tmpGalleryManage = __booksTypeConvertor().stringToGallery(_tmp_3);
+            final int _tmpHot;
+            _tmpHot = _cursor.getInt(_cursorIndexOfHot);
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final boolean _tmpIsebook;
+            final int _tmp_4;
+            _tmp_4 = _cursor.getInt(_cursorIndexOfIsebook);
+            _tmpIsebook = _tmp_4 != 0;
+            final boolean _tmpIsvip;
+            final int _tmp_5;
+            _tmp_5 = _cursor.getInt(_cursorIndexOfIsvip);
+            _tmpIsvip = _tmp_5 != 0;
+            final Language _tmpLanguage;
+            final String _tmp_6;
+            if (_cursor.isNull(_cursorIndexOfLanguage)) {
+              _tmp_6 = null;
+            } else {
+              _tmp_6 = _cursor.getString(_cursorIndexOfLanguage);
+            }
+            _tmpLanguage = __booksTypeConvertor().toLanguage(_tmp_6);
             final int _tmpNum_pages;
             _tmpNum_pages = _cursor.getInt(_cursorIndexOfNumPages);
             final int _tmpPrice;
             _tmpPrice = _cursor.getInt(_cursorIndexOfPrice);
             final Provider _tmpProvider;
-            final String _tmp_3;
+            final String _tmp_7;
             if (_cursor.isNull(_cursorIndexOfProvider)) {
-              _tmp_3 = null;
+              _tmp_7 = null;
             } else {
-              _tmp_3 = _cursor.getString(_cursorIndexOfProvider);
+              _tmp_7 = _cursor.getString(_cursorIndexOfProvider);
             }
-            _tmpProvider = __booksTypeConvertor().stringToProvider(_tmp_3);
+            _tmpProvider = __booksTypeConvertor().stringToProvider(_tmp_7);
             final String _tmpPublication_date;
             if (_cursor.isNull(_cursorIndexOfPublicationDate)) {
               _tmpPublication_date = null;
@@ -450,13 +512,15 @@ public final class BooksDao_Impl implements BooksDao {
               _tmpPublication_date = _cursor.getString(_cursorIndexOfPublicationDate);
             }
             final Publisher _tmpPublisher;
-            final String _tmp_4;
+            final String _tmp_8;
             if (_cursor.isNull(_cursorIndexOfPublisher)) {
-              _tmp_4 = null;
+              _tmp_8 = null;
             } else {
-              _tmp_4 = _cursor.getString(_cursorIndexOfPublisher);
+              _tmp_8 = _cursor.getString(_cursorIndexOfPublisher);
             }
-            _tmpPublisher = __booksTypeConvertor().stringToPublisher(_tmp_4);
+            _tmpPublisher = __booksTypeConvertor().stringToPublisher(_tmp_8);
+            final int _tmpReadingsession;
+            _tmpReadingsession = _cursor.getInt(_cursorIndexOfReadingsession);
             final String _tmpTitle;
             if (_cursor.isNull(_cursorIndexOfTitle)) {
               _tmpTitle = null;
@@ -477,7 +541,7 @@ public final class BooksDao_Impl implements BooksDao {
             } else {
               _tmpUpdateBy = _cursor.getString(_cursorIndexOfUpdateBy);
             }
-            _result = new Result(_tmpAuthors,_tmpAvailable,_tmpBookQuantity,_tmpCreateAt,_tmpCreateBy,_tmpDescription,_tmpDiscount,_tmpGalleryManage,_tmpHot,_tmpId,_tmpLanguage,_tmpNum_pages,_tmpPrice,_tmpProvider,_tmpPublication_date,_tmpPublisher,_tmpTitle,_tmpTotal_pay,_tmpUpdateAt,_tmpUpdateBy);
+            _result = new Result(_tmpAuthors,_tmpAvailable,_tmpBookQuantity,_tmpCategory,_tmpCreateAt,_tmpCreateBy,_tmpDescription,_tmpDiscount,_tmpFeedback,_tmpGalleryManage,_tmpHot,_tmpId,_tmpIsebook,_tmpIsvip,_tmpLanguage,_tmpNum_pages,_tmpPrice,_tmpProvider,_tmpPublication_date,_tmpPublisher,_tmpReadingsession,_tmpTitle,_tmpTotal_pay,_tmpUpdateAt,_tmpUpdateBy);
           } else {
             _result = null;
           }

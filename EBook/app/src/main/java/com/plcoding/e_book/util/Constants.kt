@@ -5,7 +5,9 @@ object Constants {
 
     const val APP_ENTRY = "appEntry"
 
-    const val BASE_URL = "https://charismatic-illumination-test.up.railway.app/BookStore/"
+    const val BASE_URL = "https://bookstorebackend-production-7f54.up.railway.app/BookStore/"
 
     const val BOOKS_DATABASE_NAME = "books_db"
+
+    const val CATEGORY_DATABASE_NAME = "category_db"
 }

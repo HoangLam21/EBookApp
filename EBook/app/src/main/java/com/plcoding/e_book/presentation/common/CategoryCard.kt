@@ -4,9 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,7 +22,7 @@ import com.plcoding.e_book.domain.model.Category.Result
 import com.plcoding.e_book.ui.theme.EBookTheme
 
 @Composable
-fun CategoryCard(category: Result,
+fun CategoryCard(category: com.plcoding.e_book.domain.model.Category.Result,
                  onClick:()->Unit){
     val context = LocalContext.current
     Column(
@@ -51,12 +49,14 @@ fun CategoryCard(category: Result,
 @Preview(showBackground = true)
 @Composable
 fun CategoryCardPreview(){
+
     EBookTheme{
         CategoryCard(category = Result(
             createAt = "",
             createBy = "",
             hot = 0,
             id = 0,
+            avatar = "",
             name="kinh di",
             updateAt = "",
             updateBy = "",

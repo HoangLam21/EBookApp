@@ -25,5 +25,9 @@ sealed class Route(
 
     object AccountScreen : Route(route="accountScreen")
 
+    object CategoryScreen : Route(route="categoryScreen")
+
+    object FavoriteScreen : Route(route="favriteBookScreen")
+
 
 }

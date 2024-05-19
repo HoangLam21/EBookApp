@@ -4,6 +4,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,7 +21,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
-import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
@@ -39,20 +39,28 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.common.BooksList
 import com.plcoding.e_book.presentation.common.CategoriesList
 import com.plcoding.e_book.presentation.common.ContinueReadingList
 import com.plcoding.e_book.presentation.common.HotBooksList
 
+val fontAwesome = FontFamily(
+    Font(R.font.fontawesome6freesolid900, FontWeight.Normal)
+)
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun HomeScreen(books: LazyPagingItems<Result>, navigateToSearch:() -> Unit, navigateToDetail: (Result) -> Unit, category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>) {
+fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+               navigateToSearch:() -> Unit,
+               navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
+               category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>,
+               navigateToCategory:()->Unit,
+               navigateToLike:()->Unit) {
     val titles by remember {
         derivedStateOf {
             if(books.itemCount>10){
@@ -68,7 +76,7 @@ fun HomeScreen(books: LazyPagingItems<Result>, navigateToSearch:() -> Unit, navi
 //    Log.d("vo roi", "ye")
     Column(
         modifier = Modifier
-            .padding(top = 40.dp, bottom = 40.dp)
+            .padding(top = 40.dp)
             .fillMaxWidth()
             .fillMaxHeight()
             .verticalScroll(rememberScrollState())
@@ -131,11 +139,11 @@ fun HomeScreen(books: LazyPagingItems<Result>, navigateToSearch:() -> Unit, navi
                 contentAlignment = Alignment.Center
             ) {
                 Row {
-                    Icon(
-                        imageVector = Icons.Default.FavoriteBorder,
-                        contentDescription = null,
-                        tint = Color(android.graphics.Color.parseColor("#513820")),
-                        modifier = Modifier.padding(end = 4.dp)
+                    Text(
+                        text = "\uf004", modifier = Modifier.clickable { navigateToLike() },
+                        style = androidx.compose.ui.text.TextStyle( fontFamily = fontAwesome,
+                            fontSize = 27.sp,
+                            color = Color(android.graphics.Color.parseColor("#513820")), )
                     )
                     Spacer(modifier = Modifier.width(5.dp))
                     Box(
@@ -183,13 +191,15 @@ fun HomeScreen(books: LazyPagingItems<Result>, navigateToSearch:() -> Unit, navi
 
         Spacer(modifier = Modifier.height(10.dp))
         Row() {
-            Text(text = "Category",
+            Text(text = "_Category",
                 fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
                 color = Color(android.graphics.Color.parseColor("#513820")),
                 fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
+            Spacer(modifier = Modifier.width(150.dp))
             Icon(imageVector = Icons.Default.ArrowForward, contentDescription =null,
                 modifier = Modifier
-                    .padding(end = 10.dp),
+                    .padding(end = 10.dp).clickable { navigateToCategory()
+                },
 
                 Color(android.graphics.Color.parseColor("#513820"))
             )
@@ -199,27 +209,27 @@ fun HomeScreen(books: LazyPagingItems<Result>, navigateToSearch:() -> Unit, navi
 
         CategoriesList(category = category, onClick = {})
         Spacer(modifier = Modifier.height(10.dp))
-        Text(text = "Read recently",
+        Text(text = "_Read recently",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
         ContinueReadingList(books = books, onClick = {})
 
         Spacer(modifier = Modifier.height(10.dp))
-        Text(text = "You may also like",
+        Text(text = "_You may also like",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
         BooksList(resultitem = books, onClick = {})
 
         Spacer(modifier = Modifier.height(10.dp))
-        Text(text = "Most read books",
+        Text(text = "_Most read books",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
         BooksList(resultitem = books, onClick = {})
         Spacer(modifier = Modifier.height(10.dp))
-        Text(text = "Free books",
+        Text(text = "_Free books",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
