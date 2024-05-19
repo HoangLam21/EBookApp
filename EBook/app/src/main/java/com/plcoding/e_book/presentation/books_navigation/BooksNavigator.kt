@@ -186,7 +186,6 @@ fun BooksNavigator() {
 
 
             composable(route = Route.FavoriteScreen.route){
-                Log.d("da vo viewmd","111")
 
                 val viewModel: FavouriteBookViewModel = hiltViewModel()
                 val state = viewModel.state.value
