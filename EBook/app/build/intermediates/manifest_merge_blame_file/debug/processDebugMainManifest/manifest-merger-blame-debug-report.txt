@@ -9,176 +9,176 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:4:5-66
-11-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:4:22-64
 12
 13    <queries>
-13-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:29:5-38:15
+13-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:29:5-38:15
 14        <intent>
-14-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:30:9-34:18
+14-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:30:9-34:18
 15            <action android:name="android.intent.action.VIEW" />
-15-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:31:13-65
-15-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:31:21-62
+15-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:31:13-65
+15-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:31:21-62
 16
 17            <category android:name="android.intent.category.BROWSABLE" />
-17-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:32:13-74
-17-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:32:23-71
+17-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:32:13-74
+17-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:32:23-71
 18
 19            <data android:scheme="https" />
-19-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:33:13-44
-19-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:33:19-41
+19-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:33:13-44
+19-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:33:19-41
 20        </intent>
 21        <intent>
-21-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:35:9-37:18
+21-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:35:9-37:18
 22            <action android:name="android.intent.action.SEND" />
-22-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:36:13-64
-22-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:36:21-62
+22-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:36:13-64
+22-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:36:21-62
 23        </intent>
 24    </queries>
 25
 26    <permission
-26-->[androidx.core:core:1.13.1] C:\Users\Lenovo\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+26-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
 27        android:name="com.plcoding.e_book.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-27-->[androidx.core:core:1.13.1] C:\Users\Lenovo\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+27-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
 28        android:protectionLevel="signature" />
-28-->[androidx.core:core:1.13.1] C:\Users\Lenovo\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+28-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
 29
 30    <uses-permission android:name="com.plcoding.e_book.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-30-->[androidx.core:core:1.13.1] C:\Users\Lenovo\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-30-->[androidx.core:core:1.13.1] C:\Users\Lenovo\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+30-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+30-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 31
 32    <application
-32-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:6:5-28:19
+32-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:6:5-28:19
 33        android:name="com.plcoding.e_book.NewEBookApplication"
-33-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:7:9-44
+33-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:7:9-44
 34        android:allowBackup="true"
-34-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:8:9-35
+34-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:8:9-35
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-35-->[androidx.core:core:1.13.1] C:\Users\Lenovo\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+35-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 36        android:dataExtractionRules="@xml/data_extraction_rules"
-36-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:9:9-65
+36-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:9:9-65
 37        android:debuggable="true"
 38        android:extractNativeLibs="false"
 39        android:fullBackupContent="@xml/backup_rules"
-39-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:10:9-54
+39-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:10:9-54
 40        android:icon="@mipmap/ic_launcher"
-40-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:11:9-43
+40-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:11:9-43
 41        android:label="@string/app_name"
-41-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:12:9-41
+41-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:12:9-41
 42        android:roundIcon="@mipmap/ic_launcher_round"
-42-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:13:9-54
+42-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:13:9-54
 43        android:supportsRtl="true"
-43-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:14:9-35
+43-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:14:9-35
 44        android:testOnly="true"
 45        android:theme="@style/Theme.EBook" >
-45-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:15:9-43
+45-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:15:9-43
 46        <activity
-46-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:17:9-27:20
+46-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:17:9-27:20
 47            android:name="com.plcoding.e_book.mainActivity.MainActivity"
-47-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:18:13-54
+47-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:18:13-54
 48            android:exported="true"
-48-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:19:13-36
+48-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:19:13-36
 49            android:label="@string/app_name"
-49-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:20:13-45
+49-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:20:13-45
 50            android:theme="@style/Theme.EBook" >
-50-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:21:13-47
+50-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:21:13-47
 51            <intent-filter>
-51-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:22:13-26:29
+51-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:22:13-26:29
 52                <action android:name="android.intent.action.MAIN" />
-52-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:23:17-69
-52-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:23:25-66
+52-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:23:17-69
+52-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:23:25-66
 53
 54                <category android:name="android.intent.category.LAUNCHER" />
-54-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:25:17-77
-54-->C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\AndroidManifest.xml:25:27-74
+54-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:25:17-77
+54-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:25:27-74
 55            </intent-filter>
 56        </activity>
 57
 58        <service
-58-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+58-->[androidx.room:room-runtime:2.6.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
 59            android:name="androidx.room.MultiInstanceInvalidationService"
-59-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+59-->[androidx.room:room-runtime:2.6.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
 60            android:directBootAware="true"
-60-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+60-->[androidx.room:room-runtime:2.6.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
 61            android:exported="false" />
-61-->[androidx.room:room-runtime:2.6.1] C:\Users\Lenovo\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+61-->[androidx.room:room-runtime:2.6.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
 62
 63        <provider
-63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
 64            android:name="androidx.startup.InitializationProvider"
-64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
 65            android:authorities="com.plcoding.e_book.androidx-startup"
-65-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+65-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
 66            android:exported="false" >
-66-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+66-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
 67            <meta-data
-67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
 68                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-68-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+68-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
 69                android:value="androidx.startup" />
-69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Lenovo\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
 70            <meta-data
-70-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a9505bdd4cd310adea164929a3d312b9\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+70-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\a9505bdd4cd310adea164929a3d312b9\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
 71                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-71-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a9505bdd4cd310adea164929a3d312b9\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+71-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\a9505bdd4cd310adea164929a3d312b9\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
 72                android:value="androidx.startup" />
-72-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Lenovo\.gradle\caches\transforms-3\a9505bdd4cd310adea164929a3d312b9\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+72-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\a9505bdd4cd310adea164929a3d312b9\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
 73            <meta-data
-73-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
 74                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-74-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+74-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
 75                android:value="androidx.startup" />
-75-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
 76        </provider>
 77
 78        <activity
-78-->[androidx.compose.ui:ui-test-manifest:1.6.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1b21abc3c5891a66c9017f6672cf491d\transformed\ui-test-manifest-1.6.0\AndroidManifest.xml:23:9-25:39
+78-->[androidx.compose.ui:ui-test-manifest:1.6.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\1b21abc3c5891a66c9017f6672cf491d\transformed\ui-test-manifest-1.6.0\AndroidManifest.xml:23:9-25:39
 79            android:name="androidx.activity.ComponentActivity"
-79-->[androidx.compose.ui:ui-test-manifest:1.6.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1b21abc3c5891a66c9017f6672cf491d\transformed\ui-test-manifest-1.6.0\AndroidManifest.xml:24:13-63
+79-->[androidx.compose.ui:ui-test-manifest:1.6.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\1b21abc3c5891a66c9017f6672cf491d\transformed\ui-test-manifest-1.6.0\AndroidManifest.xml:24:13-63
 80            android:exported="true" />
-80-->[androidx.compose.ui:ui-test-manifest:1.6.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1b21abc3c5891a66c9017f6672cf491d\transformed\ui-test-manifest-1.6.0\AndroidManifest.xml:25:13-36
+80-->[androidx.compose.ui:ui-test-manifest:1.6.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\1b21abc3c5891a66c9017f6672cf491d\transformed\ui-test-manifest-1.6.0\AndroidManifest.xml:25:13-36
 81        <activity
-81-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1a64b353d478552b65a0684a86fbbd01\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+81-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\1a64b353d478552b65a0684a86fbbd01\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
 82            android:name="androidx.compose.ui.tooling.PreviewActivity"
-82-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1a64b353d478552b65a0684a86fbbd01\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+82-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\1a64b353d478552b65a0684a86fbbd01\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
 83            android:exported="true" />
-83-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\Lenovo\.gradle\caches\transforms-3\1a64b353d478552b65a0684a86fbbd01\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+83-->[androidx.compose.ui:ui-tooling-android:1.6.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\1a64b353d478552b65a0684a86fbbd01\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
 84
 85        <receiver
-85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
 86            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
 87            android:directBootAware="false"
-87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
 88            android:enabled="true"
-88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+88-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
 89            android:exported="true"
-89-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+89-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
 90            android:permission="android.permission.DUMP" >
-90-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
 91            <intent-filter>
-91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
 92                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
 93            </intent-filter>
 94            <intent-filter>
-94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
 95                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
 96            </intent-filter>
 97            <intent-filter>
-97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
 98                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
 99            </intent-filter>
 100            <intent-filter>
-100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
 101                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lenovo\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
 102            </intent-filter>
 103        </receiver>
 104    </application>
