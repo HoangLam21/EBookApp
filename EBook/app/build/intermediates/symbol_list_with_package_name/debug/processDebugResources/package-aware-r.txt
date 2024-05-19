@@ -120,6 +120,7 @@ drawable bookyoumaylike2
 drawable compat_splash_screen
 drawable compat_splash_screen_no_icon_background
 drawable default_img
+drawable diamond
 drawable ic_back_arrow
 drawable ic_bookmark
 drawable ic_call_answer
@@ -186,6 +187,7 @@ drawable star
 drawable starfull
 drawable thumbnail1
 drawable thumbnail2
+drawable upgradeaccount
 font cormorantgaramondbold
 font cormorantgaramondbolditalic
 font cormorantgaramonditalic

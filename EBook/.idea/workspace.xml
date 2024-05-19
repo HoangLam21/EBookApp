@@ -82,17 +82,17 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/New folder/EBook",
+    "last_opened_file_path": "C:/New folder/EBook/app/src/main/java/com/plcoding/e_book/presentation/common",
     "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\res\drawable" />
-      <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\res\font" />
-      <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation\common" />
-      <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation" />
-      <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation\favorite_book" />
+      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation\common" />
+      <recent name="C:\New folder\EBook\app\src\main\res\drawable" />
+      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation" />
+      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation\book" />
+      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation\favorite_book" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\java\com\plcoding\e_book\presentation\Account" />

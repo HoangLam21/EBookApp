@@ -186,7 +186,7 @@ fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Res
                 shape = RoundedCornerShape(20.dp)
             ),
         ){
-            HotBooksList(books = books, onClick = {})
+            HotBooksList(books = books, onClick = navigateToDetail)
         }
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -213,26 +213,26 @@ fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Res
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
-        ContinueReadingList(books = books, onClick = {})
+        ContinueReadingList(books = books, onClick = navigateToDetail)
 
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_You may also like",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
-        BooksList(resultitem = books, onClick = {})
+        BooksList(resultitem = books, onClick = navigateToDetail)
 
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_Most read books",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
-        BooksList(resultitem = books, onClick = {})
+        BooksList(resultitem = books, onClick =navigateToDetail)
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_Free books",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
-        BooksList(resultitem = books, onClick = {})
+        BooksList(resultitem = books, onClick = navigateToDetail)
     }
 }
