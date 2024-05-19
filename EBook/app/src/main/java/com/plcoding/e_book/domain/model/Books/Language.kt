@@ -1,13 +1,16 @@
 package com.plcoding.e_book.domain.model.Books
 
+import android.os.Parcelable
 import androidx.room.Entity
+import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
-@Entity
+@Parcelize
 data class Language(
     val createAt: String,
     val createBy: String,
-    val id: Int,
+    @PrimaryKey val id: Int? = null,
     val language_name: String,
     val updateAt: String,
     val updateBy: String
-)
+): Parcelable

@@ -96,108 +96,108 @@ fun YouMayLikeCard(
     }
 }
 
-
-@Preview(showBackground = true)
-@Composable
-fun ViewyMLCard() {
-
-    EBookTheme {
-        YouMayLikeCard(
-            result = Result(
-                authors = listOf(
-                    Author(
-                        author_name = "Author Name 1",
-                        createAt = "",
-                        createBy = "",
-                        id = 0,
-                        updateAt = "",
-                        updateBy = ""
-                    ),
-                    Author(
-                        author_name = "Author Name 1",
-                        createAt = "",
-                        createBy = "",
-                        id = 1,
-                        updateAt = "",
-                        updateBy = ""
-                    ),
-                ),
-                available = 0,
-                bookQuantity = 0.0,
-                category =  Category(
-                    avatar = "",
-                    createAt = "",
-                    createBy = "",
-                    hot = 0,
-                    id=0,
-                    name="Truyen",
-                    updateAt = "",
-                    updateBy = "",
-                ), // Assuming category is not provided in the given data
-                createAt = "",
-                createBy = "",
-                description = "",
-                discount = 0,
-                feedback = Feedback(
-                    createAt = "",
-                    createBy = "",
-                    feedback_comment="",
-                    id=0,
-                    rating = 1,
-                    updateBy = "",
-                    updateAt = "",
-                ), // Assuming feedback is not provided in the given data
-                galleryManage = listOf(
-                    GalleryManage(
-                        createBy = "",
-                        createAt = "",
-                        description = "",
-                        id = 0,
-                        thumbnail = "",
-                        updateAt = "",
-                        updateBy = "",
-                    ),
-                ),
-                hot = 0,
-                id = 0,
-                isebook = false,
-                isvip = false,
-                language = Language(
-                    createAt = "",
-                    createBy = "",
-                    id = 0,
-                    language_name = "",
-                    updateAt = "",
-                    updateBy = ""
-                ),
-                num_pages = 0,
-                price = 0,
-                provider = Provider(
-                    address = "",
-                    createAt = "",
-                    createBy = "",
-                    id = 0,
-                    providername = "",
-                    representativename = "",
-                    updateAt = "",
-                    updateBy = ""
-                ),
-                publication_date = "",
-                publisher = Publisher(
-                    createAt = "",
-                    createBy = "",
-                    id = 0,
-                    publisher_name = "",
-                    updateAt = "",
-                    updateBy = ""
-                ),
-                readingsession = 0,
-                title = "LittleWomen",
-                total_pay = 1,
-                updateAt = "",
-                updateBy = ""
-            ),
-            onClick = {}
-        )
-    }
-}
+//
+//@Preview(showBackground = true)
+//@Composable
+//fun ViewyMLCard() {
+//
+//    EBookTheme {
+//        YouMayLikeCard(
+//            result = Result(
+//                authors = listOf(
+//                    Author(
+//                        author_name = "Author Name 1",
+//                        createAt = "",
+//                        createBy = "",
+//                        id = 0,
+//                        updateAt = "",
+//                        updateBy = ""
+//                    ),
+//                    Author(
+//                        author_name = "Author Name 1",
+//                        createAt = "",
+//                        createBy = "",
+//                        id = 1,
+//                        updateAt = "",
+//                        updateBy = ""
+//                    ),
+//                ),
+//                available = 0,
+//                bookQuantity = 0.0,
+//                category =  Category(
+//                    avatar = "",
+//                    createAt = "",
+//                    createBy = "",
+//                    hot = 0,
+//                    id=0,
+//                    name="Truyen",
+//                    updateAt = "",
+//                    updateBy = "",
+//                ), // Assuming category is not provided in the given data
+//                createAt = "",
+//                createBy = "",
+//                description = "",
+//                discount = 0,
+//                feedback = Feedback(
+//                    createAt = "",
+//                    createBy = "",
+//                    feedback_comment="",
+//                    id=0,
+//                    rating = 1,
+//                    updateBy = "",
+//                    updateAt = "",
+//                ), // Assuming feedback is not provided in the given data
+//                galleryManage = listOf(
+//                    GalleryManage(
+//                        createBy = "",
+//                        createAt = "",
+//                        description = "",
+//                        id = 0,
+//                        thumbnail = "",
+//                        updateAt = "",
+//                        updateBy = "",
+//                    ),
+//                ),
+//                hot = 0,
+//                id = 0,
+//                isebook = false,
+//                isvip = false,
+//                language = Language(
+//                    createAt = "",
+//                    createBy = "",
+//                    id = 0,
+//                    language_name = "",
+//                    updateAt = "",
+//                    updateBy = ""
+//                ),
+//                num_pages = 0,
+//                price = 0,
+//                provider = Provider(
+//                    address = "",
+//                    createAt = "",
+//                    createBy = "",
+//                    id = 0,
+//                    providername = "",
+//                    representativename = "",
+//                    updateAt = "",
+//                    updateBy = ""
+//                ),
+//                publication_date = "",
+//                publisher = Publisher(
+//                    createAt = "",
+//                    createBy = "",
+//                    id = 0,
+//                    publisher_name = "",
+//                    updateAt = "",
+//                    updateBy = ""
+//                ),
+//                readingsession = 0,
+//                title = "LittleWomen",
+//                total_pay = 1,
+//                updateAt = "",
+//                updateBy = ""
+//            ),
+//            onClick = {}
+//        )
+//    }
+//}
