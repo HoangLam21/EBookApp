@@ -15,7 +15,7 @@ object Dimens {
     val SmallIconSize = 11.dp
     val IconSize = 20.dp
     val BookImageSize = 250.dp
-    val ThumbnailTemplate = 115.dp
+    val ThumbnailTemplate = 140.dp
 
     val ArticleCardSize = 96.dp
     val YouMaylikeCardSize = 180.dp
@@ -25,5 +25,7 @@ object Dimens {
     val SmallText = 14.sp
     val NormalText = 16.sp
     val MediumText = 18.sp
+    val LargeText = 24.sp
+
 
 }

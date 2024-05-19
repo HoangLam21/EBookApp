@@ -1,5 +1,6 @@
 package com.plcoding.e_book.presentation.common
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,12 +13,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.Dimens
+import com.plcoding.e_book.domain.model.Books.Result
 
 @Composable
 fun BooksList(
@@ -72,27 +76,31 @@ fun handlePagingResult(
         }
     }
 }
-
 @Composable
 fun BooksListDT(
     modifier: Modifier = Modifier,
-    resultitem: List<com.plcoding.e_book.domain.model.Books.Result>,
-    onClick: (com.plcoding.e_book.domain.model.Books.Result) -> Unit
+    resultitem: List<Result>,
+    onClick: (Result) -> Unit
 ) {
+    Log.d("da vo viewmd","1144444")
 
-    LazyColumn(
-        modifier = modifier.fillMaxSize(),
+    LazyVerticalGrid(
+        modifier = Modifier.fillMaxSize(),
+        columns = GridCells.Fixed(2), // Số lượng cột cố định là 2
         verticalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
+        horizontalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
         contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
-    ) {
-        items(count = resultitem.size){
-            val resultitem  = resultitem[it]
-            YouMayLikeCard(result = resultitem, onClick = {onClick(resultitem)})
+    )
+    {
+        items(count = resultitem.size) { index ->
+            val resultitem = resultitem[index]
+            YouMayLikeCard(result = resultitem, onClick = { onClick(resultitem) })
         }
+        Log.d("da vo viewmd","11444")
+
     }
 
 }
-
 @Composable
 private fun BookListShimmerEffect() {
     Row {

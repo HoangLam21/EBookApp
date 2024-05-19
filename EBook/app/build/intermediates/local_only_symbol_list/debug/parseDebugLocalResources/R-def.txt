@@ -13,6 +13,7 @@ color white
 drawable bookyoumaylike1
 drawable bookyoumaylike2
 drawable default_img
+drawable diamond
 drawable ic_back_arrow
 drawable ic_bookmark
 drawable ic_close
@@ -59,6 +60,7 @@ drawable star
 drawable starfull
 drawable thumbnail1
 drawable thumbnail2
+drawable upgradeaccount
 font cormorantgaramondbold
 font cormorantgaramondbolditalic
 font cormorantgaramonditalic

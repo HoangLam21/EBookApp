@@ -119,6 +119,7 @@ int drawable bookyoumaylike2 0x7f060003
 int drawable compat_splash_screen 0x7f060004
 int drawable compat_splash_screen_no_icon_background 0x7f060005
 int drawable default_img 0x7f060006
+int drawable diamond 0x7f060049
 int drawable ic_back_arrow 0x7f060007
 int drawable ic_bookmark 0x7f060008
 int drawable ic_call_answer 0x7f060009
@@ -185,6 +186,7 @@ int drawable star 0x7f060045
 int drawable starfull 0x7f060046
 int drawable thumbnail1 0x7f060047
 int drawable thumbnail2 0x7f060048
+int drawable upgradeaccount 0x7f06004a
 int font cormorantgaramondbold 0x7f070000
 int font cormorantgaramondbolditalic 0x7f070001
 int font cormorantgaramonditalic 0x7f070002
