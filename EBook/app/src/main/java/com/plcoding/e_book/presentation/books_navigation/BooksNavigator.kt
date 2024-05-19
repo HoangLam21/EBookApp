@@ -21,9 +21,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Result
+import com.plcoding.e_book.presentation.Account.Account
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel
 import com.plcoding.e_book.presentation.book.DetailsEvent
+import com.plcoding.e_book.presentation.book.PaidBookDetailsScreen
 import com.plcoding.e_book.presentation.book.UnpaidBookDetailsScreen
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigation
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigationItem
@@ -32,6 +33,8 @@ import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel
 import com.plcoding.e_book.presentation.home.HomeScreen
 import com.plcoding.e_book.presentation.home.HomeViewModel
 import com.plcoding.e_book.presentation.navgragh.Route
+import com.plcoding.e_book.presentation.upgrade_account.UpgradeAccountScreen
+import com.plcoding.e_book.domain.model.Books.Result
 
 @Composable
 fun BooksNavigator() {
@@ -54,7 +57,7 @@ fun BooksNavigator() {
     selectedItem = remember(key1 = backstackState) {
         when(backstackState?.destination?.route){
             Route.HomeScreen.route -> 0
-            Route.SearchScreen.route -> 1
+            Route.AccountScreen.route -> 1
             Route.BookmarkScreen.route -> 2
             else -> 0
         }
@@ -64,6 +67,7 @@ fun BooksNavigator() {
         backstackState?.destination?.route == Route.HomeScreen.route
                 || backstackState?.destination?.route == Route.SearchScreen.route
                 ||backstackState?.destination?.route == Route.BookmarkScreen.route
+                ||backstackState?.destination?.route==Route.AccountScreen.route
     }
 
     Scaffold(
@@ -82,7 +86,7 @@ fun BooksNavigator() {
 
                             1 -> navigateToTab(
                                 navController = navController,
-                                route = Route.SearchScreen.route
+                                route = Route.AccountScreen.route
                             )
 
                             2 -> navigateToTab(
@@ -105,9 +109,10 @@ fun BooksNavigator() {
 
             composable(route = Route.HomeScreen.route) { backStackEntry ->
                 val viewModel: HomeViewModel = hiltViewModel()
-                val resultitem = viewModel.books.collectAsLazyPagingItems()
+                val resultitem = viewModel.book.collectAsLazyPagingItems()
+                val category = viewModel.category.collectAsLazyPagingItems()
                 HomeScreen(
-                    resultitem = resultitem,
+                    books = resultitem,
                     navigateToSearch = {
                         navigateToTab(
                             navController = navController,
@@ -117,13 +122,14 @@ fun BooksNavigator() {
                     navigateToDetail = {
                             result ->
                         navigateToDetails(navController = navController, result = result)
+                    }, category=category,
+                    navigateFavouriteBook = {
+                        navController.navigate( Route.BookmarkScreen.route)
                     }
                 )
             }
-            Log.d("da vo viewmd","111")
 
             composable(route = Route.DetailsScreen.route){
-                Log.d("da vo viewmd","111")
 
                 val viewModel: BookDetailsViewModel = hiltViewModel()
                 val resultitem = viewModel.books.collectAsLazyPagingItems()
@@ -144,18 +150,51 @@ fun BooksNavigator() {
                                 resultitem ->
                             navigateToDetails(navController = navController, result = resultitem)
                         },
+                        navigateUpgrade = {
+                            navController.navigate( Route.UpgradeAccountScreen.route)
+                        }
+                    )
+                }
+            }
+
+            composable(route = Route.PaidDetailsScreen.route){
+
+                val viewModel: BookDetailsViewModel = hiltViewModel()
+                val resultitem = viewModel.books.collectAsLazyPagingItems()
+
+                if(viewModel.sideEffect!=null){
+                    Toast.makeText(LocalContext.current, viewModel.sideEffect, Toast.LENGTH_SHORT).show()
+                    viewModel.onEvent(DetailsEvent.RemoveSideEffect)
+
+                }
+                navController.previousBackStackEntry?.savedStateHandle?.get<Result>("book")?.let{
+                        result ->
+                    PaidBookDetailsScreen(
+                        result = result,
+                        event = viewModel::onEvent,
+                        navigateUp = {navController.navigateUp()},
                     )
                 }
             }
 
 
-
             composable(route = Route.BookmarkScreen.route){
+                Log.d("da vo viewmd","111")
+
                 val viewModel: FavouriteBookViewModel = hiltViewModel()
+
                 val state = viewModel.state.value
                 FavouriteBookScreen(state = state,
-                    navigateToDetails = {result -> navigateToDetails(navController =navController, result = result)  })
+                    navigateToDetails = {result -> navigateToDetails(navController =navController, result = result)},
+                    navigateUp = {navController.navigateUp()})
             }
+            composable(route = Route.UpgradeAccountScreen.route){
+                UpgradeAccountScreen(navigateUp = {navController.navigateUp()} )
+            }
+            composable(route=Route.AccountScreen.route){
+                Account()
+            }
+
         }
 
     }
@@ -178,7 +217,10 @@ private fun navigateToTab(navController: NavController, route: String){
 
 private fun navigateToDetails(navController: NavController, result: Result) {
     navController.currentBackStackEntry?.savedStateHandle?.set("book", result)
-    navController.navigate(
-        route = Route.DetailsScreen.route
-    )
+    val route = if (result.id == 1 || result.id == 2|| result.id == 3) {
+        Route.DetailsScreen.route
+    } else {
+        Route.PaidDetailsScreen.route
+    }
+    navController.navigate(route)
 }

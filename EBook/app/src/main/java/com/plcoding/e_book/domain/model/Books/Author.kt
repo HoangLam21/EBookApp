@@ -1,7 +1,6 @@
 package com.plcoding.e_book.domain.model.Books
 
 import android.os.Parcelable
-import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
@@ -13,4 +12,4 @@ data class Author(
     @PrimaryKey val id: Int? = null,
     val updateAt: String,
     val updateBy: String
-): Parcelable
+):Parcelable

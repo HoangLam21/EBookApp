@@ -109,13 +109,17 @@
 
 
 package com.plcoding.e_book.data.local
+import android.widget.Gallery
+import com.plcoding.e_book.domain.model.Books.Result
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.plcoding.e_book.domain.model.Books.Author
-import com.plcoding.e_book.domain.model.Books.Gallery
+import com.plcoding.e_book.domain.model.Books.Category
+import com.plcoding.e_book.domain.model.Books.Feedback
+import com.plcoding.e_book.domain.model.Books.GalleryManage
 import com.plcoding.e_book.domain.model.Books.Language
 import com.plcoding.e_book.domain.model.Books.Provider
 import com.plcoding.e_book.domain.model.Books.Publisher
@@ -140,10 +144,39 @@ class BooksTypeConvertor {
     }
 
     @TypeConverter
-    fun galleryToString(gallery: List<Gallery>): String {
+    fun feedbackToString(feedback: List<Feedback>): String {
+        val gson = Gson()
+        return gson.toJson(feedback)
+    }
+
+    @TypeConverter
+    fun stringToFeedback(feedbackString: String?): List<Feedback> {
+        if (feedbackString.isNullOrEmpty()) {
+            return emptyList()
+        }
+        val gson = Gson()
+        val listType = object : TypeToken<List<Feedback>>() {}.type
+        return gson.fromJson(feedbackString, listType)
+    }
+
+
+
+    @TypeConverter
+    fun galleryToString(gallery: List<GalleryManage>): String {
         val gson = Gson()
         return gson.toJson(gallery)
     }
+
+    @TypeConverter
+    fun stringToGallery(galleryString: String?): List<GalleryManage> {
+        if (galleryString.isNullOrEmpty()) {
+            return emptyList()
+        }
+        val gson = Gson()
+        val listType = object : TypeToken<List<GalleryManage>>() {}.type
+        return gson.fromJson(galleryString, listType)
+    }
+
 
     @TypeConverter
     fun fromLanguage(language: Language?): String? {
@@ -156,14 +189,15 @@ class BooksTypeConvertor {
     }
 
     @TypeConverter
-    fun stringToGallery(galleryString: String?): List<Gallery> {
-        if (galleryString.isNullOrEmpty()) {
-            return emptyList()
-        }
-        val gson = Gson()
-        val listType = object : TypeToken<List<Gallery>>() {}.type
-        return gson.fromJson(galleryString, listType)
+    fun fromCategory(category: Category?): String? {
+        return category?.let { Gson().toJson(it) }
     }
+
+    @TypeConverter
+    fun toCategory(categoryString: String?): Category? {
+        return categoryString?.let { Gson().fromJson(it, Category::class.java) }
+    }
+
 
 
     @TypeConverter

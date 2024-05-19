@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.Flow
 class BooksResponsetoryImpl(
     private val booksApi: BooksApi,
     private val booksDao: BooksDao
-):BooksResponsitory {
+): BooksResponsitory {
 
     override fun getBooks(sources: List<String>): Flow<PagingData<Result>> {
         return Pager(

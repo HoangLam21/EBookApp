@@ -4,7 +4,7 @@
             "outputFile": "com.plcoding.e_book.app-mergeDebugResources-2:/values-v31/values-v31.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BAO ANH\\.gradle\\caches\\transforms-3\\63a628c95781566dece1969446dd1007\\transformed\\core-splashscreen-1.0.1\\res\\values-v31\\values-v31.xml",
+                    "source": "C:\\Users\\BAO ANH\\.gradle\\caches\\transforms-3\\5f84181254cea3eb0189c82b85363db2\\transformed\\core-splashscreen-1.0.1\\res\\values-v31\\values-v31.xml",
                     "from": {
                         "startLines": "2,9",
                         "startColumns": "4,4",

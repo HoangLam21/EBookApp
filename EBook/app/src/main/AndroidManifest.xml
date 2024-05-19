@@ -24,6 +24,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
     <queries>
@@ -36,4 +37,5 @@
             <action android:name="android.intent.action.SEND"/>
         </intent>
     </queries>
+
 </manifest>

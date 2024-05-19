@@ -46,6 +46,7 @@
         <option value="Kotlin Interface" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -74,30 +75,39 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/RealDataVersion/EBook/app/src/main/java/com/plcoding/e_book/presentation/common",
+    "last_opened_file_path": "C:/TEST/EBook",
+    "project.structure.last.edited": "Dependencies",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.plcoding.e_book.presentation.upgrade" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation\common" />
-      <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation" />
-      <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation\favorite_book" />
-      <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\domain\usecases\book" />
-      <recent name="C:\RealDataVersion\EBook\app\src\main\res\drawable" />
+      <recent name="C:\TEST\EBook\app\src\main\java\com\plcoding\e_book\zalo" />
+      <recent name="C:\TEST\EBook\app\src\main\java\com\plcoding\e_book\util" />
+      <recent name="C:\TEST\EBook\app\src\main\java\com\plcoding\e_book\domain\model" />
+      <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\res\drawable" />
+      <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\res\font" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\java\com\plcoding\e_book\presentation\Account" />
+      <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\java\com\plcoding\e_book\presentation\home" />
       <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation\books_navigation\" />
       <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation\common" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.plcoding.e_book.data.remote.dto" />
+      <recent name="com.plcoding.e_book.domain.model.Books" />
+      <recent name="com.plcoding.e_book.data.remote" />
+      <recent name="com.plcoding.e_book.domain.model.Category" />
       <recent name="com.plcoding.e_book.mainActivity" />
-      <recent name="com.plcoding.e_book" />
-      <recent name="com.plcoding.e_book.domain.model.Authors" />
-      <recent name="com.plcoding.e_book.domain.model.Book" />
-      <recent name="com.plcoding.e_book.domain.model" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.plcoding.e_book.domain.model.Books" />
       <recent name="com.plcoding.e_book.mainActivity" />
       <recent name="com.plcoding.e_book.presentation.home" />
       <recent name="com.plcoding.e_book.util" />
@@ -307,6 +317,19 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="EBook" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="EBook" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Compose Preview.ViewyMLCard" />
@@ -341,17 +364,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/plcoding/e_book/mainActivity/MainActivity.kt</url>
-          <line>42</line>
-          <properties class="com.plcoding.e_book.mainActivity.MainActivity" method="onCreate">
+          <line>39</line>
+          <properties class="com.plcoding.e_book.mainActivity.MainActivity">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/plcoding/e_book/data/remote/BooksPagingSource.kt</url>
-          <line>9</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/plcoding/e_book/presentation/common/CategoryCard.kt</url>
+          <line>37</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

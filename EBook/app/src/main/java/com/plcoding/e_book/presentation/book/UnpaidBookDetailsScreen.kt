@@ -1,6 +1,9 @@
 package com.plcoding.e_book.presentation.book
 
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.util.Log
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -33,7 +36,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.nativeCanvas
@@ -46,30 +48,23 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
-import com.plcoding.e_book.Dimens.IconSize
 import com.plcoding.e_book.Dimens.MediumText
 import com.plcoding.e_book.Dimens.SmallIconSize
 import com.plcoding.e_book.Dimens.SmallText
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Author
-import com.plcoding.e_book.domain.model.Books.Gallery
-import com.plcoding.e_book.domain.model.Books.Language
-import com.plcoding.e_book.domain.model.Books.Provider
-import com.plcoding.e_book.domain.model.Books.Publisher
-import com.plcoding.e_book.domain.model.Books.Result
-import com.plcoding.e_book.presentation.common.BookList
-import com.plcoding.e_book.presentation.navgragh.Route
+import com.plcoding.e_book.presentation.common.BooksList
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import com.plcoding.e_book.ui.theme.SecondaryKeyColor
 import java.text.SimpleDateFormat
+import com.plcoding.e_book.domain.model.Books.Result
+import androidx.compose.ui.graphics.asImageBitmap
 
 @Composable
 fun UnpaidBookDetailsScreen(
@@ -78,8 +73,11 @@ fun UnpaidBookDetailsScreen(
     navigateUp: ()-> Unit,
    resultitem: LazyPagingItems<Result>,
     navigateToDetail: (Result) -> Unit,
+    navigateUpgrade: ()->Unit
 ) {
+
     val context = LocalContext.current
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -110,6 +108,8 @@ fun UnpaidBookDetailsScreen(
             )
         ) {
             item {
+
+
                 Row (modifier = Modifier.fillMaxWidth()){
                     Column(modifier = Modifier
                         .weight(1f)
@@ -125,6 +125,8 @@ fun UnpaidBookDetailsScreen(
                         )
                         Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
 
+
+                        //Log.d("${result.galleryManage.thumbnail}")
                         AsyncImage(model = ImageRequest.Builder(context=context).data(result.createBy).build(),
                             contentDescription = null,
                             modifier = Modifier
@@ -169,9 +171,9 @@ fun UnpaidBookDetailsScreen(
                             Text(text = result.title,
                                 style = MaterialTheme.typography.bodySmall,
                                 color = PrimaryKeyColor,
-                                fontWeight = FontWeight.Bold,
+                                fontWeight = FontWeight.Medium,
                                 fontSize = Dimens.BookName,
-                                maxLines = 3,
+                                maxLines = 2,
                                 overflow = TextOverflow.Ellipsis,
                                 modifier = Modifier.padding(start = Dimens.IndicatorSize, top =  Dimens.IndicatorSize)
 
@@ -259,16 +261,16 @@ fun UnpaidBookDetailsScreen(
 
 
 
-                            Button(onClick = {},
+                            Button(onClick = navigateUpgrade,
                                 Modifier
                                     .fillMaxWidth()
                                     .padding(Dimens.ExtraSmallPadding2),
-                                colors = ButtonDefaults.buttonColors(Color.White)) {
+                                colors = ButtonDefaults.buttonColors(PrimaryKeyColor)) {
 
                                 Text(text = "Mua VIP",
                                     style = MaterialTheme.typography.bodySmall,
                                     fontWeight = FontWeight.Bold,
-                                    color = PrimaryKeyColor
+                                    color = Color.White
                                 )
                             }
                         }
@@ -276,37 +278,58 @@ fun UnpaidBookDetailsScreen(
                 }
                 Spacer(modifier = Modifier.height(Dimens.MediumPadding1))
 
-                Row (horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.Top, modifier = Modifier.fillMaxWidth()){
+                Row (horizontalArrangement = Arrangement.Start, verticalAlignment = Alignment.Top, modifier = Modifier.fillMaxWidth()) {
 
-                    Column(modifier = Modifier.width(235.dp).height(50.dp)) {
-                        Row(verticalAlignment = Alignment.CenterVertically){
+                    Column(
+                        modifier = Modifier
+                            .height(50.dp)
+                            .padding(end = 10.dp)
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
                             Text(text = "${result.hot.toFloat()}")
                             Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
 
                             RatingBar(rating = result.hot.toFloat(), spaceBetween = 3.dp)
 
+                            Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
+
+
+                            Text(
+                                text = "/ ${result.hot} Lượt đánh giá",
+                                color = GrayText,
+                                fontSize = Dimens.SmallText
+                            )
+
+
                         }
-                        Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
-
-                        Text(text = "${result.hot} Lượt đánh giá",color = GrayText, fontSize = SmallText)
-                    }
-                    Row(horizontalArrangement = Arrangement.Start, verticalAlignment = Alignment.CenterVertically,modifier =  Modifier.height(20.dp)) {
-                        Text(text = "Bình luận",fontSize = SmallText, color = PrimaryKeyColor)
-                        IconButton(onClick = {}) {
-                            Icon(imageVector = Icons.Default.ArrowForward, contentDescription = null, tint = PrimaryKeyColor)
-
-                        }
-
+                        //Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
 
                     }
-
-
                 }
-                Spacer(modifier = Modifier.height(Dimens.MediumPadding1))
 
 
-                Text(text = "Thông tin chi tiết ",color = PrimaryKeyColor,fontWeight = FontWeight.Bold, fontSize =MediumText )
+                Text(text = "Thông tin chi tiết ",color = PrimaryKeyColor,fontWeight = FontWeight.Bold, fontSize = Dimens.MediumText )
                 Spacer(modifier = Modifier.height(Dimens.IndicatorSize),)
+
+
+
+                Row{
+                    Text(text = "Nhà xuất bản:",
+                        style = MaterialTheme.typography.bodySmall,
+                        fontWeight = FontWeight.Bold,
+                        color = PrimaryKeyColor
+                    )
+                    Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
+
+                    result.provider?.let {
+                        Text(text = it.providername,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = PrimaryKeyColor
+                        )
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(Dimens.IndicatorSize))
 
                 Row{
                     Text(text = "Ngày xuất bản:",
@@ -314,7 +337,7 @@ fun UnpaidBookDetailsScreen(
                         fontWeight = FontWeight.Bold,
                         color = PrimaryKeyColor
                     )
-                    Spacer(modifier = Modifier.width(SmallIconSize))
+                    Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
 
                     Text(text = "${convertToDayMonthYear(result.publication_date)}",
                         style = MaterialTheme.typography.bodySmall,
@@ -330,7 +353,7 @@ fun UnpaidBookDetailsScreen(
                         fontWeight = FontWeight.Bold,
                         color = PrimaryKeyColor
                     )
-                    Spacer(modifier = Modifier.width(SmallIconSize))
+                    Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
 
                     Text(text = "${result.num_pages} trang",
                         style = MaterialTheme.typography.bodySmall,
@@ -345,7 +368,7 @@ fun UnpaidBookDetailsScreen(
                         withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
                             append("Trích dẫn: ")
                         }
-                        Spacer(modifier = Modifier.width(SmallIconSize))
+                        Spacer(modifier = Modifier.width(Dimens.SmallIconSize))
 
                         append(result.description)
 
@@ -367,7 +390,7 @@ fun UnpaidBookDetailsScreen(
 
                 Spacer(modifier = Modifier.height(Dimens.IndicatorSize))
 
-                BookList(
+                BooksList(
 
                     resultitem = resultitem,
                     onClick = {
@@ -477,6 +500,10 @@ fun convertToDayMonthYear(dateString: String): String {
 
     return targetFormat.format(date)
 }
+
+
+
+
 //
 //@Preview(showBackground = true)
 //@Composable

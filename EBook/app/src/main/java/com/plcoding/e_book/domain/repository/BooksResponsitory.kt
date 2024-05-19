@@ -1,8 +1,8 @@
 package com.plcoding.e_book.domain.repository
 
 import androidx.paging.PagingData
-import com.plcoding.e_book.domain.model.Books.Result
 import kotlinx.coroutines.flow.Flow
+import com.plcoding.e_book.domain.model.Books.Result
 
 interface BooksResponsitory {
 

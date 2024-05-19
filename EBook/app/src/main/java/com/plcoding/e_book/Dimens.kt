@@ -25,5 +25,7 @@ object Dimens {
     val SmallText = 14.sp
     val NormalText = 16.sp
     val MediumText = 18.sp
+    val LargeText = 24.sp
+
 
 }

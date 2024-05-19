@@ -7,7 +7,7 @@ public final class Constants {
     @org.jetbrains.annotations.NotNull
     public static final java.lang.String APP_ENTRY = "appEntry";
     @org.jetbrains.annotations.NotNull
-    public static final java.lang.String BASE_URL = "https://charismatic-illumination-test.up.railway.app/BookStore/";
+    public static final java.lang.String BASE_URL = "https://bookstorebackend-production-7f54.up.railway.app/BookStore/";
     @org.jetbrains.annotations.NotNull
     public static final java.lang.String BOOKS_DATABASE_NAME = "books_db";
     @org.jetbrains.annotations.NotNull
