@@ -29,7 +29,7 @@ public final class BooksDatabse_Impl extends BooksDatabse {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `Result` (`authors` TEXT NOT NULL, `available` INTEGER NOT NULL, `bookQuantity` INTEGER NOT NULL, `createAt` TEXT NOT NULL, `createBy` TEXT NOT NULL, `description` TEXT NOT NULL, `discount` INTEGER NOT NULL, `feedback` TEXT NOT NULL, `galleryManage` TEXT NOT NULL, `hot` INTEGER NOT NULL, `id` INTEGER, `isebook` INTEGER NOT NULL, `isvip` INTEGER NOT NULL, `language` TEXT, `num_pages` INTEGER NOT NULL, `price` INTEGER NOT NULL, `provider` TEXT, `publication_date` TEXT NOT NULL, `publisher` TEXT, `readingsession` INTEGER NOT NULL, `title` TEXT NOT NULL, `total_pay` INTEGER NOT NULL, `updateAt` TEXT NOT NULL, `updateBy` TEXT NOT NULL, `category` TEXT, PRIMARY KEY(`id`))");

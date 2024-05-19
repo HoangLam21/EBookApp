@@ -6,7 +6,7 @@ import androidx.room.TypeConverters
 import com.plcoding.e_book.domain.model.Books.Result
 
 
-@Database(entities = [Result::class], version = 1)
+@Database(entities = [Result::class], version = 2)
 @TypeConverters(BooksTypeConvertor::class)
 abstract class BooksDatabse: RoomDatabase() {
 
