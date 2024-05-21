@@ -33,5 +33,7 @@ sealed class Route(
 
     object FavoriteScreen : Route(route="favriteBookScreen")
 
+    object BooksWithCategoryScreen : Route(route = "booksWithCategoryScreen")
+
 
 }

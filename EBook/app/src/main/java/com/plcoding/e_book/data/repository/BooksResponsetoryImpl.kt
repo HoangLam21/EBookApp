@@ -38,11 +38,20 @@ class BooksResponsetoryImpl(
 
     override fun selectBooks(): Flow<List<Result>> {
         return booksDao.getBooks()
-
     }
 
     override suspend fun selectBook(id: Int): Result? {
         return booksDao.getBooks(id)
 
     }
+
+    override fun getBooksWithDiscount(): Flow<List<Result>> {
+        return booksDao.getBooksWithDiscount()
+    }
+
+    override fun getBooksWithCategory(categoryId: Int): Flow<List<Result>> {
+        return booksDao.getBooksWithCategory(categoryId)
+    }
+
+
 }

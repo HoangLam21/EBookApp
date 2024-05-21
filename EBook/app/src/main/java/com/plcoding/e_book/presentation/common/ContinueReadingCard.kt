@@ -14,10 +14,14 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
@@ -27,6 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.R
 import com.plcoding.e_book.domain.model.Books.Author
 import com.plcoding.e_book.domain.model.Books.Category
@@ -36,6 +41,7 @@ import com.plcoding.e_book.domain.model.Books.Language
 import com.plcoding.e_book.domain.model.Books.Provider
 import com.plcoding.e_book.domain.model.Books.Publisher
 import com.plcoding.e_book.domain.model.Books.Result
+import com.plcoding.e_book.presentation.book.Base64ImageList
 import com.plcoding.e_book.ui.theme.EBookTheme
 
 @Composable
@@ -64,10 +70,16 @@ fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,
                     color = Color(android.graphics.Color.parseColor("#eeebe9")),
                     shape = RoundedCornerShape(10.dp)
                 )
+                .shadow(
+                    elevation = 8.dp,
+                    shape = RoundedCornerShape(10.dp),
+                    clip = true
+                )
                 .background(
                     color = Color(android.graphics.Color.parseColor("#eeebe9")),
                     shape = RoundedCornerShape(10.dp)
                 )
+
             )
         }
         Row {
@@ -76,10 +88,14 @@ fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,
                 .fillMaxHeight()
                 .padding(start = 10.dp)
             ){
-                Image(painter = painterResource(id = R.drawable.little_women_vintage_classics_1_2018_11_20_22_04_53), contentDescription = null,
+                Base64ImageList(
+                    galleryManageList = book.galleryManage.filterNotNull(),
                     modifier = Modifier
-                        .height(140.dp)
-                        .padding(top = 10.dp, bottom = 10.dp)
+                        .fillMaxWidth()
+                        .height(Dimens.ThumbnailTemplate)
+                        .clip(MaterialTheme.shapes.medium),
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit
                 )
             }
             Column {

@@ -47,7 +47,7 @@ fun AuthorsText(authors: List<Author?>) {
 
     Text(
         fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
-        text = authorsString,
+        text = "- "+authorsString,
         color = Color(android.graphics.Color.parseColor("#7d6a58")),
         modifier = Modifier
             .padding(start = 5.dp)
