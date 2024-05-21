@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.font.Font
@@ -55,7 +56,7 @@ fun Modifier.shimmerEffect(): Modifier = composed {
 fun BookCardShimmerEffect(){
     Box(
         modifier = Modifier
-            .width(220.dp)
+            .width(190.dp)
             .border(
                 width = 1.dp,
                 color = Color(android.graphics.Color.parseColor("#eeebe9")),
@@ -67,28 +68,26 @@ fun BookCardShimmerEffect(){
             ),
     ) {
         Column {
-            Spacer(modifier = Modifier.height(5.dp))
-            Row(
+            Spacer(modifier = Modifier.height(5.dp).fillMaxWidth(1f))
 
-            ) {
-                Box(
-                    modifier = Modifier
-                        .height(160.dp)
-                        .fillMaxWidth(1f)
-                        .padding(start = 5.dp, end = 5.dp)
-                        .shimmerEffect()
-                        .clip(RoundedCornerShape(4.dp))
+            Box(
+                modifier = Modifier
+                    .height(160.dp)
+                    .width(120.dp)
+                    .padding(start = 5.dp, end = 5.dp)
+                    .shimmerEffect().align(Alignment.CenterHorizontally)
+                    .clip(RoundedCornerShape(4.dp))
 
-                )
+            )
 
-            }
+
             Spacer(modifier = Modifier.height(5.dp))
             Box(
 
                 modifier = Modifier
                     .padding(start = 5.dp)
                     .height(20.dp)
-                    .width(210.dp)
+                    .width(180.dp)
                     .clip(RoundedCornerShape(4.dp))
                     .align(Alignment.Start)
                     .shimmerEffect(),
@@ -100,7 +99,7 @@ fun BookCardShimmerEffect(){
                     .padding(start = 5.dp)
                     .clip(RoundedCornerShape(4.dp))
                     .height(20.dp)
-                    .width(210.dp)
+                    .width(180.dp)
                     .align(Alignment.Start)
                     .shimmerEffect(),
             )
@@ -111,25 +110,27 @@ fun BookCardShimmerEffect(){
                 Box(
 
                     modifier = Modifier
-                        .padding(end = 5.dp, start=5.dp)
+                        .padding(end = 5.dp, start = 5.dp)
                         .height(20.dp)
                         .clip(RoundedCornerShape(4.dp))
                         .width(70.dp)
                         .shimmerEffect(),
 
                     )
-                Spacer(modifier = Modifier.width(80.dp))
-                Box(
 
-                    modifier = Modifier
-                        .padding(end = 5.dp)
-                        .height(20.dp)
-                        .clip(RoundedCornerShape(4.dp))
-                        .width(70.dp)
-                        .shimmerEffect(),
 
-                    )
             }
+            Spacer(modifier = Modifier.height(5.dp))
+            Box(
+
+                modifier = Modifier
+                    .padding(end = 5.dp, start = 120.dp)
+                    .height(20.dp)
+                    .clip(RoundedCornerShape(4.dp))
+                    .width(70.dp)
+                    .shimmerEffect(),
+
+                )
 
 
             Spacer(modifier = Modifier.height(5.dp))
@@ -154,6 +155,7 @@ fun CategoryCardShimmerEffect(){
                     color = Color(android.graphics.Color.parseColor("#eeebe9")),
                     shape = CircleShape
                 )
+                .clip(CircleShape)
         )
         Box( modifier = Modifier
             .padding(start = 5.dp, top = 5.dp)
@@ -241,8 +243,8 @@ fun ContinueReadingShimmerEffect(){
 @Composable
 fun HotBookCardShimmerEffect(){
     Row(modifier = Modifier
-        .fillMaxWidth()
-        .padding(top = 14.dp, start = 16.dp),
+        .width(330.dp)
+        .padding(top = 15.dp, start = 25.dp),
 
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -255,17 +257,30 @@ fun HotBookCardShimmerEffect(){
                 color = Color(android.graphics.Color.parseColor("#513820")),
             )
             Spacer(modifier = Modifier.height(10.dp))
-            Box(modifier = Modifier.height(30.dp).width(150.dp).shimmerEffect()
+            Box(modifier = Modifier
+                .height(25.dp)
+                .width(170.dp)
+                .shimmerEffect()
 
             )
             Spacer(modifier = Modifier.height(5.dp))
-            Box(modifier = Modifier.height(30.dp).width(150.dp).shimmerEffect()
+            Box(modifier = Modifier
+                .height(25.dp)
+                .width(170.dp)
+                .shimmerEffect()
             )
-            Spacer(modifier = Modifier.height(3.dp))
-            Box( modifier = Modifier.padding(start=0.dp).align(Alignment.CenterHorizontally).shimmerEffect())
+            Spacer(modifier = Modifier.height(5.dp))
             Box( modifier = Modifier
-                    .padding(top = 30.dp, start = 50.dp)
-                    .height(37.dp).width(70.dp).shimmerEffect()
+                .padding(end = 42.dp)
+                .align(Alignment.End)
+                .shimmerEffect()
+                .height(25.dp)
+                .width(70.dp))
+            Box( modifier = Modifier
+                .padding(top = 5.dp, start = 45.dp)
+                .height(30.dp)
+                .width(90.dp)
+                .shimmerEffect()
 
             )
         }
@@ -341,18 +356,12 @@ fun BookCardCategoryShimmerEffect(){
                 Box(
                     modifier = Modifier
                         .height(120.dp)
-                        .width(70.dp)
+                        .width(80.dp)
                         .align(Alignment.Center)
                         .shimmerEffect()
                         .padding(top = 5.dp, bottom = 5.dp)
                 )
-//                    AsyncImage(model = ImageRequest.Builder(context).data(book.).build(), contentDescription = null,
-//                        modifier= Modifier
-//                            .height(160.dp)
-//                            .clip(
-//                                MaterialTheme.shapes.medium
-//                            )
-//                    )
+
             }
             Column(modifier = Modifier.width(250.dp)) {
                 Spacer(modifier = Modifier.height(5.dp))
@@ -365,7 +374,7 @@ fun BookCardCategoryShimmerEffect(){
 
 
                 }
-                Spacer(modifier = Modifier.height(2.dp))
+                Spacer(modifier = Modifier.height(5.dp))
                 Box(
                     modifier = Modifier
                         .padding(start = 5.dp)
@@ -374,7 +383,7 @@ fun BookCardCategoryShimmerEffect(){
                         .width(180.dp),
 
                     )
-                Spacer(modifier = Modifier.height(2.dp))
+                Spacer(modifier = Modifier.height(5.dp))
                 Box(
                     modifier = Modifier
                         .padding(start = 5.dp)
@@ -383,37 +392,43 @@ fun BookCardCategoryShimmerEffect(){
                         .width(180.dp),
 
                     )
-                Spacer(modifier = Modifier.height(2.dp))
+                Spacer(modifier = Modifier.height(5.dp))
 
 
 
-                Box(
+                Row(modifier = Modifier
+                    .padding(start = 5.dp),) {
+                    Box(
 
-                    modifier = Modifier
-                        .align(Alignment.End)
-                        .width(40.dp)
-                        .shimmerEffect()
-                        .height(20.dp)
-                        .padding(end = 5.dp),
-                )
+                        modifier = Modifier
+                            .width(70.dp)
+                            .shimmerEffect()
+                            .height(20.dp)
+                            .padding(start = 10.dp),
+                    )
+                    Spacer(modifier = Modifier.width(100.dp))
+                    Box(
+
+                        modifier = Modifier
+                            .width(70.dp)
+                            .shimmerEffect()
+                            .height(20.dp)
+                            .padding(end = 5.dp),
+                    )
+                }
+
                 Spacer(modifier = Modifier.height(2.dp))
                 Row(modifier = Modifier.fillMaxWidth(1f)) {
                     Box(
                         modifier = Modifier
-                            .height(45.dp)
+                            .height(35.dp)
                             .padding(start = 5.dp, top = 5.dp, end = 5.dp, bottom = 5.dp)
-                            .fillMaxWidth(0.5f)
+                            .fillMaxWidth(1f)
                             .shimmerEffect()
                     )
 
 
-                    Box(
-                        modifier = Modifier
-                            .height(45.dp)
-                            .padding(start = 5.dp, top = 5.dp, end = 5.dp, bottom = 5.dp)
-                            .fillMaxWidth(0.5f)
-                            .shimmerEffect()
-                    )
+
 
                 }
 

@@ -15,4 +15,9 @@ interface BooksResponsitory {
     fun selectBooks(): Flow<List<Result>>
 
     suspend fun selectBook(id: Int): Result?
+
+    fun getBooksWithDiscount(): Flow<List<Result>>
+
+    fun getBooksWithCategory(categoryId:Int):Flow<List<Result>>
+
 }

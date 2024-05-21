@@ -11,5 +11,7 @@ data class BooksUseCase(
     val upsertBooks: UpsertBooks,
     val deleteBooks: DeleteBooks,
     val selectBooks: SelectBooks,
-    val selectBook: SelectBook
+    val selectBook: SelectBook,
+    val getBooksWithDiscount: GetBooksWithDiscount,
+    val getBooksWithCategory: GetBooksWithCategory
 )

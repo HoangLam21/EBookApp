@@ -20,6 +20,8 @@ import com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases
 import com.plcoding.e_book.domain.usecases.app_entry.ReadAppEntry
 import com.plcoding.e_book.domain.usecases.app_entry.SaveAppEntry
 import com.plcoding.e_book.domain.usecases.book.BooksUseCase
+import com.plcoding.e_book.domain.usecases.book.GetBooksWithCategory
+import com.plcoding.e_book.domain.usecases.book.GetBooksWithDiscount
 import com.plcoding.e_book.domain.usecases.books.DeleteBooks
 import com.plcoding.e_book.domain.usecases.books.GetBooks
 import com.plcoding.e_book.domain.usecases.books.SelectBook
@@ -90,7 +92,9 @@ object AppModule {
             upsertBooks = UpsertBooks(booksResponsitory),
             deleteBooks = DeleteBooks(booksResponsitory),
             selectBooks = SelectBooks(booksResponsitory),
-            selectBook = SelectBook(booksResponsitory)
+            selectBook = SelectBook(booksResponsitory),
+            getBooksWithDiscount = GetBooksWithDiscount(booksResponsitory),
+            getBooksWithCategory = GetBooksWithCategory(booksResponsitory)
         )
     }
 

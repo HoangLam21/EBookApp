@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.plcoding.e_book.app-mergeDebugResources-2:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.plcoding.e_book.app-mergeDebugResources-68:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BAO ANH\\.gradle\\caches\\transforms-3\\d0dcc173c09ac492939b5e0fb2f764ee\\transformed\\core-splashscreen-1.0.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Lenovo\\.gradle\\caches\\transforms-3\\d0dcc173c09ac492939b5e0fb2f764ee\\transformed\\core-splashscreen-1.0.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

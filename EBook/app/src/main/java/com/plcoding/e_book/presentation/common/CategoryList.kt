@@ -18,10 +18,10 @@ import com.plcoding.e_book.domain.model.Category.Result
 @Composable
 fun CategoriesList(
     category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>,
-    onClick: (com.plcoding.e_book.domain.model.Category.Result) -> Unit
+    onClick: (Int) -> Unit
 ) {
     val handlerPagingResult = handlePagingResult(category = category)
-    if(handlerPagingResult){
+    if (handlerPagingResult) {
         LazyRow(
             modifier = Modifier
                 .fillMaxSize()
@@ -29,16 +29,14 @@ fun CategoriesList(
                 .height(100.dp)
                 .padding(start = 11.dp)
         ) {
-            items(count = category.itemCount){
-                category[it]?.let{
-                    CategoryCard(category = it, onClick={onClick(it)})
+            items(count = category.itemCount) {
+                category[it]?.let {
+                    CategoryCard(category = it, onClick = { onClick(it.id) })
                     Spacer(modifier = Modifier.width(25.dp))
                 }
             }
-
         }
     }
-
 }
 
 

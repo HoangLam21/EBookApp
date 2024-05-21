@@ -26,6 +26,8 @@ import com.plcoding.e_book.presentation.book.BookDetailsViewModel
 import com.plcoding.e_book.presentation.book.DetailsEvent
 import com.plcoding.e_book.presentation.book.PaidBookDetailsScreen
 import com.plcoding.e_book.presentation.book.UnpaidBookDetailsScreen
+import com.plcoding.e_book.presentation.booksWithCategory.BooksWithCategoryScreen
+import com.plcoding.e_book.presentation.booksWithCategory.BooksWithCategoryViewModel
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigation
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigationItem
 import com.plcoding.e_book.presentation.category.CategoryScreen
@@ -35,7 +37,6 @@ import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel
 import com.plcoding.e_book.presentation.home.HomeScreen
 import com.plcoding.e_book.presentation.home.HomeViewModel
 import com.plcoding.e_book.presentation.navgragh.Route
-import com.plcoding.e_book.presentation.upgrade.Upgrade
 import com.plcoding.e_book.presentation.upgrade_account.UpgradeAccountScreen
 
 @Composable
@@ -113,8 +114,11 @@ fun BooksNavigator() {
                 val viewModel: HomeViewModel = hiltViewModel()
                 val resultitem = viewModel.book.collectAsLazyPagingItems()
                 val category = viewModel.category.collectAsLazyPagingItems()
+                val booksWithDiscount =viewModel.booksWithDiscount
+                val viewModel2: CategoryViewModel = hiltViewModel()
+                val booksWithCategory = viewModel2.booksWithCategory
                 HomeScreen(
-                    books = resultitem,
+                    books = resultitem,booksWithDiscount,
                     navigateToSearch = {
                         navigateToTab(
                             navController = navController,
@@ -124,16 +128,21 @@ fun BooksNavigator() {
                     navigateToDetail = {
                             result ->
                         navigateToDetails(navController = navController, result = result)
-                    }, category=category,
+                    },
+                    category =category,
                     navigateToCategory = {
                         navigateToTab(
                             navController=navController,
                             route=Route.CategoryScreen.route
                         )
-                    }, navigateToLike = {
-                        navController.navigate( Route.FavoriteScreen.route)
+                    },
+                    navigateToBooksWithCategory = {
+                        navigateToTab(navController=navController, route=Route.BooksWithCategoryScreen.route)
                     }
-                )
+
+                ) {
+                    navController.navigate(Route.FavoriteScreen.route)
+                }
             }
             Log.d("da vo viewmd","111")
 
@@ -163,6 +172,13 @@ fun BooksNavigator() {
                         }
                     )
                 }
+            }
+
+            composable(route = Route.CategoryScreen.route){
+                val viewModel: CategoryViewModel = hiltViewModel()
+                val books = viewModel.book.collectAsLazyPagingItems()
+                val categories=viewModel.category.collectAsLazyPagingItems()
+                CategoryScreen(books = books, category = categories, navigateUp = {navController.navigateUp()})
             }
             composable(route = Route.PaidDetailsScreen.route){
 
@@ -194,6 +210,19 @@ fun BooksNavigator() {
                     navigateUp = {navController.navigateUp()})
             }
 
+            composable(route = Route.BooksWithCategoryScreen.route) { backStackEntry ->
+                val viewModel: CategoryViewModel = hiltViewModel()
+                val categoryId = backStackEntry.arguments?.getInt("categoryId") ?: 0
+                viewModel.setCategory(categoryId)
+
+                BooksWithCategoryScreen(
+                    books = viewModel.booksWithCategory,
+                    categoryId = categoryId,
+                    navigateUp = {
+                        navController.navigateUp()
+                    }
+                )
+            }
 //            composable(route = Route.FavoriteScreen.route) {
 //                val viewModel: FavouriteBookViewModel = hiltViewModel()
 //               val state = viewModel.state.value

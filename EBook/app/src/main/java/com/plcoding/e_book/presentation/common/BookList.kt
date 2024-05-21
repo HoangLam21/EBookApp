@@ -106,7 +106,7 @@ private fun BookListShimmerEffect() {
     Row {
         repeat(10){
             BookCardShimmerEffect()
-            Spacer(modifier = Modifier.width(5.dp))
+            Spacer(modifier = Modifier.width(8.dp))
         }
     }
 }
@@ -196,7 +196,7 @@ private fun ShimmerEffectContinueReading() {
     Row {
         repeat(20) {
             ContinueReadingShimmerEffect()
-            Spacer(modifier = Modifier.width(5.dp))
+            Spacer(modifier = Modifier.width(8.dp))
         }
     }
 }
@@ -260,7 +260,7 @@ private fun ShimmerEffectHot() {
     Row {
         repeat(20) {
             HotBookCardShimmerEffect()
-            Spacer(modifier = Modifier.width(5.dp))
+            Spacer(modifier = Modifier.width(8.dp))
         }
     }
 }
@@ -275,12 +275,12 @@ fun BooksListCategory(
     if(handlePagingResult){
         LazyRow(
             modifier = modifier.fillMaxSize(),
-            horizontalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
             contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
         ) {
             items(count = resultitem.itemCount){
                 resultitem[it]?.let{
                     BookCardCategory(book = it, onClick = {onClick(it)})
+                    Spacer(modifier = Modifier.width(5.dp))
                 }
             }
         }

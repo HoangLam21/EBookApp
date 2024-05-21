@@ -22,4 +22,10 @@ interface BooksDao {
 
     @Query("SELECT * FROM Result WHERE id=:id")
     suspend fun getBooks(id: Int): Result?
+
+    @Query("SELECT * FROM Result WHERE discount > 0")
+    fun getBooksWithDiscount(): Flow<List<Result>>
+
+    @Query("SELECT * FROM Result WHERE category IN (SELECT id FROM Result WHERE Result.id =:categoryId)")
+    fun getBooksWithCategory(categoryId:Int): Flow<List<Result>>
 }
