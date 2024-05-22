@@ -29,6 +29,8 @@ import com.plcoding.e_book.domain.usecases.category.CategoryUseCase
 import com.plcoding.e_book.domain.usecases.category.GetCategory
 import com.plcoding.e_book.domain.usecases.category.SelectCategories
 import com.plcoding.e_book.domain.usecases.category.SelectCategory
+import com.plcoding.e_book.presentation.reading.ChapterDao
+import com.plcoding.e_book.presentation.reading.ChapterDatabase
 import com.plcoding.e_book.util.Constants
 import com.plcoding.e_book.util.Constants.BOOKS_DATABASE_NAME
 import com.plcoding.e_book.util.Constants.CATEGORY_DATABASE_NAME
@@ -166,4 +168,21 @@ object AppModule {
        categoryDatabase: CategoryDatabase
     ):CategoryDao=categoryDatabase.categoryDao
 
+    @Provides
+    @Singleton
+    fun provideChapterDatabase(application: Application): ChapterDatabase {
+        return Room.databaseBuilder(
+            application,
+            ChapterDatabase::class.java,
+            "CHAPTER_DATABASE_NAME"
+        )
+            .fallbackToDestructiveMigration()
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun  provideChapterDao(
+        chapterDatabase: ChapterDatabase
+    ): ChapterDao = chapterDatabase.chapterDao()
 }

@@ -15,10 +15,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.Account.Account
@@ -35,6 +37,7 @@ import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel
 import com.plcoding.e_book.presentation.home.HomeScreen
 import com.plcoding.e_book.presentation.home.HomeViewModel
 import com.plcoding.e_book.presentation.navgragh.Route
+import com.plcoding.e_book.presentation.reading.ChapterScreen
 import com.plcoding.e_book.presentation.upgrade.Upgrade
 import com.plcoding.e_book.presentation.upgrade_account.UpgradeAccountScreen
 
@@ -180,6 +183,9 @@ fun BooksNavigator() {
                         result = result,
                         event = viewModel::onEvent,
                         navigateUp = {navController.navigateUp()},
+                        navigateReading = { chapterIndex ->
+                            navController.navigate(Route.ReadingScreen.createRoute(chapterIndex))
+                        },
                     )
                 }
             }
@@ -212,6 +218,14 @@ fun BooksNavigator() {
             }
             composable(route=Route.AccountScreen.route){
                 Account()
+            }
+
+            composable(
+                route = Route.ReadingScreen.route,
+                arguments = listOf(navArgument("chapterIndex") { type = NavType.IntType })
+            ) { backStackEntry ->
+                val chapterIndex = backStackEntry.arguments?.getInt("chapterIndex") ?: 0
+                ChapterScreen(chapterIndex, navigateUp = { navController.navigateUp() })
             }
         }
 

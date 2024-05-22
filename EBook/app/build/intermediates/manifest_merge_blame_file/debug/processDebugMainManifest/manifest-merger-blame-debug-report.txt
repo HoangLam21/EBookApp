@@ -9,30 +9,30 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:4:5-66
-11-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:4:22-64
 12
 13    <queries>
-13-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:29:5-38:15
+13-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:29:5-38:15
 14        <intent>
-14-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:30:9-34:18
+14-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:30:9-34:18
 15            <action android:name="android.intent.action.VIEW" />
-15-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:31:13-65
-15-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:31:21-62
+15-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:31:13-65
+15-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:31:21-62
 16
 17            <category android:name="android.intent.category.BROWSABLE" />
-17-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:32:13-74
-17-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:32:23-71
+17-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:32:13-74
+17-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:32:23-71
 18
 19            <data android:scheme="https" />
-19-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:33:13-44
-19-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:33:19-41
+19-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:33:13-44
+19-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:33:19-41
 20        </intent>
 21        <intent>
-21-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:35:9-37:18
+21-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:35:9-37:18
 22            <action android:name="android.intent.action.SEND" />
-22-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:36:13-64
-22-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:36:21-62
+22-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:36:13-64
+22-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:36:21-62
 23        </intent>
 24    </queries>
 25
@@ -48,49 +48,49 @@
 30-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 31
 32    <application
-32-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:6:5-28:19
+32-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:6:5-28:19
 33        android:name="com.plcoding.e_book.NewEBookApplication"
-33-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:7:9-44
+33-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:7:9-44
 34        android:allowBackup="true"
-34-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:8:9-35
+34-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:8:9-35
 35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 35-->[androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 36        android:dataExtractionRules="@xml/data_extraction_rules"
-36-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:9:9-65
+36-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:9:9-65
 37        android:debuggable="true"
 38        android:extractNativeLibs="false"
 39        android:fullBackupContent="@xml/backup_rules"
-39-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:10:9-54
+39-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:10:9-54
 40        android:icon="@mipmap/ic_launcher"
-40-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:11:9-43
+40-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:11:9-43
 41        android:label="@string/app_name"
-41-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:12:9-41
+41-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:12:9-41
 42        android:roundIcon="@mipmap/ic_launcher_round"
-42-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:13:9-54
+42-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:13:9-54
 43        android:supportsRtl="true"
-43-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:14:9-35
+43-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:14:9-35
 44        android:testOnly="true"
 45        android:theme="@style/Theme.EBook" >
-45-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:15:9-43
+45-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:15:9-43
 46        <activity
-46-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:17:9-27:20
+46-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:17:9-27:20
 47            android:name="com.plcoding.e_book.mainActivity.MainActivity"
-47-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:18:13-54
+47-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:18:13-54
 48            android:exported="true"
-48-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:19:13-36
+48-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:19:13-36
 49            android:label="@string/app_name"
-49-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:20:13-45
+49-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:20:13-45
 50            android:theme="@style/Theme.EBook" >
-50-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:21:13-47
+50-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:21:13-47
 51            <intent-filter>
-51-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:22:13-26:29
+51-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:22:13-26:29
 52                <action android:name="android.intent.action.MAIN" />
-52-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:23:17-69
-52-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:23:25-66
+52-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:23:17-69
+52-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:23:25-66
 53
 54                <category android:name="android.intent.category.LAUNCHER" />
-54-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:25:17-77
-54-->C:\New folder\EBook\app\src\main\AndroidManifest.xml:25:27-74
+54-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:25:17-77
+54-->C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:25:27-74
 55            </intent-filter>
 56        </activity>
 57

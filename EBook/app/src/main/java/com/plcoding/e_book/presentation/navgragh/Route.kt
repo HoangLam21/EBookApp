@@ -33,5 +33,7 @@ sealed class Route(
 
     object FavoriteScreen : Route(route="favriteBookScreen")
 
-
+    object ReadingScreen : Route(route = "readingScreen/{chapterIndex}") {
+        fun createRoute(chapterIndex: Int) = "readingScreen/$chapterIndex"
+    }
 }

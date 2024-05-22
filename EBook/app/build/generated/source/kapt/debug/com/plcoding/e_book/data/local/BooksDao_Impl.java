@@ -173,7 +173,7 @@ public final class BooksDao_Impl implements BooksDao {
   }
 
   @Override
-  public Object upsert(final Result result, final Continuation<? super Unit> arg1) {
+  public Object upsert(final Result result, final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       @NonNull
@@ -187,11 +187,11 @@ public final class BooksDao_Impl implements BooksDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   @Override
-  public Object delete(final Result result, final Continuation<? super Unit> arg1) {
+  public Object delete(final Result result, final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       @NonNull
@@ -205,7 +205,7 @@ public final class BooksDao_Impl implements BooksDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   @Override
@@ -391,7 +391,7 @@ public final class BooksDao_Impl implements BooksDao {
   }
 
   @Override
-  public Object getBooks(final int id, final Continuation<? super Result> arg1) {
+  public Object getBooks(final int id, final Continuation<? super Result> $completion) {
     final String _sql = "SELECT * FROM Result WHERE id=?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
@@ -568,7 +568,7 @@ public final class BooksDao_Impl implements BooksDao {
           _statement.release();
         }
       }
-    }, arg1);
+    }, $completion);
   }
 
   @NonNull

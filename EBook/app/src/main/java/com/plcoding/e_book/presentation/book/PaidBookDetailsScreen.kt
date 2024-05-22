@@ -52,12 +52,16 @@ import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import com.plcoding.e_book.ui.theme.SecondaryKeyColor
 import com.plcoding.e_book.domain.model.Books.Result
 
+
 @Composable
 fun PaidBookDetailsScreen(result: Result,
                           event: (DetailsEvent) -> Unit,
                           navigateUp: ()-> Unit,
+                          navigateReading: (Int) -> Unit
 
 ) {
+    var readingprocess = result.readingsession
+
     val context = LocalContext.current
     Column(
         modifier = Modifier
@@ -239,7 +243,7 @@ fun PaidBookDetailsScreen(result: Result,
 
                             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly,
                                 verticalAlignment = Alignment.CenterVertically) {
-                                Button(onClick = {},
+                                Button(onClick = { navigateReading(0) },
                                     Modifier
                                         .padding(Dimens.ExtraSmallPadding2),
                                     colors = ButtonDefaults.buttonColors(PrimaryKeyColor)) {
@@ -251,7 +255,7 @@ fun PaidBookDetailsScreen(result: Result,
                                         modifier = Modifier.padding(Dimens.ExtraSmallPadding2)
                                     )
                                 }
-                                Button(onClick = {},
+                                Button(onClick = { navigateReading(readingprocess) },
                                     Modifier
                                         .padding(Dimens.ExtraSmallPadding2),
                                     colors = ButtonDefaults.buttonColors(PrimaryKeyColor)) {
