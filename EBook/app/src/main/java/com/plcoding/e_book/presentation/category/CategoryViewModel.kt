@@ -50,7 +50,7 @@ class CategoryViewModel  @Inject constructor(
     val booksWithCategory: Flow<List<com.plcoding.e_book.domain.model.Books.Result>> = _categoryId
         .filterNotNull()
         .flatMapLatest { categoryId ->
-            bookUseCases.getBooksWithCategory(1)
+            bookUseCases.getBooksWithCategory(categoryId)
         }
 
     fun setCategory(categoryId: Int) {

@@ -41,17 +41,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        lifecycleScope.launch {
-            orderViewModel.createOrder(
-                token="Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uYXV0aGVudGljYXRpb24iLCJzdWIiOiJiZWhlbzEyIiwiZXhwIjoxNzE2Mzk5MzI1LCJpYXQiOjE3MTYzOTU3MjUsInNjb3BlIjoiQ1VTVE9NRVIgR0VUX01ZX1BBWU1FTlRTIEdFVF9NWV9CT09LUyBDQU5DTEVfT1JERVIgQ1JFQVRFX09SREVSIn0.WGio-Ai8zPoWLXaHjylxygAg5aw7NPx0XcXhG39UiXo",
-                Result(
-                    fullname = "John Doe",
-                    order_note = "Please deliver between 9-12 AM",
-                    address = "123 Main Street",
-                    order_details = orderDetails
-                )
-            )
-        }
+//        lifecycleScope.launch {
+//            orderViewModel.createOrder(
+//                token="Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uYXV0aGVudGljYXRpb24iLCJzdWIiOiJiZWhlbzEyIiwiZXhwIjoxNzE2NDQyMzkzLCJpYXQiOjE3MTY0Mzg3OTMsInNjb3BlIjoiQ1VTVE9NRVIgQ0FOQ0xFX09SREVSIENSRUFURV9PUkRFUiBHRVRfTVlfUEFZTUVOVFMgR0VUX01ZX0JPT0tTIn0.DBTpq-PgupJadJYkzWh8NTFM9wqZVfi5Gz00Y3IHqLo",
+//                Result(
+//                    fullname = "John Doe",
+//                    order_note = "Please deliver between 9-12 AM",
+//                    address = "123 Main Street",
+//                    order_details = orderDetails
+//                )
+//            )
+//        }
 
         lifecycleScope.launch {
             paymentViewModel.makePayment(
