@@ -2,6 +2,7 @@ package com.plcoding.e_book.presentation.book
 
 import android.content.Intent
 import android.graphics.BitmapFactory
+import android.net.Uri
 import android.util.Base64
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,6 +25,9 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -47,6 +51,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.Dimens.MediumText
@@ -139,10 +144,23 @@ fun UnpaidBookDetailsScreen(
     navigateUp: ()-> Unit,
     resultitem: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
     navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
-    navigateOrder: ()->Unit
+    viewModel: BookDetailsViewModel = hiltViewModel()
+//    navigateToCheckout: ()->Unit
+
 ) {
 
     val context = LocalContext.current
+
+    val paymentUrl by viewModel.paymentUrl.observeAsState()
+
+    LaunchedEffect(paymentUrl) {
+        paymentUrl?.let { url ->
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            context.startActivity(intent)
+        }
+    }
+
 
     Column(
         modifier = Modifier
@@ -321,21 +339,33 @@ fun UnpaidBookDetailsScreen(
 
                             }
                             Spacer(modifier = Modifier.height(Dimens.MediumPadding1))
+                            val viewModel: BookDetailsViewModel= hiltViewModel()
 
-
-
-                            Button(onClick = navigateOrder,
+                            Button(
+                                onClick = {
+//                                          navigateToCheckout
+                                    // Gọi hàm createOrder với idBook là result.id khi nhấn nút "Mua VIP"
+                                    viewModel.createOrder(result.id)
+                                },
                                 Modifier
                                     .fillMaxWidth()
                                     .padding(Dimens.ExtraSmallPadding2),
-                                colors = ButtonDefaults.buttonColors(PrimaryKeyColor)) {
-
-                                Text(text = "Mua VIP",
+                                colors = ButtonDefaults.buttonColors(PrimaryKeyColor)
+                            ) {
+                                Text(
+                                    text = "Mua VIP",
                                     style = MaterialTheme.typography.bodySmall,
                                     fontWeight = FontWeight.Bold,
                                     color = Color.White
                                 )
                             }
+//                            val orderId by viewModel.orderId.collectAsState()
+//
+//                            // Đoạn code dưới đây sẽ được gọi khi orderId thay đổi
+//                            orderId?.let { orderId ->
+//                                // Chuyển hướng đến màn hình CheckoutScreen và truyền orderId
+//                                navigateToOrder(orderId)
+//                            }
                         }
                     }
                 }

@@ -14,9 +14,12 @@ class paymentViewModel: ViewModel() {
     fun makePayment(orderId: Int, method: Int) {
         viewModelScope.launch {
             try {
-                val response: Response<Void> = paymentApi.PaymentPost(orderId, method)
+                val response = RetrofitInstance.api.PaymentPost(orderId,method)
+                val responseURL = response.body()
                 if (response.isSuccessful) {
-                    Log.d("PaymentViewModel", "Payment successful")
+                    if (responseURL != null) {
+                        Log.d("PaymentViewModel", "Payment successful"+responseURL.result.paymentURL)
+                    }
                 } else {
                     Log.e("PaymentViewModel", "Payment failed: ${response.errorBody()?.string()}")
                 }

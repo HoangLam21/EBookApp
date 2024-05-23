@@ -134,7 +134,7 @@ fun BooksNavigator() {
                             route=Route.CategoryScreen.route
                         )
                     },
-                    navigateToBooksWithCategory = {
+                    navigateToBooksWithCategory = { categoryId ->
                         navigateToTab(navController=navController, route=Route.BooksWithCategoryScreen.route)
                     }
 
@@ -148,6 +148,9 @@ fun BooksNavigator() {
 
                 val viewModel: BookDetailsViewModel = hiltViewModel()
                 val resultitem = viewModel.books.collectAsLazyPagingItems()
+
+
+                val orderId:Int
 
                 if(viewModel.sideEffect!=null){
                     Toast.makeText(LocalContext.current, viewModel.sideEffect, Toast.LENGTH_SHORT).show()
@@ -164,10 +167,12 @@ fun BooksNavigator() {
                         navigateToDetail = {
                                 resultitem ->
                             navigateToDetails(navController = navController, result = resultitem)
-                        },
-                        navigateOrder = {
-                            navController.navigate( Route.UpgradeAccountScreen.route)
                         }
+//                        navigateToCheckout = {
+//                            viewModel.createOrder(result.id)
+//                            navigateToTab(navController = navController, route=Route.CheckoutScreen.route)                        }
+
+
                     )
                 }
             }
@@ -234,7 +239,7 @@ fun BooksNavigator() {
 //                FavouriteBookScreen(state = state,
 //                    navigateToDetails = {result -> navigateToDetails(navController =navController, result = result)  })
             }
-            composable(route = Route.UpgradeAccountScreen.route){
+            composable(route = Route.CheckoutScreen.route){
                 UpgradeAccountScreen(navigateUp = {navController.navigateUp()} )
             }
             composable(route=Route.AccountScreen.route){
@@ -262,10 +267,15 @@ private fun navigateToTab(navController: NavController, route: String){
 
 private fun navigateToDetails(navController: NavController, result: com.plcoding.e_book.domain.model.Books.Result) {
     navController.currentBackStackEntry?.savedStateHandle?.set("book", result)
-    val route = if (result.id == 1 || result.id == 2|| result.id == 3) {
+    val route = if (result.id == 1 || result.id == 2|| result.id == 3 || result.id==10) {
         Route.DetailsScreen.route
     } else {
         Route.PaidDetailsScreen.route
     }
     navController.navigate(route)
+}
+
+fun navigateToOrder(navController: NavController) {
+    val action = Route.CheckoutScreen.route
+    navController.navigate(action)
 }

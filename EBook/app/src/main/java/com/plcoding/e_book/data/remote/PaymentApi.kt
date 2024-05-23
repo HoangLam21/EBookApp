@@ -1,5 +1,6 @@
 package com.plcoding.e_book.data.remote
 
+import com.plcoding.e_book.data.remote.dto.APIResponseObj
 import com.plcoding.e_book.domain.model.Order.Result
 import retrofit2.Response
 import retrofit2.http.Body
@@ -12,5 +13,5 @@ interface PaymentApi {
     suspend fun PaymentPost(
         @Query("order_id") orderId:Int,
         @Query("method") method: Int
-    ): Response<Void>
+    ): Response<APIResponseObj<ResponseURLPayment>>
 }

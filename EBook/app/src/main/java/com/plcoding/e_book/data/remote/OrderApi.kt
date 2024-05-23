@@ -1,6 +1,7 @@
 package com.plcoding.e_book.data.remote
 
-import com.plcoding.e_book.data.remote.dto.APIResponse
+import com.plcoding.e_book.data.remote.dto.APIResponseArr
+import com.plcoding.e_book.data.remote.dto.APIResponseObj
 import com.plcoding.e_book.domain.model.Order.OrderResponse
 import com.plcoding.e_book.domain.model.Order.Result
 import retrofit2.Response
@@ -13,7 +14,7 @@ interface OrderApi {
     suspend fun CreateOrderPost(
         @Header("Authorization") token: String,
         @Body orderPost: Result
-    ): Response<APIResponse<OrderResponse>>
+    ): Response<APIResponseObj<OrderResponse>>
 
 
 }

@@ -23,7 +23,7 @@ sealed class Route(
 
     object BooksNavigatorScreen : Route(route = "booksNavigator")
 
-    object UpgradeAccountScreen : Route(route = "upgradeAccountScreen")
+    object CheckoutScreen : Route(route = "checkoutScreen")
 
     object PaidDetailsScreen : Route(route = "paidDetailsScreen")
 
@@ -34,6 +34,7 @@ sealed class Route(
     object FavoriteScreen : Route(route="favriteBookScreen")
 
     object BooksWithCategoryScreen : Route(route = "booksWithCategoryScreen")
+
 
 
 }
