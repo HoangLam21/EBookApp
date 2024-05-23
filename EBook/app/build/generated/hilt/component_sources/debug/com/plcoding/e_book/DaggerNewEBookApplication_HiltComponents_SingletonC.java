@@ -34,6 +34,8 @@ import com.plcoding.e_book.domain.usecases.category.CategoryUseCase;
 import com.plcoding.e_book.mainActivity.MainActivity;
 import com.plcoding.e_book.mainActivity.MainViewModel;
 import com.plcoding.e_book.mainActivity.MainViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.plcoding.e_book.presentation.Search.SearchViewModel;
+import com.plcoding.e_book.presentation.Search.SearchViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel;
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.plcoding.e_book.presentation.category.CategoryViewModel;
@@ -44,6 +46,8 @@ import com.plcoding.e_book.presentation.home.HomeViewModel;
 import com.plcoding.e_book.presentation.home.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel;
 import com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.plcoding.e_book.presentation.payment.paymentViewModel;
+import com.plcoding.e_book.presentation.payment.paymentViewModel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -396,7 +400,7 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(6).add(BookDetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavouriteBookViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(8).add(BookDetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavouriteBookViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SearchViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(paymentViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -434,6 +438,10 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
     private Provider<OnBoardingViewModel> onBoardingViewModelProvider;
 
+    private Provider<SearchViewModel> searchViewModelProvider;
+
+    private Provider<paymentViewModel> paymentViewModelProvider;
+
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
         ViewModelLifecycle viewModelLifecycleParam) {
@@ -453,11 +461,13 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
       this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
       this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
       this.onBoardingViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
+      this.searchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 6);
+      this.paymentViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 7);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(6).put("com.plcoding.e_book.presentation.book.BookDetailsViewModel", ((Provider) bookDetailsViewModelProvider)).put("com.plcoding.e_book.presentation.category.CategoryViewModel", ((Provider) categoryViewModelProvider)).put("com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel", ((Provider) favouriteBookViewModelProvider)).put("com.plcoding.e_book.presentation.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.plcoding.e_book.mainActivity.MainViewModel", ((Provider) mainViewModelProvider)).put("com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(8).put("com.plcoding.e_book.presentation.book.BookDetailsViewModel", ((Provider) bookDetailsViewModelProvider)).put("com.plcoding.e_book.presentation.category.CategoryViewModel", ((Provider) categoryViewModelProvider)).put("com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel", ((Provider) favouriteBookViewModelProvider)).put("com.plcoding.e_book.presentation.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.plcoding.e_book.mainActivity.MainViewModel", ((Provider) mainViewModelProvider)).put("com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.plcoding.e_book.presentation.Search.SearchViewModel", ((Provider) searchViewModelProvider)).put("com.plcoding.e_book.presentation.payment.paymentViewModel", ((Provider) paymentViewModelProvider)).build();
     }
 
     @Override
@@ -503,6 +513,12 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
           case 5: // com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel 
           return (T) new OnBoardingViewModel(singletonCImpl.provideAppEntryUseCasesProvider.get());
+
+          case 6: // com.plcoding.e_book.presentation.Search.SearchViewModel 
+          return (T) new SearchViewModel(singletonCImpl.provideBooksUseCasesProvider.get());
+
+          case 7: // com.plcoding.e_book.presentation.payment.paymentViewModel 
+          return (T) new paymentViewModel(singletonCImpl.provideBooksUseCasesProvider.get());
 
           default: throw new AssertionError(id);
         }

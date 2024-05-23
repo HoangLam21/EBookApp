@@ -27,6 +27,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.plcoding.e_book.Dimens.IconSize
 import com.plcoding.e_book.R
+import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -62,14 +63,14 @@ fun Searchbar(
                     painter = painterResource(id = R.drawable.ic_search),
                     contentDescription = null,
                     modifier = Modifier.size(IconSize),
-                    tint = colorResource(id = R.color.teal_700)
+                    tint = PrimaryKeyColor
                 )
             },
             placeholder = {
                 Text(
                     text = "Search",
                     style = MaterialTheme.typography.bodySmall,
-                    color = colorResource(id = R.color.teal_200)
+                    color = PrimaryKeyColor
                 )
             },
             shape = MaterialTheme.shapes.medium,
