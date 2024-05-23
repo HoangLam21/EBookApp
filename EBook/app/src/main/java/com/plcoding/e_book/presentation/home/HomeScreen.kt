@@ -22,7 +22,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -102,32 +104,11 @@ fun HomeScreen(
                     .fillMaxWidth(0.7f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                var text by rememberSaveable {
-                    mutableStateOf("")
-                }
-                OutlinedTextField(
-                    value = text,
-                    onValueChange = { text = it },
-                    label = {
-                        Text(
-                            text = "Searching for...",
-                            fontFamily = FontFamily(Font(R.font.cormorantgaramondmedium)),
-                            color = Color(android.graphics.Color.parseColor("#513820")),
-                            modifier = Modifier.align(Alignment.CenterHorizontally)
-                        )
-                    },
-                    shape = RoundedCornerShape(20.dp),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = Color(android.graphics.Color.parseColor("#7d6a58")),
-                        unfocusedBorderColor = Color(android.graphics.Color.parseColor("#7d6a58")),
-                        unfocusedLabelColor = Color(android.graphics.Color.parseColor("#7d6a58"))
-                    ),
-                    leadingIcon = { Icon(imageVector = Icons.Default.Search, contentDescription = null) },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                    ,
-                )
+                Button(onClick = navigateToSearch ) {}
+
             }
+
+
 
             Box(
                 modifier = Modifier

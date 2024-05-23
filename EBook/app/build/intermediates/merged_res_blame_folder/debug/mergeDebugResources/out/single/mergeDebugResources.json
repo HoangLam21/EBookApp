@@ -1,330 +1,398 @@
 [
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic8.png.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic8.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img4.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img4.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\logo.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_logo.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_logo.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_bookyoumaylike2.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\bookyoumaylike2.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_thumbnail2.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/thumbnail2.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_diamond.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\diamond.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_fontawesome6freesolid900.otf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/fontawesome6freesolid900.otf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img8.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img8.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img15.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img15.jpg"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic10.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic10.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_onboarding2.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/onboarding2.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img1.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img1.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondmediumitalic.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondmediumitalic.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_poppins_regular.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/poppins_regular.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_fontawesome6brandsregular400.otf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\fontawesome6brandsregular400.otf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_bookmark.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_bookmark.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_bookyoumaylike1.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\bookyoumaylike1.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_images.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/images.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_upgradeaccount.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\upgradeaccount.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondbold.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondbold.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondsemibolditalic.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondsemibolditalic.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img49.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img49.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondlightitalic.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondlightitalic.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_home.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_home.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img11.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img11.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img9.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img9.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_notfound.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/notfound.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img2.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img2.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_time.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_time.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_poppins_bold.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\poppins_bold.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img7.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img7.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_home.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondlight.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondlight.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_logo.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_logo.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_thumbnail1.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/thumbnail1.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_little_women_vintage_classics_5_2018_11_20_22_04_53.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\little_women_vintage_classics_5_2018_11_20_22_04_53.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_image50.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/image50.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img6.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img6.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_thumbnail2.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\thumbnail2.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondbolditalic.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondbolditalic.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondlight.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondlight.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_back_arrow.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_back_arrow.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_network_error.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_network_error.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img11.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img11.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondmedium.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondmedium.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_fontawesome6freesolid900.otf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\fontawesome6freesolid900.otf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img3.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img3.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_fontawesome6freeregular400.otf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/fontawesome6freeregular400.otf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img49.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img49.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img9.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img9.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_search.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_search.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_notfound.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\notfound.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondsemibold.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondsemibold.ttf"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic2.png.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic2.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_gmail_732200.png.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/gmail_732200.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_poppins_bold.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/poppins_bold.ttf"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic11.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic11.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_logo.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/logo.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondsemibold.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondsemibold.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img14.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img14.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_poppins_semibold.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\poppins_semibold.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_onboarding3.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/onboarding3.png"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic4.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic4.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img6.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img6.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img16.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img16.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_diamond.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/diamond.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img3.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img3.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img10.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img10.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramonditalic.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramonditalic.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img2.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img2.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_search_document.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_search_document.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_starfull.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/starfull.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img13.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img13.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_little_women_vintage_classics_1_2018_11_20_22_04_53.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/little_women_vintage_classics_1_2018_11_20_22_04_53.jpg"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic7.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic7.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/xml_backup_rules.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/xml/backup_rules.xml"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic14.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic14.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_little_women_vintage_classics.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/little_women_vintage_classics.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_star.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/star.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img10.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img10.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_network.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_network.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_poppins_regular.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\poppins_regular.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_splash.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_splash.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_close.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_bookyoumaylike2.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/bookyoumaylike2.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_little_women_vintage_classics_5_2018_11_20_22_04_53.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/little_women_vintage_classics_5_2018_11_20_22_04_53.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_little_women_vintage_classics_1_2018_11_20_22_04_53.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\little_women_vintage_classics_1_2018_11_20_22_04_53.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img4.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img4.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/layout_activity_main.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/layout/activity_main.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_onboarding2.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\onboarding2.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondsemibolditalic.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondsemibolditalic.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_network.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_network.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img14.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img14.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_preferences.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_preferences.xml"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ebook.png.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/ebook.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img13.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img13.jpg"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic1.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic1.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondlightitalic.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondlightitalic.ttf"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic13.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic13.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_poppins_semibold.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/poppins_semibold.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_bookmark.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_bookmark.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/xml_data_extraction_rules.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_images.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\images.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramonditalic.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramonditalic.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondbolditalic.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondbolditalic.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_default_img.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\default_img.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img5.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img5.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img5.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img5.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_default_img.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/default_img.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_fontawesome6freeregular400.otf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\fontawesome6freeregular400.otf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_network_error.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_network_error.xml"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic5.png.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic5.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_search_document.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_search_document.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondmedium.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondmedium.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_onboarding3.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\onboarding3.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.plcoding.e_book.app-main-72:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondmediumitalic.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondmediumitalic.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_onboarding1.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/onboarding1.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_splash.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_splash.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img16.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img16.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_thumbnail1.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\thumbnail1.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_fontawesome6brandsregular400.otf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/fontawesome6brandsregular400.otf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_ic_close.xml.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/ic_close.xml"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_bookyoumaylike1.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/bookyoumaylike1.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img15.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img15.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img8.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img8.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_back_arrow.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_back_arrow.xml"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img1.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img1.jpg"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic12.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic12.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_upgradeaccount.png.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/upgradeaccount.png"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondbold.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondbold.ttf"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/font_cormorantgaramondregular.ttf.flat",
-        "source": "com.plcoding.e_book.app-main-72:/font/cormorantgaramondregular.ttf"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_star.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\star.png"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_img12.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/img12.jpg"
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic3.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic3.jpg"
     },
     {
-        "merged": "com.plcoding.e_book.app-debug-70:/drawable_little_women_vintage_classics_6_2018_11_20_22_04_53.jpg.flat",
-        "source": "com.plcoding.e_book.app-main-72:/drawable/little_women_vintage_classics_6_2018_11_20_22_04_53.jpg"
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_little_women_vintage_classics.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\little_women_vintage_classics.png"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img12.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img12.jpg"
+    },
+    {
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic15.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic15.jpg"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\font_cormorantgaramondregular.ttf.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\font\\cormorantgaramondregular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_little_women_vintage_classics_6_2018_11_20_22_04_53.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\little_women_vintage_classics_6_2018_11_20_22_04_53.jpg"
+    },
+    {
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic6.jpg.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic6.jpg"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_image50.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\image50.png"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_starfull.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\starfull.png"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_img7.jpg.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\img7.jpg"
+    },
+    {
+        "merged": "com.plcoding.e_book.app-debug-70:/drawable_pic9.png.flat",
+        "source": "com.plcoding.e_book.app-main-72:/drawable/pic9.png"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_preferences.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_preferences.xml"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_time.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-debug-70:\\drawable_onboarding1.png.flat",
+        "source": "C:\\Users\\JunKye\\.gradle\\daemon\\8.4\\com.plcoding.e_book.app-main-72:\\drawable\\onboarding1.png"
     }
 ]

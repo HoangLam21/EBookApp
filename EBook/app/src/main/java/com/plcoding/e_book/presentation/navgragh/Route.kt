@@ -35,6 +35,15 @@ sealed class Route(
 
     object BooksWithCategoryScreen : Route(route = "booksWithCategoryScreen")
 
+    object LoginScrn : Route(route = "loginScreen")
+    object RegisterScrn : Route(route = "registerScreen")
+    object TermScreen : Route(route = "termScreen")
+    object PrivacyScreen : Route(route = "privacyScreen")
+
+
+
+
+
 
 
 }

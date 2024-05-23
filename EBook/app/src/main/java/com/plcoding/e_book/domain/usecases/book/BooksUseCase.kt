@@ -8,6 +8,7 @@ import com.plcoding.e_book.domain.usecases.books.UpsertBooks
 
 data class BooksUseCase(
     val getBooks: GetBooks,
+    val searchBooks: SearchBooks,
     val upsertBooks: UpsertBooks,
     val deleteBooks: DeleteBooks,
     val selectBooks: SelectBooks,

@@ -21,6 +21,12 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.plcoding.e_book.presentation.Account.Account
+import com.plcoding.e_book.presentation.Login.LoginScreen
+import com.plcoding.e_book.presentation.Register.PrivacyPolicyScreen
+import com.plcoding.e_book.presentation.Register.RegisterScreen
+import com.plcoding.e_book.presentation.Register.TermConditionScreen
+import com.plcoding.e_book.presentation.Search.SearchScreen
+import com.plcoding.e_book.presentation.Search.SearchViewModel
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel
 import com.plcoding.e_book.presentation.book.DetailsEvent
 import com.plcoding.e_book.presentation.book.PaidBookDetailsScreen
@@ -35,11 +41,11 @@ import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel
 import com.plcoding.e_book.presentation.home.HomeScreen
 import com.plcoding.e_book.presentation.home.HomeViewModel
 import com.plcoding.e_book.presentation.navgragh.Route
+import com.plcoding.e_book.presentation.payment.paymentViewModel
 import com.plcoding.e_book.presentation.upgrade_account.UpgradeAccountScreen
 
 @Composable
 fun BooksNavigator() {
-
     val bottomNavigationItems = remember {
         listOf(
             BooksBottomNavigationItem(icon = "\uf015") ,
@@ -104,9 +110,53 @@ fun BooksNavigator() {
         val bottomPadding = it.calculateBottomPadding()
         NavHost(
             navController = navController,
-            startDestination = Route.HomeScreen.route,
+            startDestination = Route.LoginScrn.route,
             modifier = Modifier.padding(bottom = bottomPadding)
         ) {
+
+            composable(route = Route.LoginScrn.route) {
+                LoginScreen(
+                    onLoginClick = {
+                        navController.navigate(Route.HomeScreen.route)
+                    },
+                    onRegisterClick = {
+                        navController.navigate(Route.RegisterScrn.route)
+                    }
+                )
+
+            }
+            composable(route = Route.RegisterScrn.route) {
+                RegisterScreen(
+                    onLoginClick = {
+                        navController.navigate(Route.LoginScrn.route)
+                    },
+                    onTermClick = {
+                        navController.navigate(Route.TermScreen.route)
+                    },
+                    onPrivacyClick = {
+                        navController.navigate(Route.PrivacyScreen.route)
+                    },
+                    onRegisterClick = {
+                        navController.navigate(Route.LoginScrn.route)
+                    }
+
+                )
+            }
+            composable(route = Route.TermScreen.route) {
+                TermConditionScreen(
+                    onBtnClick = {
+                        navController.navigate(Route.RegisterScrn.route)
+                    }
+                )
+            }
+
+            composable(route = Route.PrivacyScreen.route) {
+                PrivacyPolicyScreen(
+                    onBtnClick = {
+                        navController.navigate(Route.RegisterScrn.route)
+                    }
+                )
+            }
 
             composable(route = Route.HomeScreen.route) { backStackEntry ->
                 val viewModel: HomeViewModel = hiltViewModel()
@@ -118,10 +168,7 @@ fun BooksNavigator() {
                 HomeScreen(
                     books = resultitem,booksWithDiscount,
                     navigateToSearch = {
-                        navigateToTab(
-                            navController = navController,
-                            route = Route.SearchScreen.route
-                        )
+                        navController.navigate(Route.SearchScreen.route)
                     },
                     navigateToDetail = {
                             result ->
@@ -177,6 +224,13 @@ fun BooksNavigator() {
                 }
             }
 
+            composable(route=Route.SearchScreen.route){
+                val viewModel: SearchViewModel = hiltViewModel()
+                val state = viewModel.state.value
+                SearchScreen(state = state, event = viewModel::onEvent) {
+
+                }
+            }
             composable(route = Route.CategoryScreen.route){
                 val viewModel: CategoryViewModel = hiltViewModel()
                 val books = viewModel.book.collectAsLazyPagingItems()

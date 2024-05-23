@@ -1,7 +1,6 @@
 package com.plcoding.e_book.mainActivity
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
@@ -13,12 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.lifecycleScope
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.plcoding.e_book.domain.model.Login.Result
+import com.plcoding.e_book.domain.model.Login.loginPost
 import com.plcoding.e_book.domain.model.Order.OrderDetail
-import com.plcoding.e_book.domain.model.Order.Result
+import com.plcoding.e_book.domain.model.Register.registerPost
 import com.plcoding.e_book.presentation.category.CategoryViewModel
-import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel
 import com.plcoding.e_book.presentation.navgragh.NavGragh
-import com.plcoding.e_book.presentation.order.OrderViewModel
 import com.plcoding.e_book.presentation.payment.paymentViewModel
 import com.plcoding.e_book.ui.theme.EBookTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -30,9 +29,13 @@ class MainActivity : ComponentActivity() {
 
     private val viewModel2: CategoryViewModel by viewModels()
 
-    private val orderViewModel: OrderViewModel by viewModels()
+    private val orderViewModel: paymentViewModel by viewModels()
 
     val orderDetails = listOf(OrderDetail(book_id = 4, quantity = 2))
+
+    val account = Result(username = "beheo12", password = "11111111")
+
+    val accoun2=registerPost(username = "hhh", password = "12345678", repassword = "12345678", email="asdfg", phonenumber = "0987654321", fullname = "lkjh")
 
     private val paymentViewModel: paymentViewModel by viewModels()
 
@@ -41,24 +44,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-//        lifecycleScope.launch {
-//            orderViewModel.createOrder(
-//                token="Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uYXV0aGVudGljYXRpb24iLCJzdWIiOiJiZWhlbzEyIiwiZXhwIjoxNzE2NDQyMzkzLCJpYXQiOjE3MTY0Mzg3OTMsInNjb3BlIjoiQ1VTVE9NRVIgQ0FOQ0xFX09SREVSIENSRUFURV9PUkRFUiBHRVRfTVlfUEFZTUVOVFMgR0VUX01ZX0JPT0tTIn0.DBTpq-PgupJadJYkzWh8NTFM9wqZVfi5Gz00Y3IHqLo",
-//                Result(
-//                    fullname = "John Doe",
-//                    order_note = "Please deliver between 9-12 AM",
-//                    address = "123 Main Street",
-//                    order_details = orderDetails
-//                )
-//            )
-//        }
-
         lifecycleScope.launch {
+            orderViewModel.createAccount(
+                accoun2
+            )
+        }
+
+        /*lifecycleScope.launch {
             paymentViewModel.makePayment(
                 orderId = 13,
                 method = 2
             )
-        }
+        }*/
 
         setContent {
             EBookTheme {
@@ -71,9 +68,6 @@ class MainActivity : ComponentActivity() {
                     NavGragh(startDestination = startDestination)
                     //CommentListScreen(onNavigate = {}, navigateUp = {})
                     //CommentScreen(viewModel = commentViewModel, navigateUp = {})
-
-
-
 
                 }
             }
