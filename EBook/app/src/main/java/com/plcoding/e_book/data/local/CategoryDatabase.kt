@@ -4,7 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.plcoding.e_book.domain.model.Category.Result
 
-@Database(entities = [Result::class], version =1)
+@Database(entities = [Result::class], version =2)
 abstract class CategoryDatabase: RoomDatabase() {
     abstract val categoryDao:CategoryDao
 }

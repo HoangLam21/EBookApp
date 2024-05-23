@@ -115,13 +115,11 @@ import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.plcoding.e_book.domain.model.Books.Author
-import com.plcoding.e_book.domain.model.Books.Category
 import com.plcoding.e_book.domain.model.Books.Feedback
 import com.plcoding.e_book.domain.model.Books.GalleryManage
 import com.plcoding.e_book.domain.model.Books.Language
 import com.plcoding.e_book.domain.model.Books.Provider
 import com.plcoding.e_book.domain.model.Books.Publisher
-import com.plcoding.e_book.domain.model.Books.Result
 
 @ProvidedTypeConverter
 class BooksTypeConvertor {
@@ -185,16 +183,6 @@ class BooksTypeConvertor {
     @TypeConverter
     fun toLanguage(languageString: String?): Language? {
         return languageString?.let { Gson().fromJson(it, Language::class.java) }
-    }
-
-    @TypeConverter
-    fun fromCategory(category: Category?): String? {
-        return category?.let { Gson().toJson(it) }
-    }
-
-    @TypeConverter
-    fun toCategory(categoryString: String?): Category? {
-        return categoryString?.let { Gson().fromJson(it, Category::class.java) }
     }
 
 

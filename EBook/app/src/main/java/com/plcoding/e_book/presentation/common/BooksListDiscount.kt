@@ -2,37 +2,27 @@ package com.plcoding.e_book.presentation.common
 
 
 
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.LiveData
 import com.plcoding.e_book.Dimens
-import com.plcoding.e_book.domain.model.Books.Result
-import com.plcoding.e_book.presentation.common.YouMayLikeCard
-import com.plcoding.e_book.presentation.common.handlePagingResultBookList
 import com.plcoding.e_book.presentation.home.HomeViewModel
 import kotlinx.coroutines.flow.Flow
-
-import kotlinx.coroutines.flow.flowOf
 
 @Composable
 fun BooksListDiscount(
     modifier: Modifier = Modifier,
-    resultitemFlow: Flow<List<Result>>, // Flow as parameter
-    onClick: (Result) -> Unit,
+    resultitemFlow: Flow<List<com.plcoding.e_book.domain.model.Books.Result>>, // Flow as parameter
+    onClick: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
     viewModel: HomeViewModel = hiltViewModel() // Getting ViewModel instance
 ) {
     val resultitem by resultitemFlow.collectAsState(initial = emptyList()) // Collect Flow

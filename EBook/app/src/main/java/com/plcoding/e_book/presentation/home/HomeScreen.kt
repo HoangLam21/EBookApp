@@ -43,10 +43,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.LiveData
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.common.BooksList
 import com.plcoding.e_book.presentation.common.BooksListDiscount
 import com.plcoding.e_book.presentation.common.CategoriesList
@@ -61,12 +59,12 @@ val fontAwesome = FontFamily(
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
-    books: LazyPagingItems<Result>,
-    booksWithDiscount: Flow<List<Result>>,
+    books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+    booksWithDiscount: Flow<List<com.plcoding.e_book.domain.model.Books.Result>>,
     navigateToSearch:() -> Unit,
 
     navigateToBooksWithCategory:(Int)->Unit,
-    navigateToDetail: (Result) -> Unit,
+    navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
     category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>,
     navigateToCategory:()->Unit,
     navigateToLike:()->Unit) {

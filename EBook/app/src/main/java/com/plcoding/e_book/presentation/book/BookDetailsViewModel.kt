@@ -11,7 +11,6 @@ import com.plcoding.e_book.domain.usecases.book.BooksUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import com.plcoding.e_book.domain.model.Books.Result
 
 @HiltViewModel
 class BookDetailsViewModel @Inject constructor(
@@ -43,7 +42,7 @@ class BookDetailsViewModel @Inject constructor(
         sources = listOf("bbc-news","abc-news", "al-jaz-egl")
     ).cachedIn(viewModelScope)
 
-    private suspend fun deleteBookResponseItem(result: Result) {
+    private suspend fun deleteBookResponseItem(result: com.plcoding.e_book.domain.model.Books.Result) {
         Log.d("da co delete","upsert")
 
         booksUseCase.deleteBooks(result = result)
@@ -52,7 +51,7 @@ class BookDetailsViewModel @Inject constructor(
         sideEffect = "Book Deleted"
     }
 
-    private suspend fun upserBookResponseItem(result: Result) {
+    private suspend fun upserBookResponseItem(result: com.plcoding.e_book.domain.model.Books.Result) {
         Log.d("da co delete","upsert")
 
         booksUseCase.upsertBooks(result= result)

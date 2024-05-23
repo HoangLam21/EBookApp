@@ -29,7 +29,7 @@ public abstract interface BooksDao {
     @org.jetbrains.annotations.NotNull
     public abstract kotlinx.coroutines.flow.Flow<java.util.List<com.plcoding.e_book.domain.model.Books.Result>> getBooksWithDiscount();
     
-    @androidx.room.Query(value = "SELECT * FROM Result WHERE category IN (SELECT id FROM Result WHERE Result.id =:categoryId)")
+    @androidx.room.Query(value = "SELECT * FROM Result WHERE categoryId =:categoryId")
     @org.jetbrains.annotations.NotNull
     public abstract kotlinx.coroutines.flow.Flow<java.util.List<com.plcoding.e_book.domain.model.Books.Result>> getBooksWithCategory(int categoryId);
 }
