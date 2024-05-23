@@ -19,12 +19,8 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -52,16 +48,12 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.paging.compose.LazyPagingItems
-import coil.compose.AsyncImage
-import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.Dimens.MediumText
 import com.plcoding.e_book.Dimens.SmallIconSize
-import com.plcoding.e_book.Dimens.SmallText
 import com.plcoding.e_book.R
 import com.plcoding.e_book.domain.model.Books.Feedback
 import com.plcoding.e_book.domain.model.Books.GalleryManage
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.common.BooksList
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
@@ -142,12 +134,12 @@ fun Base64ImageList(
 
 @Composable
 fun UnpaidBookDetailsScreen(
-    result: Result,
+    result: com.plcoding.e_book.domain.model.Books.Result,
     event: (DetailsEvent) -> Unit,
     navigateUp: ()-> Unit,
-    resultitem: LazyPagingItems<Result>,
-    navigateToDetail: (Result) -> Unit,
-    navigateUpgrade: ()->Unit
+    resultitem: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+    navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
+    navigateOrder: ()->Unit
 ) {
 
     val context = LocalContext.current
@@ -300,8 +292,8 @@ fun UnpaidBookDetailsScreen(
                                     )
                                     Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding))
 
-                                    result.category?.let {
-                                        Text(text = it.name,
+                                    result.categoryId?.let {
+                                        Text(text = it.toString(),
                                             style = MaterialTheme.typography.bodySmall,
                                             color = PrimaryKeyColor,
                                             modifier = Modifier
@@ -332,7 +324,7 @@ fun UnpaidBookDetailsScreen(
 
 
 
-                            Button(onClick = navigateUpgrade,
+                            Button(onClick = navigateOrder,
                                 Modifier
                                     .fillMaxWidth()
                                     .padding(Dimens.ExtraSmallPadding2),

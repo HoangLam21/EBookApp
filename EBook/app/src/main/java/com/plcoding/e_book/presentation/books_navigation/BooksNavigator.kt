@@ -20,14 +20,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.Account.Account
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel
 import com.plcoding.e_book.presentation.book.DetailsEvent
 import com.plcoding.e_book.presentation.book.PaidBookDetailsScreen
 import com.plcoding.e_book.presentation.book.UnpaidBookDetailsScreen
 import com.plcoding.e_book.presentation.booksWithCategory.BooksWithCategoryScreen
-import com.plcoding.e_book.presentation.booksWithCategory.BooksWithCategoryViewModel
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigation
 import com.plcoding.e_book.presentation.books_navigation.components.BooksBottomNavigationItem
 import com.plcoding.e_book.presentation.category.CategoryScreen
@@ -156,7 +154,7 @@ fun BooksNavigator() {
                     viewModel.onEvent(DetailsEvent.RemoveSideEffect)
 
                 }
-                navController.previousBackStackEntry?.savedStateHandle?.get<Result>("book")?.let{
+                navController.previousBackStackEntry?.savedStateHandle?.get<com.plcoding.e_book.domain.model.Books.Result>("book")?.let{
                         result ->
                     UnpaidBookDetailsScreen(
                         result = result,
@@ -167,7 +165,7 @@ fun BooksNavigator() {
                                 resultitem ->
                             navigateToDetails(navController = navController, result = resultitem)
                         },
-                        navigateUpgrade = {
+                        navigateOrder = {
                             navController.navigate( Route.UpgradeAccountScreen.route)
                         }
                     )
@@ -190,7 +188,7 @@ fun BooksNavigator() {
                     viewModel.onEvent(DetailsEvent.RemoveSideEffect)
 
                 }
-                navController.previousBackStackEntry?.savedStateHandle?.get<Result>("book")?.let{
+                navController.previousBackStackEntry?.savedStateHandle?.get<com.plcoding.e_book.domain.model.Books.Result>("book")?.let{
                         result ->
                     PaidBookDetailsScreen(
                         result = result,
@@ -262,7 +260,7 @@ private fun navigateToTab(navController: NavController, route: String){
 
 }
 
-private fun navigateToDetails(navController: NavController, result: Result) {
+private fun navigateToDetails(navController: NavController, result: com.plcoding.e_book.domain.model.Books.Result) {
     navController.currentBackStackEntry?.savedStateHandle?.set("book", result)
     val route = if (result.id == 1 || result.id == 2|| result.id == 3) {
         Route.DetailsScreen.route

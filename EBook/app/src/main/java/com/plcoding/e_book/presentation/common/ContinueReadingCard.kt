@@ -1,6 +1,5 @@
 package com.plcoding.e_book.presentation.common
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -23,26 +22,15 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Author
-import com.plcoding.e_book.domain.model.Books.Category
-import com.plcoding.e_book.domain.model.Books.Feedback
-import com.plcoding.e_book.domain.model.Books.GalleryManage
-import com.plcoding.e_book.domain.model.Books.Language
-import com.plcoding.e_book.domain.model.Books.Provider
-import com.plcoding.e_book.domain.model.Books.Publisher
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.book.Base64ImageList
-import com.plcoding.e_book.ui.theme.EBookTheme
 
 @Composable
 fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,

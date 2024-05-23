@@ -1,6 +1,5 @@
 package com.plcoding.e_book.domain.usecases.books
 
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.domain.repository.BooksResponsitory
 
 class UpsertBooks(
@@ -8,7 +7,7 @@ class UpsertBooks(
 
 ) {
 
-    suspend operator fun  invoke(result: Result){
+    suspend operator fun  invoke(result: com.plcoding.e_book.domain.model.Books.Result){
         booksResponsitory.upsertBooks(result)
     }
 }

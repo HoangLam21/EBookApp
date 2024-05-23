@@ -47,10 +47,10 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.R
+import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import com.plcoding.e_book.ui.theme.SecondaryKeyColor
-import com.plcoding.e_book.domain.model.Books.Result
 
 @Composable
 fun PaidBookDetailsScreen(result: Result,

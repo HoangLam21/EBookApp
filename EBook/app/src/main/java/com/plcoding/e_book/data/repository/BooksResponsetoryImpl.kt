@@ -6,7 +6,6 @@ import androidx.paging.PagingData
 import com.plcoding.e_book.data.local.BooksDao
 import com.plcoding.e_book.data.remote.BooksApi
 import com.plcoding.e_book.data.remote.BooksPagingSource
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.domain.repository.BooksResponsitory
 import kotlinx.coroutines.flow.Flow
 
@@ -15,7 +14,7 @@ class BooksResponsetoryImpl(
     private val booksDao: BooksDao
 ): BooksResponsitory {
 
-    override fun getBooks(sources: List<String>): Flow<PagingData<Result>> {
+    override fun getBooks(sources: List<String>): Flow<PagingData<com.plcoding.e_book.domain.model.Books.Result>> {
         return Pager(
             config = PagingConfig(pageSize = 10),
             pagingSourceFactory = {
@@ -27,29 +26,29 @@ class BooksResponsetoryImpl(
         ).flow
     }
 
-    override suspend fun upsertBooks(result: Result) {
+    override suspend fun upsertBooks(result: com.plcoding.e_book.domain.model.Books.Result) {
         booksDao.upsert(result)
     }
 
-    override suspend fun deleteBooks(result: Result) {
+    override suspend fun deleteBooks(result: com.plcoding.e_book.domain.model.Books.Result) {
         booksDao.delete(result)
 
     }
 
-    override fun selectBooks(): Flow<List<Result>> {
+    override fun selectBooks(): Flow<List<com.plcoding.e_book.domain.model.Books.Result>> {
         return booksDao.getBooks()
     }
 
-    override suspend fun selectBook(id: Int): Result? {
+    override suspend fun selectBook(id: Int): com.plcoding.e_book.domain.model.Books.Result? {
         return booksDao.getBooks(id)
 
     }
 
-    override fun getBooksWithDiscount(): Flow<List<Result>> {
+    override fun getBooksWithDiscount(): Flow<List<com.plcoding.e_book.domain.model.Books.Result>> {
         return booksDao.getBooksWithDiscount()
     }
 
-    override fun getBooksWithCategory(categoryId: Int): Flow<List<Result>> {
+    override fun getBooksWithCategory(categoryId: Int): Flow<List<com.plcoding.e_book.domain.model.Books.Result>> {
         return booksDao.getBooksWithCategory(categoryId)
     }
 

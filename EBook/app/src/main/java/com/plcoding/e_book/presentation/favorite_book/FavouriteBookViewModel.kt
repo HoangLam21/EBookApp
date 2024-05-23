@@ -4,7 +4,6 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.domain.usecases.book.BooksUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
@@ -23,7 +22,7 @@ class FavouriteBookViewModel @Inject constructor(
         getBook()
     }
 
-    val booksWithDiscount: Flow<List<Result>> = booksUseCases.getBooksWithDiscount()
+    val booksWithDiscount: Flow<List<com.plcoding.e_book.domain.model.Books.Result>> = booksUseCases.getBooksWithDiscount()
 
     private fun getBook(){
         booksUseCases.selectBooks()

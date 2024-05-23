@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.common.BooksListCategory
 
 val fontAwesome = FontFamily(
@@ -37,7 +36,7 @@ val fontAwesome = FontFamily(
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun CategoryScreen(books: LazyPagingItems<Result>,
+fun CategoryScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
                    category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>,
 //                   event:(DetailsEvent)->Unit,
                    navigateUp:()->Unit

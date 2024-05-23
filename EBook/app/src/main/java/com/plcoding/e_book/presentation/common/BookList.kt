@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -21,7 +20,6 @@ import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.Dimens
-import com.plcoding.e_book.domain.model.Books.Result
 
 @Composable
 fun BooksList(
@@ -79,8 +77,8 @@ fun handlePagingResult(
 @Composable
 fun BooksListDT(
     modifier: Modifier = Modifier,
-    resultitem: List<Result>,
-    onClick: (Result) -> Unit
+    resultitem: List<com.plcoding.e_book.domain.model.Books.Result>,
+    onClick: (com.plcoding.e_book.domain.model.Books.Result) -> Unit
 ) {
     Log.d("da vo viewmd","1144444")
 

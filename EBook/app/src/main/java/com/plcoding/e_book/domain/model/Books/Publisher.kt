@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 data class Publisher(
     val createAt: String,
     val createBy: String,
-    @PrimaryKey val id: Int? = null,
+    @PrimaryKey val id: Int?=null,
     val publisher_name: String,
     val updateAt: String,
     val updateBy: String

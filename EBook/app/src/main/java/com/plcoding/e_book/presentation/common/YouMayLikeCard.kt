@@ -22,17 +22,7 @@ import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Author
-import com.plcoding.e_book.domain.model.Books.Category
-import com.plcoding.e_book.domain.model.Books.Feedback
-import com.plcoding.e_book.domain.model.Books.GalleryManage
-import com.plcoding.e_book.domain.model.Books.Language
-import com.plcoding.e_book.domain.model.Books.Provider
-import com.plcoding.e_book.domain.model.Books.Publisher
-import com.plcoding.e_book.domain.model.Books.Result
-import com.plcoding.e_book.ui.theme.EBookTheme
 
 @Composable
 fun YouMayLikeCard(

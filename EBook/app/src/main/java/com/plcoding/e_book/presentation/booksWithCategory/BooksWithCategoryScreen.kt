@@ -15,28 +15,19 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.category.CategoryTopBar
-import com.plcoding.e_book.presentation.category.DetailCategoryList
-import com.plcoding.e_book.presentation.common.BooksListCategory
-import com.plcoding.e_book.presentation.navgragh.Route
 import kotlinx.coroutines.flow.Flow
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun BooksWithCategoryScreen(books: Flow<List<Result>>,
+fun BooksWithCategoryScreen(books: Flow<List<com.plcoding.e_book.domain.model.Books.Result>>,
     categoryId:Int,
 //                   event:(DetailsEvent)->Unit,
                    navigateUp:()->Unit
