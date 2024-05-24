@@ -15,11 +15,15 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.Dimens
+import com.plcoding.e_book.domain.model.Books.Result
+import kotlinx.coroutines.flow.Flow
 
 @Composable
 fun BooksList(
@@ -201,11 +205,13 @@ private fun ShimmerEffectContinueReading() {
 
 @Composable
 fun HotBooksList(
-    books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
-    onClick: (com.plcoding.e_book.domain.model.Books.Result) -> Unit
+    books: Flow<List<Result>>,
+    onClick: (Result) -> Unit
 ) {
-    val handlerPagingResult = handlePagingResultHot(books = books)
-    if(handlerPagingResult){
+    val bookList by books.collectAsState(initial = emptyList())
+    val handlerPagingResult = handlePagingResultHot(bookList = bookList)
+
+    if (handlerPagingResult) {
         LazyRow(
             modifier = Modifier
                 .fillMaxSize()
@@ -213,46 +219,31 @@ fun HotBooksList(
                 .height(250.dp)
                 .padding(start = 11.dp)
         ) {
-            items(count = books.itemCount){
-                books[it]?.let{
-                    HotBookCard(book = it,onClick={onClick(it)})
-                    Spacer(modifier = Modifier.width(7.dp))
-                }
+            items(bookList.size) { index ->
+                val book = bookList[index]
+                HotBookCard(book = book, onClick = { onClick(book) })
+                Spacer(modifier = Modifier.width(7.dp))
             }
-
         }
     }
 
 }
+
 
 
 
 @Composable
 fun handlePagingResultHot(
-    books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+    bookList: List<Result>
 ): Boolean {
-    val loadState = books.loadState
-    val error = when {
-        loadState.refresh is LoadState.Error -> loadState.refresh as LoadState.Error
-        loadState.prepend is LoadState.Error -> loadState.prepend as LoadState.Error
-        loadState.append is LoadState.Error -> loadState.append as LoadState.Error
-        else -> null
-    }
-    return when {
-        loadState.refresh is LoadState.Loading -> {
-            ShimmerEffectHot()
-            false
-        }
-        error != null -> {
-            EmptyScreen()
-            false
-        }
-        else -> {
-            true
-        }
+    return if (bookList.isEmpty()) {
+        // Handle loading state or empty state
+        ShimmerEffectHot()
+        false
+    } else {
+        true
     }
 }
-
 @Composable
 private fun ShimmerEffectHot() {
     Row {
@@ -265,24 +256,26 @@ private fun ShimmerEffectHot() {
 @Composable
 fun BooksListCategory(
     modifier: Modifier = Modifier,
-    resultitem: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
-    onClick: (com.plcoding.e_book.domain.model.Books.Result) -> Unit
+    resultitem: List<Result>,
+    onClick: (Result) -> Unit
 ) {
 
-    val handlePagingResult = handlePagingResultBooksListCategory(resultitem = resultitem)
-    if(handlePagingResult){
-        LazyRow(
-            modifier = modifier.fillMaxSize(),
-            contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
-        ) {
-            items(count = resultitem.itemCount){
-                resultitem[it]?.let{
-                    BookCardCategory(book = it, onClick = {onClick(it)})
-                    Spacer(modifier = Modifier.width(5.dp))
-                }
-            }
+    LazyVerticalGrid(
+        modifier = Modifier.fillMaxSize(),
+        columns = GridCells.Fixed(2),
+        verticalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
+        horizontalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
+        contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
+    )
+    {
+        items(count = resultitem.size) { index ->
+            val resultitem = resultitem[index]
+            BookCard(book = resultitem, onClick = { onClick(resultitem) })
         }
+        Log.d("da vo viewmd","11444")
+
     }
+
 }
 
 
@@ -322,4 +315,5 @@ private fun BookListCategoryShimmerEffect() {
             Spacer(modifier = Modifier.height(5.dp))
         }
     }
+
 }

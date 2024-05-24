@@ -44,17 +44,8 @@ class CategoryViewModel  @Inject constructor(
         sources = listOf("bcc-news", "abc-news", "al-jazeera-english")
     ).cachedIn(viewModelScope)
 
-    private val _categoryId = MutableStateFlow<Int?>(null)
-    val categoryId: StateFlow<Int?> = _categoryId
-
-    val booksWithCategory: Flow<List<com.plcoding.e_book.domain.model.Books.Result>> = _categoryId
-        .filterNotNull()
-        .flatMapLatest { categoryId ->
-            bookUseCases.getBooksWithCategory(categoryId)
-        }
-
-    fun setCategory(categoryId: Int) {
-        _categoryId.value = categoryId
+    fun getBooksByCategory(categoryId: Int): Flow<List<com.plcoding.e_book.domain.model.Books.Result>> {
+        return bookUseCases.getBooksWithCategory(categoryId)
     }
 
 

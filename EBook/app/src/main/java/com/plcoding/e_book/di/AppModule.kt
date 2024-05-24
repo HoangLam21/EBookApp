@@ -39,8 +39,10 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
@@ -66,12 +68,49 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideBooksApi(): BooksApi {
-        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
+    fun provideOkHttpClient(): OkHttpClient {
+        return OkHttpClient.Builder()
+            .connectTimeout(120, TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
+            .writeTimeout(120, TimeUnit.SECONDS)
+            .addInterceptor { chain ->
+                val request = chain.request()
+                var response = chain.proceed(request)
+                var tryCount = 0
+                val maxLimit = 3
+                while (!response.isSuccessful && tryCount < maxLimit) {
+                    tryCount++
+                    response = chain.proceed(request)
+                }
+                response
+            }
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(Constants.BASE_URL)
+            .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(BooksApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun provideBooksApi(retrofit: Retrofit): BooksApi {
+        return retrofit.create(BooksApi::class.java)
+    }
+
+//    @Provides
+//    @Singleton
+//    fun provideBooksApi(): BooksApi {
+//        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//            .create(BooksApi::class.java)
+//    }
 
     @Provides
     @Singleton

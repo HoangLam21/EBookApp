@@ -5,6 +5,7 @@ import com.plcoding.e_book.mainActivity.MainActivity_GeneratedInjector;
 import com.plcoding.e_book.mainActivity.MainViewModel_HiltModules;
 import com.plcoding.e_book.presentation.Search.SearchViewModel_HiltModules;
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel_HiltModules;
+import com.plcoding.e_book.presentation.booksWithCategory.BooksWithCategoryViewModel_HiltModules;
 import com.plcoding.e_book.presentation.category.CategoryViewModel_HiltModules;
 import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel_HiltModules;
 import com.plcoding.e_book.presentation.home.HomeViewModel_HiltModules;
@@ -153,6 +154,7 @@ public final class NewEBookApplication_HiltComponents {
   @Subcomponent(
       modules = {
           BookDetailsViewModel_HiltModules.KeyModule.class,
+          BooksWithCategoryViewModel_HiltModules.KeyModule.class,
           CategoryViewModel_HiltModules.KeyModule.class,
           FavouriteBookViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
@@ -200,6 +202,7 @@ public final class NewEBookApplication_HiltComponents {
   @Subcomponent(
       modules = {
           BookDetailsViewModel_HiltModules.BindsModule.class,
+          BooksWithCategoryViewModel_HiltModules.BindsModule.class,
           CategoryViewModel_HiltModules.BindsModule.class,
           FavouriteBookViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,

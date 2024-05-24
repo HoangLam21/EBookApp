@@ -17,7 +17,7 @@ class BooksPagingSource(
             val books = booksResponse.result.distinctBy { it.id }
             LoadResult.Page(
                 data = books,
-                nextKey = if(totalBooksCount == 400) null else page + 1,
+                nextKey = if(totalBooksCount == 20) null else page + 1,
                 prevKey = null
             )
         }catch (e:Exception){

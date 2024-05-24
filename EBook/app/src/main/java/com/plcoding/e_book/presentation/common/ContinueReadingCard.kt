@@ -106,7 +106,6 @@ fun ContinueReadingCard(book: com.plcoding.e_book.domain.model.Books.Result,
 
 
 }
-
 //@Preview(showBackground = true)
 //@Composable
 //fun ContinueReadingCardPreview(){
