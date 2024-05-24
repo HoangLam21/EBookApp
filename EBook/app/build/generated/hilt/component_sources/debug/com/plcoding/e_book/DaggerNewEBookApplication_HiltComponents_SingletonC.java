@@ -13,6 +13,7 @@ import com.plcoding.e_book.data.local.CategoryDao;
 import com.plcoding.e_book.data.local.CategoryDatabase;
 import com.plcoding.e_book.data.remote.BooksApi;
 import com.plcoding.e_book.data.remote.CategoryApi;
+import com.plcoding.e_book.data.remote.MyBooksApi;
 import com.plcoding.e_book.di.AppModule_ProvideAppEntryUseCasesFactory;
 import com.plcoding.e_book.di.AppModule_ProvideBooksApiFactory;
 import com.plcoding.e_book.di.AppModule_ProvideBooksDaoFactory;
@@ -25,15 +26,24 @@ import com.plcoding.e_book.di.AppModule_ProvideCategoryDatabaseFactory;
 import com.plcoding.e_book.di.AppModule_ProvideCategoryRepositoryFactory;
 import com.plcoding.e_book.di.AppModule_ProvideCategoryUseCasesFactory;
 import com.plcoding.e_book.di.AppModule_ProvideLocalUserManagerFactory;
+import com.plcoding.e_book.di.AppModule_ProvideMyBooksApiFactory;
+import com.plcoding.e_book.di.AppModule_ProvideMyBooksRepositoryFactory;
+import com.plcoding.e_book.di.AppModule_ProvideMyBooksUseCasesFactory;
+import com.plcoding.e_book.di.AppModule_ProvideUpdateChapterApiFactory;
 import com.plcoding.e_book.domain.manager.LocalUserManager;
+import com.plcoding.e_book.domain.model.update_reading.UpdateChapterApi;
 import com.plcoding.e_book.domain.repository.BooksResponsitory;
 import com.plcoding.e_book.domain.repository.CategoryRepository;
+import com.plcoding.e_book.domain.repository.MyBookRepository;
 import com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases;
 import com.plcoding.e_book.domain.usecases.book.BooksUseCase;
 import com.plcoding.e_book.domain.usecases.category.CategoryUseCase;
+import com.plcoding.e_book.domain.usecases.mybook.MyBookUseCase;
 import com.plcoding.e_book.mainActivity.MainActivity;
 import com.plcoding.e_book.mainActivity.MainViewModel;
 import com.plcoding.e_book.mainActivity.MainViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.plcoding.e_book.presentation.Search.SearchViewModel;
+import com.plcoding.e_book.presentation.Search.SearchViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel;
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.plcoding.e_book.presentation.category.CategoryViewModel;
@@ -42,8 +52,14 @@ import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel;
 import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.plcoding.e_book.presentation.home.HomeViewModel;
 import com.plcoding.e_book.presentation.home.HomeViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.plcoding.e_book.presentation.mybook.MyBookViewModel;
+import com.plcoding.e_book.presentation.mybook.MyBookViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel;
 import com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.plcoding.e_book.presentation.payment.paymentViewModel;
+import com.plcoding.e_book.presentation.payment.paymentViewModel_HiltModules_KeyModule_ProvideFactory;
+import com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel;
+import com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel_HiltModules_KeyModule_ProvideFactory;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -396,7 +412,7 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(6).add(BookDetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavouriteBookViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return SetBuilder.<String>newSetBuilder(10).add(BookDetailsViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(CategoryViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(FavouriteBookViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(HomeViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(MyBookViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(OnBoardingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(ReadingViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(SearchViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(paymentViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
     }
 
     @Override
@@ -432,7 +448,15 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
     private Provider<MainViewModel> mainViewModelProvider;
 
+    private Provider<MyBookViewModel> myBookViewModelProvider;
+
     private Provider<OnBoardingViewModel> onBoardingViewModelProvider;
+
+    private Provider<ReadingViewModel> readingViewModelProvider;
+
+    private Provider<SearchViewModel> searchViewModelProvider;
+
+    private Provider<paymentViewModel> paymentViewModelProvider;
 
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
@@ -452,12 +476,16 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
       this.favouriteBookViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
       this.homeViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 3);
       this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 4);
-      this.onBoardingViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
+      this.myBookViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 5);
+      this.onBoardingViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 6);
+      this.readingViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 7);
+      this.searchViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 8);
+      this.paymentViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 9);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(6).put("com.plcoding.e_book.presentation.book.BookDetailsViewModel", ((Provider) bookDetailsViewModelProvider)).put("com.plcoding.e_book.presentation.category.CategoryViewModel", ((Provider) categoryViewModelProvider)).put("com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel", ((Provider) favouriteBookViewModelProvider)).put("com.plcoding.e_book.presentation.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.plcoding.e_book.mainActivity.MainViewModel", ((Provider) mainViewModelProvider)).put("com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).build();
+      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(10).put("com.plcoding.e_book.presentation.book.BookDetailsViewModel", ((Provider) bookDetailsViewModelProvider)).put("com.plcoding.e_book.presentation.category.CategoryViewModel", ((Provider) categoryViewModelProvider)).put("com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel", ((Provider) favouriteBookViewModelProvider)).put("com.plcoding.e_book.presentation.home.HomeViewModel", ((Provider) homeViewModelProvider)).put("com.plcoding.e_book.mainActivity.MainViewModel", ((Provider) mainViewModelProvider)).put("com.plcoding.e_book.presentation.mybook.MyBookViewModel", ((Provider) myBookViewModelProvider)).put("com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel", ((Provider) onBoardingViewModelProvider)).put("com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel", ((Provider) readingViewModelProvider)).put("com.plcoding.e_book.presentation.Search.SearchViewModel", ((Provider) searchViewModelProvider)).put("com.plcoding.e_book.presentation.payment.paymentViewModel", ((Provider) paymentViewModelProvider)).build();
     }
 
     @Override
@@ -501,8 +529,20 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
           case 4: // com.plcoding.e_book.mainActivity.MainViewModel 
           return (T) new MainViewModel(singletonCImpl.provideAppEntryUseCasesProvider.get());
 
-          case 5: // com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel 
+          case 5: // com.plcoding.e_book.presentation.mybook.MyBookViewModel 
+          return (T) new MyBookViewModel(singletonCImpl.provideMyBooksUseCasesProvider.get());
+
+          case 6: // com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel 
           return (T) new OnBoardingViewModel(singletonCImpl.provideAppEntryUseCasesProvider.get());
+
+          case 7: // com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel 
+          return (T) new ReadingViewModel(singletonCImpl.provideUpdateChapterApiProvider.get());
+
+          case 8: // com.plcoding.e_book.presentation.Search.SearchViewModel 
+          return (T) new SearchViewModel(singletonCImpl.provideBooksUseCasesProvider.get());
+
+          case 9: // com.plcoding.e_book.presentation.payment.paymentViewModel 
+          return (T) new paymentViewModel(singletonCImpl.provideBooksUseCasesProvider.get());
 
           default: throw new AssertionError(id);
         }
@@ -608,6 +648,14 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
     private Provider<AppEntryUseCases> provideAppEntryUseCasesProvider;
 
+    private Provider<MyBooksApi> provideMyBooksApiProvider;
+
+    private Provider<MyBookRepository> provideMyBooksRepositoryProvider;
+
+    private Provider<MyBookUseCase> provideMyBooksUseCasesProvider;
+
+    private Provider<UpdateChapterApi> provideUpdateChapterApiProvider;
+
     private SingletonCImpl(ApplicationContextModule applicationContextModuleParam) {
       this.applicationContextModule = applicationContextModuleParam;
       initialize(applicationContextModuleParam);
@@ -628,6 +676,10 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
       this.provideCategoryUseCasesProvider = DoubleCheck.provider(new SwitchingProvider<CategoryUseCase>(singletonCImpl, 5));
       this.provideLocalUserManagerProvider = DoubleCheck.provider(new SwitchingProvider<LocalUserManager>(singletonCImpl, 11));
       this.provideAppEntryUseCasesProvider = DoubleCheck.provider(new SwitchingProvider<AppEntryUseCases>(singletonCImpl, 10));
+      this.provideMyBooksApiProvider = DoubleCheck.provider(new SwitchingProvider<MyBooksApi>(singletonCImpl, 14));
+      this.provideMyBooksRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<MyBookRepository>(singletonCImpl, 13));
+      this.provideMyBooksUseCasesProvider = DoubleCheck.provider(new SwitchingProvider<MyBookUseCase>(singletonCImpl, 12));
+      this.provideUpdateChapterApiProvider = DoubleCheck.provider(new SwitchingProvider<UpdateChapterApi>(singletonCImpl, 15));
     }
 
     @Override
@@ -698,6 +750,18 @@ public final class DaggerNewEBookApplication_HiltComponents_SingletonC {
 
           case 11: // com.plcoding.e_book.domain.manager.LocalUserManager 
           return (T) AppModule_ProvideLocalUserManagerFactory.provideLocalUserManager(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
+
+          case 12: // com.plcoding.e_book.domain.usecases.mybook.MyBookUseCase 
+          return (T) AppModule_ProvideMyBooksUseCasesFactory.provideMyBooksUseCases(singletonCImpl.provideMyBooksRepositoryProvider.get(), singletonCImpl.provideBooksDaoProvider.get());
+
+          case 13: // com.plcoding.e_book.domain.repository.MyBookRepository 
+          return (T) AppModule_ProvideMyBooksRepositoryFactory.provideMyBooksRepository(singletonCImpl.provideMyBooksApiProvider.get(), singletonCImpl.provideBooksDaoProvider.get());
+
+          case 14: // com.plcoding.e_book.data.remote.MyBooksApi 
+          return (T) AppModule_ProvideMyBooksApiFactory.provideMyBooksApi();
+
+          case 15: // com.plcoding.e_book.domain.model.update_reading.UpdateChapterApi 
+          return (T) AppModule_ProvideUpdateChapterApiFactory.provideUpdateChapterApi();
 
           default: throw new AssertionError(id);
         }

@@ -11,15 +11,22 @@ import com.plcoding.e_book.data.local.CategoryDatabase
 import com.plcoding.e_book.data.manager.LocalUserManagerImpl
 import com.plcoding.e_book.data.remote.BooksApi
 import com.plcoding.e_book.data.remote.CategoryApi
+import com.plcoding.e_book.data.remote.MyBooksApi
 import com.plcoding.e_book.data.repository.BooksResponsetoryImpl
 import com.plcoding.e_book.data.repository.CategoryRepositoryImpl
+import com.plcoding.e_book.data.repository.MyBookRepositoryImpl
 import com.plcoding.e_book.domain.manager.LocalUserManager
+import com.plcoding.e_book.domain.model.update_reading.UpdateChapterApi
 import com.plcoding.e_book.domain.repository.BooksResponsitory
 import com.plcoding.e_book.domain.repository.CategoryRepository
+import com.plcoding.e_book.domain.repository.MyBookRepository
 import com.plcoding.e_book.domain.usecases.app_entry.AppEntryUseCases
 import com.plcoding.e_book.domain.usecases.app_entry.ReadAppEntry
 import com.plcoding.e_book.domain.usecases.app_entry.SaveAppEntry
 import com.plcoding.e_book.domain.usecases.book.BooksUseCase
+import com.plcoding.e_book.domain.usecases.book.GetBooksWithCategory
+import com.plcoding.e_book.domain.usecases.book.GetBooksWithDiscount
+import com.plcoding.e_book.domain.usecases.book.SearchBooks
 import com.plcoding.e_book.domain.usecases.books.DeleteBooks
 import com.plcoding.e_book.domain.usecases.books.GetBooks
 import com.plcoding.e_book.domain.usecases.books.SelectBook
@@ -29,8 +36,9 @@ import com.plcoding.e_book.domain.usecases.category.CategoryUseCase
 import com.plcoding.e_book.domain.usecases.category.GetCategory
 import com.plcoding.e_book.domain.usecases.category.SelectCategories
 import com.plcoding.e_book.domain.usecases.category.SelectCategory
-import com.plcoding.e_book.presentation.reading.ChapterDao
-import com.plcoding.e_book.presentation.reading.ChapterDatabase
+import com.plcoding.e_book.domain.usecases.mybook.GetMyBooks
+import com.plcoding.e_book.domain.usecases.mybook.MyBookUseCase
+import com.plcoding.e_book.domain.usecases.mybook.SelectMyBooks
 import com.plcoding.e_book.util.Constants
 import com.plcoding.e_book.util.Constants.BOOKS_DATABASE_NAME
 import com.plcoding.e_book.util.Constants.CATEGORY_DATABASE_NAME
@@ -89,10 +97,13 @@ object AppModule {
     ): BooksUseCase{
         return BooksUseCase(
             getBooks = GetBooks(booksResponsitory),
+            searchBooks = SearchBooks(booksResponsitory),
             upsertBooks = UpsertBooks(booksResponsitory),
             deleteBooks = DeleteBooks(booksResponsitory),
             selectBooks = SelectBooks(booksResponsitory),
-            selectBook = SelectBook(booksResponsitory)
+            selectBook = SelectBook(booksResponsitory),
+            getBooksWithDiscount = GetBooksWithDiscount(booksResponsitory),
+            getBooksWithCategory = GetBooksWithCategory(booksResponsitory)
         )
     }
 
@@ -168,21 +179,54 @@ object AppModule {
        categoryDatabase: CategoryDatabase
     ):CategoryDao=categoryDatabase.categoryDao
 
+
     @Provides
     @Singleton
-    fun provideChapterDatabase(application: Application): ChapterDatabase {
-        return Room.databaseBuilder(
-            application,
-            ChapterDatabase::class.java,
-            "CHAPTER_DATABASE_NAME"
+    fun provideMyBooksUseCases(
+        myBookRepository: MyBookRepository,
+        booksDao: BooksDao
+
+    ): MyBookUseCase {
+        return MyBookUseCase(
+            getMyBooks = GetMyBooks(myBookRepository),
+            selectMyBooks = SelectMyBooks(myBookRepository)
+
         )
-            .fallbackToDestructiveMigration()
-            .build()
     }
 
     @Provides
     @Singleton
-    fun  provideChapterDao(
-        chapterDatabase: ChapterDatabase
-    ): ChapterDao = chapterDatabase.chapterDao()
+    fun provideMyBooksApi(): MyBooksApi {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(MyBooksApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideMyBooksRepository(
+        myBooksApi: MyBooksApi,
+        booksDao: BooksDao
+    ): MyBookRepository = MyBookRepositoryImpl(myBooksApi,booksDao)
+
+
+    @Provides
+    @Singleton
+    fun provideUpdateChapterApi(): UpdateChapterApi {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(UpdateChapterApi::class.java)
+    }
+
+//    @Provides
+//    @Singleton
+//    fun provideUpdateUserInf(): CustomerInformationRequest {
+//        return Retrofit.Builder().baseUrl(Constants.BASE_URL)
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .build()
+//            .create(CustomerInformationRequest::class.java)
+//    }
+//
 }

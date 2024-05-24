@@ -23,7 +23,7 @@ sealed class Route(
 
     object BooksNavigatorScreen : Route(route = "booksNavigator")
 
-    object UpgradeAccountScreen : Route(route = "upgradeAccountScreen")
+    object CheckoutScreen : Route(route = "checkoutScreen")
 
     object PaidDetailsScreen : Route(route = "paidDetailsScreen")
 
@@ -33,7 +33,26 @@ sealed class Route(
 
     object FavoriteScreen : Route(route="favriteBookScreen")
 
+    object BooksWithCategoryScreen : Route(route = "booksWithCategoryScreen")
+
+    object LoginScrn : Route(route = "loginScreen")
+
+    object RegisterScrn : Route(route = "registerScreen")
+
+    object TermScreen : Route(route = "termScreen")
+
+    object PrivacyScreen : Route(route = "privacyScreen")
+
     object ReadingScreen : Route(route = "readingScreen/{chapterIndex}") {
         fun createRoute(chapterIndex: Int) = "readingScreen/$chapterIndex"
     }
+
+    object UpgradeAccountScreen : Route(route = "upgradeAccountScreen")
+
+
+
+
+
+
+
 }

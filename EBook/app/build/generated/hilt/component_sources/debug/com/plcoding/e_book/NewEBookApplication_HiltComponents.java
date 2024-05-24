@@ -3,11 +3,15 @@ package com.plcoding.e_book;
 import com.plcoding.e_book.di.AppModule;
 import com.plcoding.e_book.mainActivity.MainActivity_GeneratedInjector;
 import com.plcoding.e_book.mainActivity.MainViewModel_HiltModules;
+import com.plcoding.e_book.presentation.Search.SearchViewModel_HiltModules;
 import com.plcoding.e_book.presentation.book.BookDetailsViewModel_HiltModules;
 import com.plcoding.e_book.presentation.category.CategoryViewModel_HiltModules;
 import com.plcoding.e_book.presentation.favourite_book.FavouriteBookViewModel_HiltModules;
 import com.plcoding.e_book.presentation.home.HomeViewModel_HiltModules;
+import com.plcoding.e_book.presentation.mybook.MyBookViewModel_HiltModules;
 import com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel_HiltModules;
+import com.plcoding.e_book.presentation.payment.paymentViewModel_HiltModules;
+import com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -157,9 +161,13 @@ public final class NewEBookApplication_HiltComponents {
           HiltWrapper_SavedStateHandleModule.class,
           HomeViewModel_HiltModules.KeyModule.class,
           MainViewModel_HiltModules.KeyModule.class,
+          MyBookViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
-          OnBoardingViewModel_HiltModules.KeyModule.class
+          OnBoardingViewModel_HiltModules.KeyModule.class,
+          ReadingViewModel_HiltModules.KeyModule.class,
+          SearchViewModel_HiltModules.KeyModule.class,
+          paymentViewModel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -201,7 +209,11 @@ public final class NewEBookApplication_HiltComponents {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,
           MainViewModel_HiltModules.BindsModule.class,
-          OnBoardingViewModel_HiltModules.BindsModule.class
+          MyBookViewModel_HiltModules.BindsModule.class,
+          OnBoardingViewModel_HiltModules.BindsModule.class,
+          ReadingViewModel_HiltModules.BindsModule.class,
+          SearchViewModel_HiltModules.BindsModule.class,
+          paymentViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped

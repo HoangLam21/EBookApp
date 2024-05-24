@@ -22,7 +22,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -35,6 +37,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
@@ -45,9 +48,11 @@ import androidx.compose.ui.unit.sp
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.R
 import com.plcoding.e_book.presentation.common.BooksList
+import com.plcoding.e_book.presentation.common.BooksListDiscount
 import com.plcoding.e_book.presentation.common.CategoriesList
 import com.plcoding.e_book.presentation.common.ContinueReadingList
 import com.plcoding.e_book.presentation.common.HotBooksList
+import kotlinx.coroutines.flow.Flow
 
 val fontAwesome = FontFamily(
     Font(R.font.fontawesome6freesolid900, FontWeight.Normal)
@@ -55,12 +60,16 @@ val fontAwesome = FontFamily(
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
-               navigateToSearch:() -> Unit,
-               navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
-               category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>,
-               navigateToCategory:()->Unit,
-               navigateToLike:()->Unit) {
+fun HomeScreen(
+    books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+    booksWithDiscount: Flow<List<com.plcoding.e_book.domain.model.Books.Result>>,
+    navigateToSearch:() -> Unit,
+
+    navigateToBooksWithCategory:(Int)->Unit,
+    navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
+    category: LazyPagingItems<com.plcoding.e_book.domain.model.Category.Result>,
+    navigateToCategory:()->Unit,
+    navigateToLike:()->Unit) {
     val titles by remember {
         derivedStateOf {
             if(books.itemCount>10){
@@ -95,32 +104,11 @@ fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Res
                     .fillMaxWidth(0.7f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                var text by rememberSaveable {
-                    mutableStateOf("")
-                }
-                OutlinedTextField(
-                    value = text,
-                    onValueChange = { text = it },
-                    label = {
-                        Text(
-                            text = "Searching for...",
-                            fontFamily = FontFamily(Font(R.font.cormorantgaramondmedium)),
-                            color = Color(android.graphics.Color.parseColor("#513820")),
-                            modifier = Modifier.align(Alignment.CenterHorizontally)
-                        )
-                    },
-                    shape = RoundedCornerShape(20.dp),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = Color(android.graphics.Color.parseColor("#7d6a58")),
-                        unfocusedBorderColor = Color(android.graphics.Color.parseColor("#7d6a58")),
-                        unfocusedLabelColor = Color(android.graphics.Color.parseColor("#7d6a58"))
-                    ),
-                    leadingIcon = { Icon(imageVector = Icons.Default.Search, contentDescription = null) },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                    ,
-                )
+                Button(onClick = navigateToSearch ) {}
+
             }
+
+
 
             Box(
                 modifier = Modifier
@@ -181,6 +169,11 @@ fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Res
                 color = Color(android.graphics.Color.parseColor("#eeebe9")),
                 shape = RoundedCornerShape(20.dp)
             )
+            .shadow(
+                elevation = 8.dp,
+                shape = RoundedCornerShape(10.dp),
+                clip = true
+            )
             .background(
                 color = Color(android.graphics.Color.parseColor("#eeebe9")),
                 shape = RoundedCornerShape(20.dp)
@@ -198,8 +191,10 @@ fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Res
             Spacer(modifier = Modifier.width(150.dp))
             Icon(imageVector = Icons.Default.ArrowForward, contentDescription =null,
                 modifier = Modifier
-                    .padding(end = 10.dp).clickable { navigateToCategory()
-                },
+                    .padding(end = 10.dp)
+                    .clickable {
+                        navigateToCategory()
+                    },
 
                 Color(android.graphics.Color.parseColor("#513820"))
             )
@@ -207,7 +202,7 @@ fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Res
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        CategoriesList(category = category, onClick = {})
+        CategoriesList(category = category, onClick = navigateToBooksWithCategory)
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_Read recently",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
@@ -229,10 +224,9 @@ fun HomeScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Res
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
         BooksList(resultitem = books, onClick =navigateToDetail)
         Spacer(modifier = Modifier.height(10.dp))
-        Text(text = "_Free books",
+        Text(text = "_Discount",
             fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
-        BooksList(resultitem = books, onClick = navigateToDetail)
-    }
+            BooksListDiscount(resultitemFlow = booksWithDiscount, onClick = navigateToDetail)    }
 }

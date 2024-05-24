@@ -1,6 +1,7 @@
 package com.plcoding.e_book.presentation.book
 
 import android.content.Intent
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,6 +22,9 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -43,24 +47,34 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
-import coil.request.ImageRequest
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.R
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import com.plcoding.e_book.ui.theme.SecondaryKeyColor
 import com.plcoding.e_book.domain.model.Books.Result
-
+import com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel
 
 @Composable
 fun PaidBookDetailsScreen(result: Result,
                           event: (DetailsEvent) -> Unit,
                           navigateUp: ()-> Unit,
-                          navigateReading: (Int) -> Unit
+                          navigateReading: (Int) -> Unit,
 
-) {
-    var readingprocess = result.readingsession
+
+                          ) {
+
+    val readingViewModel: ReadingViewModel = hiltViewModel()
+
+    val readingResult by readingViewModel.readingResult.observeAsState()
+    val readingResultState by readingViewModel.readingResult.observeAsState()
+    LaunchedEffect(readingResult) {
+        readingResult?.let { result ->
+            // Sử dụng giá trị result từ phản hồi để truyền vào navigateReading
+            navigateReading(result)
+        }
+    }
 
     val context = LocalContext.current
     Column(
@@ -93,45 +107,15 @@ fun PaidBookDetailsScreen(result: Result,
             )
         ) {
             item {
-                Row (modifier = Modifier.fillMaxWidth()){
-                    Column(modifier = Modifier
-                        .weight(1f)
-                        .padding(Dimens.ExtraSmallPadding2),
-                        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                        AsyncImage(model = ImageRequest.Builder(context=context).data(result.createBy).build(),
-                            contentDescription = null,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(Dimens.ThumbnailTemplate)
-                                .clip(MaterialTheme.shapes.medium),
-                            contentScale = ContentScale.Crop
-                        )
-                        Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
-
-                        AsyncImage(model = ImageRequest.Builder(context=context).data(result.createBy).build(),
-                            contentDescription = null,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(Dimens.ThumbnailTemplate)
-                                .clip(MaterialTheme.shapes.medium),
-                            contentScale = ContentScale.Crop
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
-
-                    Box(modifier = Modifier.weight(1f)){
-                        AsyncImage(model = ImageRequest.Builder(context=context).data(result.createBy).build(),
-                            contentDescription = null,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(Dimens.BookImageSize)
-                                .clip(MaterialTheme.shapes.medium),
-                            contentScale = ContentScale.Crop
-                        )
-                    }
+                Row (modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center){
+                    Base64ImageList(
+                        galleryManageList = result.galleryManage,
+                        //modifier = Modifier.height(300.dp).background(PrimaryKeyColor),
+                        contentDescription = null,
+                        contentScale = ContentScale.FillHeight
+                    )
                 }
-
                 Spacer(modifier = Modifier.height(Dimens.MediumPadding1))
 
                 Box(modifier = Modifier
@@ -207,12 +191,7 @@ fun PaidBookDetailsScreen(result: Result,
                                     )
                                     Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding))
 
-                                    Text(text =buildString {
-                                        for (gallery in result.galleryManage) {
-                                            if (gallery != null) {
-                                                append("${gallery.description}")
-                                            }
-                                        }},
+                                    Text(text = "Tieu thuyet",
                                         style = MaterialTheme.typography.bodySmall,
                                         color = PrimaryKeyColor,
                                         modifier = Modifier
@@ -255,7 +234,8 @@ fun PaidBookDetailsScreen(result: Result,
                                         modifier = Modifier.padding(Dimens.ExtraSmallPadding2)
                                     )
                                 }
-                                Button(onClick = { navigateReading(readingprocess) },
+
+                                Button(onClick = {navigateReading(result.readingsession) }  ,
                                     Modifier
                                         .padding(Dimens.ExtraSmallPadding2),
                                     colors = ButtonDefaults.buttonColors(PrimaryKeyColor)) {
@@ -280,7 +260,8 @@ fun PaidBookDetailsScreen(result: Result,
                         .height(50.dp)
                         .padding(end = 10.dp)) {
                         Row(verticalAlignment = Alignment.CenterVertically){
-                            Text(text = "${result.hot.toFloat()}")
+
+                            Text(text =  "1.0")
                             Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
 
                             RatingBar(rating = result.hot.toFloat(), spaceBetween = 3.dp)
@@ -288,7 +269,8 @@ fun PaidBookDetailsScreen(result: Result,
                             Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
 
 
-                            Text(text = "/ ${result.hot} Lượt đánh giá",color = GrayText, fontSize = Dimens.SmallText)
+                            Text(text =" 1 Lượt đánh giá",
+                                color = GrayText, fontSize = Dimens.SmallText)
 
 
                         }
@@ -297,8 +279,8 @@ fun PaidBookDetailsScreen(result: Result,
                     }
 
 
-                }
 
+                }
 
                 Text(text = "Thông tin chi tiết ",color = PrimaryKeyColor,fontWeight = FontWeight.Bold, fontSize = Dimens.MediumText )
                 Spacer(modifier = Modifier.height(Dimens.IndicatorSize),)
@@ -371,8 +353,6 @@ fun PaidBookDetailsScreen(result: Result,
                     overflow = TextOverflow.Ellipsis
                 )
                 Spacer(modifier = Modifier.height(Dimens.IndicatorSize))
-
-//
 //
             }
 

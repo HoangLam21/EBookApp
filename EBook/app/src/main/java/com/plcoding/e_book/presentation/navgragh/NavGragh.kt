@@ -9,8 +9,8 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import com.plcoding.e_book.presentation.book.UnpaidBookDetailsScreen
 import com.plcoding.e_book.presentation.books_navigation.BooksNavigator
-import com.plcoding.e_book.presentation.onboarding.OnBoardingScreen
 import com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel
+import com.plcoding.e_book.presentation.onboarding1.OnBoardingScreen
 
 @Composable
 fun NavGragh(
@@ -25,7 +25,7 @@ fun NavGragh(
         ) {
             composable(route = Route.OnBoardingScreen.route) {
                 val viewModel: OnBoardingViewModel = hiltViewModel()
-                OnBoardingScreen(onEvent = viewModel::onEvent)
+                OnBoardingScreen(event = viewModel::onEvent)
             }
         }
         navigation(

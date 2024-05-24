@@ -2,6 +2,7 @@ package com.plcoding.e_book.presentation.book
 
 import android.content.Intent
 import android.graphics.BitmapFactory
+import android.net.Uri
 import android.util.Base64
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -19,15 +20,14 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -51,13 +51,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.LazyPagingItems
-import coil.compose.AsyncImage
-import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.Dimens.MediumText
 import com.plcoding.e_book.Dimens.SmallIconSize
-import com.plcoding.e_book.Dimens.SmallText
 import com.plcoding.e_book.R
 import com.plcoding.e_book.domain.model.Books.Feedback
 import com.plcoding.e_book.domain.model.Books.GalleryManage
@@ -148,6 +146,7 @@ fun UnpaidBookDetailsScreen(
     resultitem: LazyPagingItems<Result>,
     navigateToDetail: (Result) -> Unit,
     navigateUpgrade: ()->Unit
+
 ) {
 
     val context = LocalContext.current
@@ -184,43 +183,14 @@ fun UnpaidBookDetailsScreen(
             item {
 
 
-                Row (modifier = Modifier.fillMaxWidth().height(300.dp)){
-                    Column(modifier = Modifier
-                        .width(150.dp)
-                        .height(300.dp)
-                        .padding(Dimens.ExtraSmallPadding2),
-                        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                        Base64ImageList(
-                            galleryManageList = result.galleryManage.filterNotNull(),
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(Dimens.ThumbnailTemplate)
-                                .clip(MaterialTheme.shapes.medium),
-                            contentDescription = null,
-                            contentScale = ContentScale.Fit
-                        )
-                        Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding2))
-
+                Row (modifier = Modifier.fillMaxWidth().height(300.dp), verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center){
+                    Row(modifier = Modifier.height(300.dp)) {
                         Base64ImageList(
                             galleryManageList = result.galleryManage,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(Dimens.ThumbnailTemplate),
-
+                            //modifier = Modifier.height(300.dp),
                             contentDescription = null,
-                            contentScale = ContentScale.Fit
-                        )
-                    }
-
-
-                    Row(modifier = Modifier.weight(1f).height(300.dp), verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center) {
-                        Base64ImageList(
-                            galleryManageList = result.galleryManage,
-                            modifier = Modifier
-                                .fillMaxWidth(),
-                            contentDescription = null,
-                            contentScale = ContentScale.Fit
+                            contentScale = ContentScale.FillHeight
                         )
                     }
                 }
@@ -300,14 +270,12 @@ fun UnpaidBookDetailsScreen(
                                     )
                                     Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding))
 
-                                    result.category?.let {
-                                        Text(text = it.name,
-                                            style = MaterialTheme.typography.bodySmall,
-                                            color = PrimaryKeyColor,
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                        )
-                                    }
+                                    Text(text = "kinh di",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = PrimaryKeyColor,
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                    )
                                     Spacer(modifier = Modifier.height(Dimens.IndicatorSize))
 
                                     Text(text = "Ngôn ngữ",
@@ -357,22 +325,29 @@ fun UnpaidBookDetailsScreen(
                             .height(50.dp)
                             .padding(end = 10.dp)
                     ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            val feedbackList: List<Feedback?> = result.feedback// Lấy danh sách feedback từ result
-                            val averageRating = calculateAverageRating(feedbackList)
-                            Text(text = "${averageRating.toFloat()}")
-                            Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
+                        Row (horizontalArrangement = Arrangement.Start, verticalAlignment = Alignment.Top, modifier = Modifier.fillMaxWidth()){
 
-                            RatingBar(rating = averageRating.toFloat(), spaceBetween = 3.dp)
+                            Column(modifier = Modifier
+                                .height(50.dp)
+                                .padding(end = 10.dp)) {
+                                Row(verticalAlignment = Alignment.CenterVertically){
 
-                            Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
+                                    Text(text =  "1.0")
+                                    Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
+
+                                    RatingBar(rating = result.hot.toFloat(), spaceBetween = 3.dp)
+
+                                    Spacer(modifier = Modifier.width(Dimens.ExtraSmallPadding2))
 
 
-                            Text(
-                                text = "/ ${result.hot} Lượt đánh giá",
-                                color = GrayText,
-                                fontSize = Dimens.SmallText
-                            )
+                                    Text(text =" 1 Lượt đánh giá",
+                                        color = GrayText, fontSize = Dimens.SmallText)
+
+
+                                }
+
+
+                            }
 
 
                         }

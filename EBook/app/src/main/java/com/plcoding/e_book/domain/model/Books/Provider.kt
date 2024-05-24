@@ -9,7 +9,7 @@ data class Provider(
     val address: String,
     val createAt: String,
     val createBy: String,
-    @PrimaryKey val id: Int? = null,
+    @PrimaryKey val id: Int?=null,
     val providername: String,
     val representativename: String,
     val updateAt: String,

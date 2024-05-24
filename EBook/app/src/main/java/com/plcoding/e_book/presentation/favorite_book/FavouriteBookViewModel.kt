@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.plcoding.e_book.domain.usecases.book.BooksUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
@@ -18,11 +19,14 @@ class FavouriteBookViewModel @Inject constructor(
     val state: State<FavouriteBookState> = _state
 
     init {
-        getBooks()
+        getBook()
     }
 
-    private fun getBooks(){
-        booksUseCases.selectBooks().onEach {
+    val booksWithDiscount: Flow<List<com.plcoding.e_book.domain.model.Books.Result>> = booksUseCases.getBooksWithDiscount()
+
+    private fun getBook(){
+        booksUseCases.selectBooks()
+            .onEach {
             _state.value = _state.value.copy(resultitem = it.asReversed())
         }.launchIn(viewModelScope)
     }

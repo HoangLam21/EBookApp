@@ -49,11 +49,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Object" />
-        <option value="Kotlin Data Class" />
-        <option value="Kotlin Class" />
-        <option value="Kotlin Interface" />
         <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Data Class" />
       </list>
     </option>
   </component>
@@ -82,17 +82,17 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/New folder/EBook/app/src/main/java/com/plcoding/e_book/presentation/common",
+    "last_opened_file_path": "C:/New folder (2)/EBook/app/src/main/java/com/plcoding/e_book/presentation",
     "settings.editor.selected.configurable": "AndroidSdkUpdater"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation\common" />
-      <recent name="C:\New folder\EBook\app\src\main\res\drawable" />
-      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation" />
-      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation\book" />
-      <recent name="C:\New folder\EBook\app\src\main\java\com\plcoding\e_book\presentation\favorite_book" />
+      <recent name="C:\New folder (2)\EBook\app\src\main\java\com\plcoding\e_book\presentation" />
+      <recent name="C:\New folder (2)\EBook\app\src\main\java\com\plcoding\e_book\domain\usecases" />
+      <recent name="C:\New folder (2)\EBook\app\src\main\java\com\plcoding\e_book\domain\repository" />
+      <recent name="C:\New folder (2)\EBook\app\src\main\java\com\plcoding\e_book\domain\model" />
+      <recent name="C:\New folder (2)\EBook\app\src\main\java\com\plcoding\e_book\data\remote" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Documents\HK4\DiDongFinal\EBookApp\EBook\app\src\main\java\com\plcoding\e_book\presentation\Account" />
@@ -101,13 +101,15 @@
       <recent name="C:\RealDataVersion\EBook\app\src\main\java\com\plcoding\e_book\presentation\common" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="com.plcoding.e_book.domain.model.Category" />
       <recent name="com.plcoding.e_book.domain.model.Books" />
+      <recent name="com.plcoding.e_book.domain.model.Order" />
+      <recent name="com.plcoding.e_book.domain.model.Category" />
       <recent name="com.plcoding.e_book.data.remote" />
       <recent name="com.plcoding.e_book.mainActivity" />
-      <recent name="com.plcoding.e_book" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.plcoding.e_book.data.repository" />
+      <recent name="com.plcoding.e_book.data.remote.dto" />
       <recent name="com.plcoding.e_book.mainActivity" />
       <recent name="com.plcoding.e_book.presentation.home" />
       <recent name="com.plcoding.e_book.util" />
@@ -483,25 +485,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/plcoding/e_book/mainActivity/MainActivity.kt</url>
-          <line>39</line>
-          <properties class="com.plcoding.e_book.mainActivity.MainActivity">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/plcoding/e_book/presentation/common/CategoryCard.kt</url>
-          <line>35</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

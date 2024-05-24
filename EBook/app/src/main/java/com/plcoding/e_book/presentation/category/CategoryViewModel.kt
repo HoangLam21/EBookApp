@@ -8,9 +8,12 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import com.plcoding.e_book.domain.usecases.book.BooksUseCase
 import com.plcoding.e_book.domain.usecases.category.CategoryUseCase
-import com.plcoding.e_book.presentation.book.DetailsEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.flatMapLatest
 import javax.inject.Inject
 
 @HiltViewModel
@@ -40,5 +43,20 @@ class CategoryViewModel  @Inject constructor(
     val category = categoryUseCases.getCategory(
         sources = listOf("bcc-news", "abc-news", "al-jazeera-english")
     ).cachedIn(viewModelScope)
+
+    private val _categoryId = MutableStateFlow<Int?>(null)
+    val categoryId: StateFlow<Int?> = _categoryId
+
+    val booksWithCategory: Flow<List<com.plcoding.e_book.domain.model.Books.Result>> = _categoryId
+        .filterNotNull()
+        .flatMapLatest { categoryId ->
+            bookUseCases.getBooksWithCategory(categoryId)
+        }
+
+    fun setCategory(categoryId: Int) {
+        _categoryId.value = categoryId
+    }
+
+
 
 }

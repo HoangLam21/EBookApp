@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -79,8 +78,8 @@ fun handlePagingResult(
 @Composable
 fun BooksListDT(
     modifier: Modifier = Modifier,
-    resultitem: List<Result>,
-    onClick: (Result) -> Unit
+    resultitem: List<com.plcoding.e_book.domain.model.Books.Result>,
+    onClick: (com.plcoding.e_book.domain.model.Books.Result) -> Unit
 ) {
     Log.d("da vo viewmd","1144444")
 
@@ -106,7 +105,7 @@ private fun BookListShimmerEffect() {
     Row {
         repeat(10){
             BookCardShimmerEffect()
-            Spacer(modifier = Modifier.width(5.dp))
+            Spacer(modifier = Modifier.width(8.dp))
         }
     }
 }
@@ -196,7 +195,7 @@ private fun ShimmerEffectContinueReading() {
     Row {
         repeat(20) {
             ContinueReadingShimmerEffect()
-            Spacer(modifier = Modifier.width(5.dp))
+            Spacer(modifier = Modifier.width(8.dp))
         }
     }
 }
@@ -260,7 +259,7 @@ private fun ShimmerEffectHot() {
     Row {
         repeat(20) {
             HotBookCardShimmerEffect()
-            Spacer(modifier = Modifier.width(5.dp))
+            Spacer(modifier = Modifier.width(8.dp))
         }
     }
 }
@@ -275,12 +274,12 @@ fun BooksListCategory(
     if(handlePagingResult){
         LazyRow(
             modifier = modifier.fillMaxSize(),
-            horizontalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
             contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
         ) {
             items(count = resultitem.itemCount){
                 resultitem[it]?.let{
                     BookCardCategory(book = it, onClick = {onClick(it)})
+                    Spacer(modifier = Modifier.width(5.dp))
                 }
             }
         }
@@ -325,3 +324,32 @@ private fun BookListCategoryShimmerEffect() {
         }
     }
 }
+
+
+@Composable
+fun MyBooksList(
+    modifier: Modifier = Modifier,
+    resultitem: LazyPagingItems<Result>,
+    onClick: (Result) -> Unit
+) {
+    val handlePagingResult = handlePagingResult(resultitem = resultitem)
+    if(handlePagingResult){
+
+        LazyVerticalGrid(
+            modifier = Modifier.fillMaxSize(),
+            columns = GridCells.Fixed(2), // Số lượng cột cố định là 2
+            verticalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
+            horizontalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
+            contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
+        )
+        {
+            items(count = resultitem.itemCount){
+                resultitem[it]?.let{
+                    YouMayLikeCard(result = it, onClick = {onClick(it)})
+                }
+            }
+
+        }
+    }
+}
+

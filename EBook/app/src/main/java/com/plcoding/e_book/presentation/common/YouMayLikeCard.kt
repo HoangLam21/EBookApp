@@ -22,21 +22,12 @@ import coil.request.ImageRequest
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.plcoding.e_book.R
-import com.plcoding.e_book.domain.model.Books.Author
-import com.plcoding.e_book.domain.model.Books.Category
-import com.plcoding.e_book.domain.model.Books.Feedback
-import com.plcoding.e_book.domain.model.Books.GalleryManage
-import com.plcoding.e_book.domain.model.Books.Language
-import com.plcoding.e_book.domain.model.Books.Provider
-import com.plcoding.e_book.domain.model.Books.Publisher
-import com.plcoding.e_book.domain.model.Books.Result
-import com.plcoding.e_book.ui.theme.EBookTheme
+import com.plcoding.e_book.presentation.book.Base64ImageList
 
 @Composable
 fun YouMayLikeCard(
-   modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier,
     result: com.plcoding.e_book.domain.model.Books.Result,
     onClick:()-> Unit
 ) {
@@ -50,45 +41,26 @@ fun YouMayLikeCard(
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.Top
     ) {
-        val imageRequest = if (result.galleryManage.isNotEmpty()) {
-            ImageRequest.Builder(context).data(buildList<String> {
-                for (gallery in result.galleryManage) {
-                    if (gallery != null) {
-                        add(gallery.thumbnail)
-                    }
-                }
-            }.firstOrNull()).build()
-        } else {
-            // Nếu không có dữ liệu, sử dụng hình mặc định tại đây
-            // Ví dụ: R.drawable.default_image
-            ImageRequest.Builder(context).data(R.drawable.default_img).build()
-        }
 
-        AsyncImage(
-            modifier = Modifier
-                .width(160.dp)
-                .height(250.dp)
-                .clip(MaterialTheme.shapes.medium)
-                .padding(top = Dimens.SmallIconSize),
-            model = imageRequest,
+        Base64ImageList(
+            galleryManageList = result.galleryManage,
+            modifier = Modifier.height(200.dp),
             contentDescription = null,
             contentScale = ContentScale.FillHeight
         )
 
-
-
         Spacer(modifier = Modifier.padding(Dimens.ExtraSmallPadding2))
+
         Text(
             text = buildString {
                 for (author in result.authors) {
                     if (author != null) {
                         append( "${result.title} " + " - " + "${author.author_name}")
-                    } // Hiển thị tên của mỗi tác giả, có thể chỉnh sửa cách hiển thị tùy theo yêu cầu của bạn
+                    }
                 }
             },
             style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Medium),
             color = PrimaryKeyColor,
-
             modifier=Modifier.width(160.dp),
             maxLines = 3,
             overflow = TextOverflow.Ellipsis

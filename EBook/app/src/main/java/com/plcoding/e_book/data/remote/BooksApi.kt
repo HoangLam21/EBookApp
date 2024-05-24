@@ -11,4 +11,12 @@ interface BooksApi {
         @Query("source") sources: String,
 
         ):BooksResponse
+
+    @GET("ebook/find")
+    suspend fun searchBooks(
+        @Query("q") searchQuery: String,
+        @Query("page") page: Int,
+        @Query("source") sources: String,
+
+        ):BooksResponse
 }

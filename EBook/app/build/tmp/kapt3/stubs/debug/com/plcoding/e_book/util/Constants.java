@@ -1,6 +1,6 @@
 package com.plcoding.e_book.util;
 
-@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\t"}, d2 = {"Lcom/plcoding/e_book/util/Constants;", "", "()V", "APP_ENTRY", "", "BASE_URL", "BOOKS_DATABASE_NAME", "CATEGORY_DATABASE_NAME", "USER_SETTINGS", "app_debug"})
+@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\n"}, d2 = {"Lcom/plcoding/e_book/util/Constants;", "", "()V", "APP_ENTRY", "", "BASE_URL", "BOOKS_DATABASE_NAME", "CATEGORY_DATABASE_NAME", "USER_SETTINGS", "USER_TOKEN", "app_debug"})
 public final class Constants {
     @org.jetbrains.annotations.NotNull
     public static final java.lang.String USER_SETTINGS = "userSetting";
@@ -12,6 +12,8 @@ public final class Constants {
     public static final java.lang.String BOOKS_DATABASE_NAME = "books_db";
     @org.jetbrains.annotations.NotNull
     public static final java.lang.String CATEGORY_DATABASE_NAME = "category_db";
+    @org.jetbrains.annotations.NotNull
+    public static final java.lang.String USER_TOKEN = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjb20uYXV0aGVudGljYXRpb24iLCJzdWIiOiJiZWhlbzEyIiwiZXhwIjoxNzE2NTAzNDUwLCJpYXQiOjE3MTY0OTk4NTAsInNjb3BlIjoiQ1VTVE9NRVIgR0VUX01ZX1BBWU1FTlRTIENBTkNMRV9PUkRFUiBDUkVBVEVfT1JERVIgR0VUX01ZX0JPT0tTIn0.vFYlSslNVLbqzj85bgNjhtHsmM-xVAiGH1NPQ3bU7mE";
     @org.jetbrains.annotations.NotNull
     public static final com.plcoding.e_book.util.Constants INSTANCE = null;
     

@@ -23,6 +23,8 @@ class ChapterViewModel(application: Application) : AndroidViewModel(application)
     private val _currentChapterIndex = MutableStateFlow(0)
     val currentChapterIndex: StateFlow<Int> get() = _currentChapterIndex.asStateFlow()
 
+
+
     init {
         fetchChapters()
     }
@@ -55,4 +57,6 @@ class ChapterViewModel(application: Application) : AndroidViewModel(application)
     fun setChapterIndex(index: Int) {
         _currentChapterIndex.value = index
     }
+
+
 }

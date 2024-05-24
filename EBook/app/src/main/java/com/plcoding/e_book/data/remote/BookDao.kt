@@ -5,23 +5,22 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.plcoding.e_book.domain.model.Books.Result
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface BookDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertBook(result: Result)
+    suspend fun insertBook(result: com.plcoding.e_book.domain.model.Books.Result)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(result: Result)
+    suspend fun upsert(result: com.plcoding.e_book.domain.model.Books.Result)
 
     @Delete
-    suspend fun delete(result: Result)
+    suspend fun delete(result: com.plcoding.e_book.domain.model.Books.Result)
 
     @Query("SELECT * FROM Result")
-    fun getBooks(): Flow<List<Result>>
+    fun getBooks(): Flow<List<com.plcoding.e_book.domain.model.Books.Result>>
 
     @Query("SELECT * FROM Result WHERE id=:id")
-    suspend fun getBooks(id: Int): Result?
+    suspend fun getBooks(id: Int): com.plcoding.e_book.domain.model.Books.Result?
 }

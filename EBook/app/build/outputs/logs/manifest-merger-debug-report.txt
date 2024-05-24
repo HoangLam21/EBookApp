@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:2:1-40:12
 MERGED from [io.coil-kt:coil-compose:2.4.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\a77fe5e25f87717ab97d00277159c976\transformed\coil-compose-2.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta] C:\Users\BAO ANH\.gradle\caches\transforms-3\a7fba8d44b9f8889b3ed1cb128de84b5\transformed\accompanist-systemuicontroller-0.31.4-beta\AndroidManifest.xml:17:1-25:12
 MERGED from [io.coil-kt:coil-compose-base:2.4.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\46d78b58ad146a5966c70ae59839fd90\transformed\coil-compose-base-2.4.0\AndroidManifest.xml:2:1-7:12
@@ -88,22 +88,26 @@ MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\BAO ANH\.gradle\caches\tra
 MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\BAO ANH\.gradle\caches\transforms-3\a7df4862dba6a561ea3affb1ec157e34\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.49] C:\Users\BAO ANH\.gradle\caches\transforms-3\dfa5039ae2802d99e39a067ed6e76191\transformed\dagger-lint-aar-2.49\AndroidManifest.xml:16:1-19:12
 	package
-		INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
+		INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
+		INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
+		INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:4:5-66
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:5:5-66
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:6:5-28:19
-INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:6:5-28:19
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:7:5-29:19
+INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:7:5-29:19
 MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
 MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
@@ -123,75 +127,75 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\BAO ANH\
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\d4ed437d9cd33044cc344d1f8105a8f6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\d4ed437d9cd33044cc344d1f8105a8f6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
+		INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:13:9-41
 	android:fullBackupContent
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:11:9-54
 	android:roundIcon
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:14:9-54
 	tools:targetApi
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:16:9-29
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:16:9-43
 	android:dataExtractionRules
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:9:9-65
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:10:9-65
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:7:9-44
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:8:9-44
 activity#com.plcoding.e_book.mainActivity.MainActivity
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:17:9-27:20
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:18:9-28:20
 	android:label
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:20:13-45
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:21:13-45
 	android:exported
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:19:13-36
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:20:13-36
 	android:theme
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:21:13-47
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:22:13-47
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:18:13-54
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:19:13-54
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:22:13-26:29
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:23:17-69
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:23:25-66
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:25:17-77
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:25:27-74
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:26:27-74
 queries
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:29:5-38:15
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:30:5-39:15
 intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:30:9-34:18
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:31:9-35:18
 action#android.intent.action.VIEW
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:31:13-65
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:32:13-65
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:31:21-62
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:32:21-62
 category#android.intent.category.BROWSABLE
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:32:13-74
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:33:13-74
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:32:23-71
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:33:23-71
 data
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:33:13-44
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:34:13-44
 	android:scheme
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:33:19-41
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:34:19-41
 intent#action:name:android.intent.action.SEND
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:35:9-37:18
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:36:9-38:18
 action#android.intent.action.SEND
-ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:36:13-64
+ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:37:13-64
 	android:name
-		ADDED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml:36:21-62
+		ADDED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml:37:21-62
 uses-sdk
-INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
-INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
+INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
+INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
 MERGED from [io.coil-kt:coil-compose:2.4.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\a77fe5e25f87717ab97d00277159c976\transformed\coil-compose-2.4.0\AndroidManifest.xml:5:5-44
 MERGED from [io.coil-kt:coil-compose:2.4.0] C:\Users\BAO ANH\.gradle\caches\transforms-3\a77fe5e25f87717ab97d00277159c976\transformed\coil-compose-2.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta] C:\Users\BAO ANH\.gradle\caches\transforms-3\a7fba8d44b9f8889b3ed1cb128de84b5\transformed\accompanist-systemuicontroller-0.31.4-beta\AndroidManifest.xml:21:5-23:42
@@ -359,11 +363,11 @@ MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\BAO ANH\.gradl
 MERGED from [com.google.dagger:dagger-lint-aar:2.49] C:\Users\BAO ANH\.gradle\caches\transforms-3\dfa5039ae2802d99e39a067ed6e76191\transformed\dagger-lint-aar-2.49\AndroidManifest.xml:18:3-42
 MERGED from [com.google.dagger:dagger-lint-aar:2.49] C:\Users\BAO ANH\.gradle\caches\transforms-3\dfa5039ae2802d99e39a067ed6e76191\transformed\dagger-lint-aar-2.49\AndroidManifest.xml:18:3-42
 	android:targetSdkVersion
-		INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
+		INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
 	tools:ignore
 		ADDED from [com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta] C:\Users\BAO ANH\.gradle\caches\transforms-3\a7fba8d44b9f8889b3ed1cb128de84b5\transformed\accompanist-systemuicontroller-0.31.4-beta\AndroidManifest.xml:23:9-39
 	android:minSdkVersion
-		INJECTED from C:\TEST\EBookApp\EBook\app\src\main\AndroidManifest.xml
+		INJECTED from C:\New folder (2)\EBook\app\src\main\AndroidManifest.xml
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\BAO ANH\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
 	android:exported
