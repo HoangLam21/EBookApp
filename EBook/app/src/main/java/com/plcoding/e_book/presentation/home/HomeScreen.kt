@@ -54,6 +54,8 @@ import com.plcoding.e_book.presentation.common.ContinueReadingList
 import com.plcoding.e_book.presentation.common.HotBooksList
 import kotlinx.coroutines.flow.Flow
 
+
+
 val fontAwesome = FontFamily(
     Font(R.font.fontawesome6freesolid900, FontWeight.Normal)
 )
@@ -63,6 +65,8 @@ val fontAwesome = FontFamily(
 fun HomeScreen(
     books: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
     booksWithDiscount: Flow<List<com.plcoding.e_book.domain.model.Books.Result>>,
+//    getBooksHot: Flow<List<com.plcoding.e_book.domain.model.Books.Result>>,
+
     navigateToSearch:() -> Unit,
 
     navigateToBooksWithCategory:(Int)->Unit,
@@ -104,11 +108,31 @@ fun HomeScreen(
                     .fillMaxWidth(0.7f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Button(onClick = navigateToSearch ) {}
-
+                var text by rememberSaveable {
+                    mutableStateOf("")
+                }
+                OutlinedTextField(
+                    value = text,
+                    onValueChange = { text = it },
+                    label = {
+                        Text(
+                            text = "Searching for...",
+                            color = Color(android.graphics.Color.parseColor("#513820")),
+                            modifier = Modifier.align(Alignment.CenterHorizontally)
+                        )
+                    },
+                    shape = RoundedCornerShape(20.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Color(android.graphics.Color.parseColor("#7d6a58")),
+                        unfocusedBorderColor = Color(android.graphics.Color.parseColor("#7d6a58")),
+                        unfocusedLabelColor = Color(android.graphics.Color.parseColor("#7d6a58"))
+                    ),
+                    leadingIcon = { Icon(imageVector = Icons.Default.Search, contentDescription = null) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                    ,
+                )
             }
-
-
 
             Box(
                 modifier = Modifier
@@ -179,16 +203,15 @@ fun HomeScreen(
                 shape = RoundedCornerShape(20.dp)
             ),
         ){
-            HotBooksList(books = books, onClick = navigateToDetail)
+//            HotBooksList(books = getBooksHot, onClick = navigateToDetail)
         }
 
         Spacer(modifier = Modifier.height(10.dp))
         Row() {
             Text(text = "_Category",
-                fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
                 color = Color(android.graphics.Color.parseColor("#513820")),
                 fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
-            Spacer(modifier = Modifier.width(150.dp))
+            Spacer(modifier = Modifier.width(200.dp))
             Icon(imageVector = Icons.Default.ArrowForward, contentDescription =null,
                 modifier = Modifier
                     .padding(end = 10.dp)
@@ -205,28 +228,24 @@ fun HomeScreen(
         CategoriesList(category = category, onClick = navigateToBooksWithCategory)
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_Read recently",
-            fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
         ContinueReadingList(books = books, onClick = navigateToDetail)
 
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_You may also like",
-            fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
         BooksList(resultitem = books, onClick = navigateToDetail)
 
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_Most read books",
-            fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
         BooksList(resultitem = books, onClick =navigateToDetail)
         Spacer(modifier = Modifier.height(10.dp))
         Text(text = "_Discount",
-            fontFamily = FontFamily(Font(R.font.cormorantgaramondbold)),
             color = Color(android.graphics.Color.parseColor("#513820")),
             fontSize = 17.sp, modifier = Modifier.padding(start=16.dp))
-            BooksListDiscount(resultitemFlow = booksWithDiscount, onClick = navigateToDetail)    }
+        BooksListDiscount(resultitemFlow = booksWithDiscount, onClick = navigateToDetail)    }
 }

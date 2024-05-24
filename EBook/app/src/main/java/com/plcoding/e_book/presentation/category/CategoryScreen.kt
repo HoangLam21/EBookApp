@@ -84,7 +84,7 @@ fun CategoryScreen(books: LazyPagingItems<com.plcoding.e_book.domain.model.Books
         Spacer(modifier = Modifier.height(10.dp))
         Row {
             Spacer(modifier = Modifier.width(10.dp))
-            BooksListCategory(resultitem = books, onClick = {})
+//            BooksListCategory(resultitem = books, onClick = {})
         }
 
     }

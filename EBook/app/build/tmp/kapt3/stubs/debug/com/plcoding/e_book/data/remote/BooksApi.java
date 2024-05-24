@@ -11,7 +11,7 @@ public abstract interface BooksApi {
     java.lang.String sources, @org.jetbrains.annotations.NotNull
     kotlin.coroutines.Continuation<? super com.plcoding.e_book.data.remote.dto.BooksResponse> $completion);
     
-    @retrofit2.http.GET(value = "ebook/all")
+    @retrofit2.http.GET(value = "ebook/find")
     @org.jetbrains.annotations.Nullable
     public abstract java.lang.Object searchBooks(@retrofit2.http.Query(value = "q")
     @org.jetbrains.annotations.NotNull

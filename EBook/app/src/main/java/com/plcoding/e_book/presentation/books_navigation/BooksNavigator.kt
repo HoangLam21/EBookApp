@@ -163,12 +163,18 @@ fun BooksNavigator() {
                 val resultitem = viewModel.book.collectAsLazyPagingItems()
                 val category = viewModel.category.collectAsLazyPagingItems()
                 val booksWithDiscount =viewModel.booksWithDiscount
+//                val getBooksHot = viewModel.getBooksHot
                 val viewModel2: CategoryViewModel = hiltViewModel()
-                val booksWithCategory = viewModel2.booksWithCategory
+//                val navigateToBooksWithCategory: (Int) -> Unit = { categoryId ->
+//                    navigateToTab(navController = navController, route = "${Route.BooksWithCategoryScreen.route}/$categoryId")
+//                }
                 HomeScreen(
                     books = resultitem,booksWithDiscount,
                     navigateToSearch = {
-                        navController.navigate(Route.SearchScreen.route)
+                        navigateToTab(
+                            navController = navController,
+                            route = Route.SearchScreen.route
+                        )
                     },
                     navigateToDetail = {
                             result ->
@@ -182,14 +188,15 @@ fun BooksNavigator() {
                         )
                     },
                     navigateToBooksWithCategory = { categoryId ->
-                        navigateToTab(navController=navController, route=Route.BooksWithCategoryScreen.route)
-                    }
+                        navController.navigate("categoryBooks/$categoryId")
+                    },
+//                    getBooksHot = getBooksHot
+
 
                 ) {
                     navController.navigate(Route.FavoriteScreen.route)
                 }
             }
-            Log.d("da vo viewmd","111")
 
             composable(route = Route.DetailsScreen.route){
 
@@ -267,19 +274,19 @@ fun BooksNavigator() {
                     navigateUp = {navController.navigateUp()})
             }
 
-            composable(route = Route.BooksWithCategoryScreen.route) { backStackEntry ->
-                val viewModel: CategoryViewModel = hiltViewModel()
-                val categoryId = backStackEntry.arguments?.getInt("categoryId") ?: 0
-                viewModel.setCategory(categoryId)
-
-                BooksWithCategoryScreen(
-                    books = viewModel.booksWithCategory,
-                    categoryId = categoryId,
-                    navigateUp = {
-                        navController.navigateUp()
-                    }
-                )
-            }
+//            composable(route = Route.BooksWithCategoryScreen.route) { backStackEntry ->
+//                val viewModel: CategoryViewModel = hiltViewModel()
+//                val categoryId = backStackEntry.arguments?.getInt("categoryId") ?: 0
+//                viewModel.setCategory(categoryId)
+//
+//                BooksWithCategoryScreen(
+//                    books = viewModel.getBooksByCategory(),
+//                    categoryId = categoryId,
+//                    navigateUp = {
+//                        navController.navigateUp()
+//                    }
+//                )
+//            }
 //            composable(route = Route.FavoriteScreen.route) {
 //                val viewModel: FavouriteBookViewModel = hiltViewModel()
 //               val state = viewModel.state.value

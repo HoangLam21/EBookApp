@@ -23,7 +23,6 @@ fun DetailCategoryList(
     val handlePagingResult = handlePagingResultDetailCategoryList(resultitem = resultitem)
     if(handlePagingResult){
         LazyRow(
-            modifier = modifier.fillMaxSize(),
             horizontalArrangement = Arrangement.spacedBy(Dimens.MediumPadding1),
             contentPadding = PaddingValues(all = Dimens.ExtraSmallPadding2)
         ) {

@@ -132,12 +132,6 @@ fun BookCardDiscount(book: com.plcoding.e_book.domain.model.Books.Result,
                 )
 
             }
-
-
-
-
-
-
             Spacer(modifier = Modifier.height(5.dp))
         }
 
