@@ -38,8 +38,11 @@ import hilt_aggregated_deps._com_plcoding_e_book_presentation_onboarding_OnBoard
 import hilt_aggregated_deps._com_plcoding_e_book_presentation_onboarding_OnBoardingViewModel_HiltModules_KeyModule;
 import hilt_aggregated_deps._com_plcoding_e_book_presentation_payment_paymentViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_plcoding_e_book_presentation_payment_paymentViewModel_HiltModules_KeyModule;
+<<<<<<< HEAD
 import hilt_aggregated_deps._com_plcoding_e_book_presentation_reading_chapter_ReadingViewModel_HiltModules_BindsModule;
 import hilt_aggregated_deps._com_plcoding_e_book_presentation_reading_chapter_ReadingViewModel_HiltModules_KeyModule;
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
 import hilt_aggregated_deps._dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint;
 import hilt_aggregated_deps._dagger_hilt_android_flags_HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule;
 import hilt_aggregated_deps._dagger_hilt_android_internal_lifecycle_DefaultViewModelFactories_ActivityEntryPoint;
@@ -101,8 +104,11 @@ import hilt_aggregated_deps._dagger_hilt_android_internal_modules_HiltWrapper_Ac
         _com_plcoding_e_book_presentation_onboarding_OnBoardingViewModel_HiltModules_KeyModule.class,
         _com_plcoding_e_book_presentation_payment_paymentViewModel_HiltModules_BindsModule.class,
         _com_plcoding_e_book_presentation_payment_paymentViewModel_HiltModules_KeyModule.class,
+<<<<<<< HEAD
         _com_plcoding_e_book_presentation_reading_chapter_ReadingViewModel_HiltModules_BindsModule.class,
         _com_plcoding_e_book_presentation_reading_chapter_ReadingViewModel_HiltModules_KeyModule.class,
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
         _dagger_hilt_android_flags_FragmentGetContextFix_FragmentGetContextFixEntryPoint.class,
         _dagger_hilt_android_flags_HiltWrapper_FragmentGetContextFix_FragmentGetContextFixModule.class,
         _dagger_hilt_android_internal_lifecycle_DefaultViewModelFactories_ActivityEntryPoint.class,

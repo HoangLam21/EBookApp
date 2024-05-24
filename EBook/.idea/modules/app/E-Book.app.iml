@@ -2,7 +2,11 @@
 <module version="4">
   <component name="ModuleClassLoaderOverlays">
     <paths>
+<<<<<<< HEAD
       <option value="C:\Users\BAOANH~1\AppData\Local\Temp\overlay8191538450068456447" />
+=======
+      <option value="C:\Users\Lenovo\AppData\Local\Temp\overlay13551990373971726825" />
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
     </paths>
   </component>
 </module>

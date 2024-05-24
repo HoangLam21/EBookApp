@@ -50,11 +50,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.R
+import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import com.plcoding.e_book.ui.theme.SecondaryKeyColor
+<<<<<<< HEAD
 import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
 
 @Composable
 fun PaidBookDetailsScreen(result: Result,

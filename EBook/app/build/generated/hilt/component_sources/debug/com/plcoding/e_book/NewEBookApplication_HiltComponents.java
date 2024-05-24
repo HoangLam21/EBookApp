@@ -11,7 +11,10 @@ import com.plcoding.e_book.presentation.home.HomeViewModel_HiltModules;
 import com.plcoding.e_book.presentation.mybook.MyBookViewModel_HiltModules;
 import com.plcoding.e_book.presentation.onboarding.OnBoardingViewModel_HiltModules;
 import com.plcoding.e_book.presentation.payment.paymentViewModel_HiltModules;
+<<<<<<< HEAD
 import com.plcoding.e_book.presentation.reading_chapter.ReadingViewModel_HiltModules;
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -165,7 +168,10 @@ public final class NewEBookApplication_HiltComponents {
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           OnBoardingViewModel_HiltModules.KeyModule.class,
+<<<<<<< HEAD
           ReadingViewModel_HiltModules.KeyModule.class,
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
           SearchViewModel_HiltModules.KeyModule.class,
           paymentViewModel_HiltModules.KeyModule.class
       }
@@ -209,9 +215,13 @@ public final class NewEBookApplication_HiltComponents {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           HomeViewModel_HiltModules.BindsModule.class,
           MainViewModel_HiltModules.BindsModule.class,
+<<<<<<< HEAD
           MyBookViewModel_HiltModules.BindsModule.class,
           OnBoardingViewModel_HiltModules.BindsModule.class,
           ReadingViewModel_HiltModules.BindsModule.class,
+=======
+          OnBoardingViewModel_HiltModules.BindsModule.class,
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
           SearchViewModel_HiltModules.BindsModule.class,
           paymentViewModel_HiltModules.BindsModule.class
       }

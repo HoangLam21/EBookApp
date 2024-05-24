@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.plcoding.e_book.app-mergeDebugResources-2:/values-v31/values-v31.xml",
+            "outputFile": "com.plcoding.e_book.app-mergeDebugResources-68:/values-v31/values-v31.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\BAO ANH\\.gradle\\caches\\transforms-3\\d0dcc173c09ac492939b5e0fb2f764ee\\transformed\\core-splashscreen-1.0.1\\res\\values-v31\\values-v31.xml",
+                    "source": "C:\\Users\\JunKye\\.gradle\\caches\\transforms-3\\d0dcc173c09ac492939b5e0fb2f764ee\\transformed\\core-splashscreen-1.0.1\\res\\values-v31\\values-v31.xml",
                     "from": {
                         "startLines": "2,9",
                         "startColumns": "4,4",

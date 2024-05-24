@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Fri May 24 06:43:05 GMT+07:00 2024
 base.0=C\:\\New folder (2)\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\New folder (2)\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
@@ -16,6 +17,26 @@ base.6=C\:\\New folder (2)\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeP
 base.7=C\:\\New folder (2)\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
 base.8=C\:\\New folder (2)\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
 base.9=C\:\\New folder (2)\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+=======
+#Fri May 24 05:57:49 ICT 2024
+base.0=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.10=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.11=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.12=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.13=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.14=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.15=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.16=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.3=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.4=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.5=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
+base.6=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.7=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\15\\classes.dex
+base.8=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+base.9=C\:\\Users\\JunKye\\Desktop\\Ebook-ver4\\EBookApp\\EBook\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=4/classes.dex

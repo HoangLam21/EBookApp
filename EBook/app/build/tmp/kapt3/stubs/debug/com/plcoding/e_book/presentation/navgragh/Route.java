@@ -1,6 +1,10 @@
 package com.plcoding.e_book.presentation.navgragh;
 
+<<<<<<< HEAD
 @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0019\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0014\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001fB\u001f\b\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u000e\b\u0002\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u00a2\u0006\u0002\u0010\u0007R\u0017\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u00a2\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b\u0082\u0001\u0014 !\"#$%&\'()*+,-./0123\u00a8\u00064"}, d2 = {"Lcom/plcoding/e_book/presentation/navgragh/Route;", "", "route", "", "arguments", "", "Landroidx/navigation/NamedNavArgument;", "(Ljava/lang/String;Ljava/util/List;)V", "getArguments", "()Ljava/util/List;", "getRoute", "()Ljava/lang/String;", "AccountScreen", "AppStartNavigation", "BookmarkScreen", "BooksNavigation", "BooksNavigatorScreen", "BooksWithCategoryScreen", "CategoryScreen", "CheckoutScreen", "DetailsScreen", "FavoriteScreen", "HomeScreen", "LoginScrn", "OnBoardingScreen", "PaidDetailsScreen", "PrivacyScreen", "ReadingScreen", "RegisterScrn", "SearchScreen", "TermScreen", "UpgradeAccountScreen", "Lcom/plcoding/e_book/presentation/navgragh/Route$AccountScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$AppStartNavigation;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BookmarkScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BooksNavigation;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BooksNavigatorScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BooksWithCategoryScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$CategoryScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$CheckoutScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$DetailsScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$FavoriteScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$HomeScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$LoginScrn;", "Lcom/plcoding/e_book/presentation/navgragh/Route$OnBoardingScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$PaidDetailsScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$PrivacyScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$ReadingScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$RegisterScrn;", "Lcom/plcoding/e_book/presentation/navgragh/Route$SearchScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$TermScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$UpgradeAccountScreen;", "app_debug"})
+=======
+@kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0017\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0012\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001dB\u001f\b\u0004\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u000e\b\u0002\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u00a2\u0006\u0002\u0010\u0007R\u0017\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u00a2\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b\u0082\u0001\u0012\u001e\u001f !\"#$%&\'()*+,-./\u00a8\u00060"}, d2 = {"Lcom/plcoding/e_book/presentation/navgragh/Route;", "", "route", "", "arguments", "", "Landroidx/navigation/NamedNavArgument;", "(Ljava/lang/String;Ljava/util/List;)V", "getArguments", "()Ljava/util/List;", "getRoute", "()Ljava/lang/String;", "AccountScreen", "AppStartNavigation", "BookmarkScreen", "BooksNavigation", "BooksNavigatorScreen", "BooksWithCategoryScreen", "CategoryScreen", "CheckoutScreen", "DetailsScreen", "FavoriteScreen", "HomeScreen", "LoginScrn", "OnBoardingScreen", "PaidDetailsScreen", "PrivacyScreen", "RegisterScrn", "SearchScreen", "TermScreen", "Lcom/plcoding/e_book/presentation/navgragh/Route$AccountScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$AppStartNavigation;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BookmarkScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BooksNavigation;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BooksNavigatorScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$BooksWithCategoryScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$CategoryScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$CheckoutScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$DetailsScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$FavoriteScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$HomeScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$LoginScrn;", "Lcom/plcoding/e_book/presentation/navgragh/Route$OnBoardingScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$PaidDetailsScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$PrivacyScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$RegisterScrn;", "Lcom/plcoding/e_book/presentation/navgragh/Route$SearchScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route$TermScreen;", "app_debug"})
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
 public abstract class Route {
     @org.jetbrains.annotations.NotNull
     private final java.lang.String route = null;
@@ -156,6 +160,7 @@ public abstract class Route {
         }
     }
     
+<<<<<<< HEAD
     @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002J\u000e\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0006\u00a8\u0006\u0007"}, d2 = {"Lcom/plcoding/e_book/presentation/navgragh/Route$ReadingScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route;", "()V", "createRoute", "", "chapterIndex", "", "app_debug"})
     public static final class ReadingScreen extends com.plcoding.e_book.presentation.navgragh.Route {
         @org.jetbrains.annotations.NotNull
@@ -170,6 +175,8 @@ public abstract class Route {
         }
     }
     
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
     @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/plcoding/e_book/presentation/navgragh/Route$RegisterScrn;", "Lcom/plcoding/e_book/presentation/navgragh/Route;", "()V", "app_debug"})
     public static final class RegisterScrn extends com.plcoding.e_book.presentation.navgragh.Route {
         @org.jetbrains.annotations.NotNull
@@ -190,6 +197,7 @@ public abstract class Route {
     
     @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/plcoding/e_book/presentation/navgragh/Route$TermScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route;", "()V", "app_debug"})
     public static final class TermScreen extends com.plcoding.e_book.presentation.navgragh.Route {
+<<<<<<< HEAD
         @org.jetbrains.annotations.NotNull
         public static final com.plcoding.e_book.presentation.navgragh.Route.TermScreen INSTANCE = null;
         
@@ -199,10 +207,12 @@ public abstract class Route {
     
     @kotlin.Metadata(mv = {1, 9, 0}, k = 1, xi = 48, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u00c6\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0003"}, d2 = {"Lcom/plcoding/e_book/presentation/navgragh/Route$UpgradeAccountScreen;", "Lcom/plcoding/e_book/presentation/navgragh/Route;", "()V", "app_debug"})
     public static final class UpgradeAccountScreen extends com.plcoding.e_book.presentation.navgragh.Route {
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
         @org.jetbrains.annotations.NotNull
-        public static final com.plcoding.e_book.presentation.navgragh.Route.UpgradeAccountScreen INSTANCE = null;
+        public static final com.plcoding.e_book.presentation.navgragh.Route.TermScreen INSTANCE = null;
         
-        private UpgradeAccountScreen() {
+        private TermScreen() {
         }
     }
 }

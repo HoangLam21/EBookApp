@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.LazyPagingItems
 import com.plcoding.e_book.Dimens
-import com.plcoding.e_book.domain.model.Books.Result
 
 @Composable
 fun BooksList(

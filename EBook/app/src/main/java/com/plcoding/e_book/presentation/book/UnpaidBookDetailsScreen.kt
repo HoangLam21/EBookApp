@@ -59,7 +59,6 @@ import com.plcoding.e_book.Dimens.SmallIconSize
 import com.plcoding.e_book.R
 import com.plcoding.e_book.domain.model.Books.Feedback
 import com.plcoding.e_book.domain.model.Books.GalleryManage
-import com.plcoding.e_book.domain.model.Books.Result
 import com.plcoding.e_book.presentation.common.BooksList
 import com.plcoding.e_book.ui.theme.GrayText
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
@@ -140,16 +139,34 @@ fun Base64ImageList(
 
 @Composable
 fun UnpaidBookDetailsScreen(
-    result: Result,
+    result: com.plcoding.e_book.domain.model.Books.Result,
     event: (DetailsEvent) -> Unit,
     navigateUp: ()-> Unit,
+<<<<<<< HEAD
     resultitem: LazyPagingItems<Result>,
     navigateToDetail: (Result) -> Unit,
     navigateUpgrade: ()->Unit
+=======
+    resultitem: LazyPagingItems<com.plcoding.e_book.domain.model.Books.Result>,
+    navigateToDetail: (com.plcoding.e_book.domain.model.Books.Result) -> Unit,
+    viewModel: BookDetailsViewModel = hiltViewModel()
+//    navigateToCheckout: ()->Unit
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
 
 ) {
 
     val context = LocalContext.current
+
+    val paymentUrl by viewModel.paymentUrl.observeAsState()
+
+    LaunchedEffect(paymentUrl) {
+        paymentUrl?.let { url ->
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            context.startActivity(intent)
+        }
+    }
+
 
     Column(
         modifier = Modifier
@@ -270,12 +287,23 @@ fun UnpaidBookDetailsScreen(
                                     )
                                     Spacer(modifier = Modifier.height(Dimens.ExtraSmallPadding))
 
+<<<<<<< HEAD
                                     Text(text = "kinh di",
                                         style = MaterialTheme.typography.bodySmall,
                                         color = PrimaryKeyColor,
                                         modifier = Modifier
                                             .fillMaxWidth()
                                     )
+=======
+                                    result.categoryId?.let {
+                                        Text(text = it.toString(),
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = PrimaryKeyColor,
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                        )
+                                    }
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
                                     Spacer(modifier = Modifier.height(Dimens.IndicatorSize))
 
                                     Text(text = "Ngôn ngữ",
@@ -297,21 +325,33 @@ fun UnpaidBookDetailsScreen(
 
                             }
                             Spacer(modifier = Modifier.height(Dimens.MediumPadding1))
+                            val viewModel: BookDetailsViewModel= hiltViewModel()
 
-
-
-                            Button(onClick = navigateUpgrade,
+                            Button(
+                                onClick = {
+//                                          navigateToCheckout
+                                    // Gọi hàm createOrder với idBook là result.id khi nhấn nút "Mua VIP"
+                                    viewModel.createOrder(result.id)
+                                },
                                 Modifier
                                     .fillMaxWidth()
                                     .padding(Dimens.ExtraSmallPadding2),
-                                colors = ButtonDefaults.buttonColors(PrimaryKeyColor)) {
-
-                                Text(text = "Mua VIP",
+                                colors = ButtonDefaults.buttonColors(PrimaryKeyColor)
+                            ) {
+                                Text(
+                                    text = "Mua VIP",
                                     style = MaterialTheme.typography.bodySmall,
                                     fontWeight = FontWeight.Bold,
                                     color = Color.White
                                 )
                             }
+//                            val orderId by viewModel.orderId.collectAsState()
+//
+//                            // Đoạn code dưới đây sẽ được gọi khi orderId thay đổi
+//                            orderId?.let { orderId ->
+//                                // Chuyển hướng đến màn hình CheckoutScreen và truyền orderId
+//                                navigateToOrder(orderId)
+//                            }
                         }
                     }
                 }

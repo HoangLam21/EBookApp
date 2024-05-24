@@ -23,7 +23,10 @@ import com.plcoding.e_book.Dimens
 import com.plcoding.e_book.ui.theme.PrimaryKeyColor
 import androidx.compose.ui.Modifier
 import com.plcoding.e_book.R
+<<<<<<< HEAD
 import com.plcoding.e_book.presentation.book.Base64ImageList
+=======
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
 
 @Composable
 fun YouMayLikeCard(

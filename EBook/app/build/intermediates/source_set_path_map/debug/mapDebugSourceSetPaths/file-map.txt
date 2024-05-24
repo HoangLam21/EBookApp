@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com.plcoding.e_book.app-resValues-0 C:\New folder (2)\EBook\app\build\generated\res\resValues\debug
 com.plcoding.e_book.app-packageDebugResources-1 C:\New folder (2)\EBook\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
 com.plcoding.e_book.app-packageDebugResources-2 C:\New folder (2)\EBook\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
@@ -70,3 +71,77 @@ com.plcoding.e_book.app-material-ripple-release-68 C:\Users\BAO ANH\.gradle\cach
 com.plcoding.e_book.app-lifecycle-livedata-core-ktx-2.7.0-69 C:\Users\BAO ANH\.gradle\caches\transforms-3\f69802b48cb05ba1405fcff05f6c1a86\transformed\lifecycle-livedata-core-ktx-2.7.0\res
 com.plcoding.e_book.app-navigation-common-2.6.0-70 C:\Users\BAO ANH\.gradle\caches\transforms-3\fd857dca98a5598f64f2267551aa522e\transformed\navigation-common-2.6.0\res
 com.plcoding.e_book.app-ui-graphics-release-71 C:\Users\BAO ANH\.gradle\caches\transforms-3\fdbf58c6fb20fcb6223c98375f8c5c65\transformed\ui-graphics-release\res
+=======
+com.plcoding.e_book.app-core-1.13.1-0 C:\Users\JunKye\.gradle\caches\transforms-3\03fa08e222be8e9fee7b5487131fa4b0\transformed\core-1.13.1\res
+com.plcoding.e_book.app-navigation-compose-2.6.0-1 C:\Users\JunKye\.gradle\caches\transforms-3\0602d1f112654e1e33d5bdb0d9239a00\transformed\navigation-compose-2.6.0\res
+com.plcoding.e_book.app-datastore-preferences-release-2 C:\Users\JunKye\.gradle\caches\transforms-3\06bac4d4bb02e9526c7a2fd3d7c99382\transformed\datastore-preferences-release\res
+com.plcoding.e_book.app-core-runtime-2.2.0-3 C:\Users\JunKye\.gradle\caches\transforms-3\086fbea062f183fd369f9bbd1dc0aeb7\transformed\core-runtime-2.2.0\res
+com.plcoding.e_book.app-ui-release-4 C:\Users\JunKye\.gradle\caches\transforms-3\1194ee38464a8c2a8d5bec69baff63b8\transformed\ui-release\res
+com.plcoding.e_book.app-navigation-runtime-ktx-2.6.0-5 C:\Users\JunKye\.gradle\caches\transforms-3\1295c9c9ae3117158f4d1c0121db87bc\transformed\navigation-runtime-ktx-2.6.0\res
+com.plcoding.e_book.app-room-runtime-2.6.1-6 C:\Users\JunKye\.gradle\caches\transforms-3\14624deb63547c419897df7211f20be3\transformed\room-runtime-2.6.1\res
+com.plcoding.e_book.app-foundation-release-7 C:\Users\JunKye\.gradle\caches\transforms-3\19e4915a15e1f94accde4d480bdd3e13\transformed\foundation-release\res
+com.plcoding.e_book.app-ui-tooling-release-8 C:\Users\JunKye\.gradle\caches\transforms-3\1a64b353d478552b65a0684a86fbbd01\transformed\ui-tooling-release\res
+com.plcoding.e_book.app-ui-test-manifest-1.6.0-9 C:\Users\JunKye\.gradle\caches\transforms-3\1b21abc3c5891a66c9017f6672cf491d\transformed\ui-test-manifest-1.6.0\res
+com.plcoding.e_book.app-savedstate-ktx-1.2.1-10 C:\Users\JunKye\.gradle\caches\transforms-3\1c3c214e5eaf64e0ad8607f06bb1443c\transformed\savedstate-ktx-1.2.1\res
+com.plcoding.e_book.app-runtime-release-11 C:\Users\JunKye\.gradle\caches\transforms-3\21acf84e85d820c9e84aea2175b262f2\transformed\runtime-release\res
+com.plcoding.e_book.app-room-ktx-2.6.1-12 C:\Users\JunKye\.gradle\caches\transforms-3\21d8a1ec544134521b46aa9ebcb83d87\transformed\room-ktx-2.6.1\res
+com.plcoding.e_book.app-lifecycle-livedata-ktx-2.7.0-13 C:\Users\JunKye\.gradle\caches\transforms-3\27ab2fdbb62b89239466667396c7c210\transformed\lifecycle-livedata-ktx-2.7.0\res
+com.plcoding.e_book.app-sqlite-2.4.0-14 C:\Users\JunKye\.gradle\caches\transforms-3\2a6972dc2eda9b1ff02129a7cae14b91\transformed\sqlite-2.4.0\res
+com.plcoding.e_book.app-emoji2-1.3.0-15 C:\Users\JunKye\.gradle\caches\transforms-3\2a77e2d3b77bcb41877f40122e60ab7b\transformed\emoji2-1.3.0\res
+com.plcoding.e_book.app-lifecycle-viewmodel-compose-2.7.0-16 C:\Users\JunKye\.gradle\caches\transforms-3\2b06aa5045eb5289a1a0b1697bec8a33\transformed\lifecycle-viewmodel-compose-2.7.0\res
+com.plcoding.e_book.app-runtime-saveable-release-17 C:\Users\JunKye\.gradle\caches\transforms-3\2c1b2bac8b7cf3879b7475e79d82558c\transformed\runtime-saveable-release\res
+com.plcoding.e_book.app-ui-tooling-data-release-18 C:\Users\JunKye\.gradle\caches\transforms-3\2f446566b05e0c4d40efe259a57e2a80\transformed\ui-tooling-data-release\res
+com.plcoding.e_book.app-lifecycle-viewmodel-ktx-2.7.0-19 C:\Users\JunKye\.gradle\caches\transforms-3\3100265601d9e55c82c9f51102b27fd1\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.plcoding.e_book.app-appcompat-resources-1.6.1-20 C:\Users\JunKye\.gradle\caches\transforms-3\31e1fd7e09aa42c04a4b06097d30b112\transformed\appcompat-resources-1.6.1\res
+com.plcoding.e_book.app-profileinstaller-1.3.1-21 C:\Users\JunKye\.gradle\caches\transforms-3\33134410904838aa27e7ec638d71a823\transformed\profileinstaller-1.3.1\res
+com.plcoding.e_book.app-lifecycle-runtime-ktx-2.7.0-22 C:\Users\JunKye\.gradle\caches\transforms-3\34355acbb7da05f764e078bb3f5b2d60\transformed\lifecycle-runtime-ktx-2.7.0\res
+com.plcoding.e_book.app-lifecycle-livedata-core-2.7.0-23 C:\Users\JunKye\.gradle\caches\transforms-3\36ed142dab81760edf304bf16448d863\transformed\lifecycle-livedata-core-2.7.0\res
+com.plcoding.e_book.app-paging-runtime-3.2.0-rc01-24 C:\Users\JunKye\.gradle\caches\transforms-3\37b628d323be3af29b07e20ad1982736\transformed\paging-runtime-3.2.0-rc01\res
+com.plcoding.e_book.app-ui-util-release-25 C:\Users\JunKye\.gradle\caches\transforms-3\3a52a4820299c7b3b0cd5b9f7e22884d\transformed\ui-util-release\res
+com.plcoding.e_book.app-animation-release-26 C:\Users\JunKye\.gradle\caches\transforms-3\3e7a23bbf3f5aa20f2f652c8964f7745\transformed\animation-release\res
+com.plcoding.e_book.app-activity-compose-1.9.0-27 C:\Users\JunKye\.gradle\caches\transforms-3\44547cb5eed65d0c22253e594166f6e2\transformed\activity-compose-1.9.0\res
+com.plcoding.e_book.app-navigation-runtime-2.6.0-28 C:\Users\JunKye\.gradle\caches\transforms-3\5607fcac79cec5fad46be9f4421c09b7\transformed\navigation-runtime-2.6.0\res
+com.plcoding.e_book.app-customview-poolingcontainer-1.0.0-29 C:\Users\JunKye\.gradle\caches\transforms-3\585e20c26425a01df7e15fa9508c9c35\transformed\customview-poolingcontainer-1.0.0\res
+com.plcoding.e_book.app-lifecycle-runtime-2.7.0-30 C:\Users\JunKye\.gradle\caches\transforms-3\59fdc3c740ebc8c41830e69719f43d81\transformed\lifecycle-runtime-2.7.0\res
+com.plcoding.e_book.app-core-ktx-1.13.1-31 C:\Users\JunKye\.gradle\caches\transforms-3\5b02b47fa24683c90aabee762f13bc67\transformed\core-ktx-1.13.1\res
+com.plcoding.e_book.app-animation-core-release-32 C:\Users\JunKye\.gradle\caches\transforms-3\60ef4da676c1e2287bfdb0f0059098e2\transformed\animation-core-release\res
+com.plcoding.e_book.app-fragment-1.5.1-33 C:\Users\JunKye\.gradle\caches\transforms-3\6424c9a64a33bfb5cff33e9e60fa1963\transformed\fragment-1.5.1\res
+com.plcoding.e_book.app-hilt-navigation-1.0.0-34 C:\Users\JunKye\.gradle\caches\transforms-3\6b9b754f5e65415796ce44c1ac23e498\transformed\hilt-navigation-1.0.0\res
+com.plcoding.e_book.app-coil-base-2.4.0-35 C:\Users\JunKye\.gradle\caches\transforms-3\6d0fa1e4fa864f1f791afe9867040547\transformed\coil-base-2.4.0\res
+com.plcoding.e_book.app-lifecycle-viewmodel-2.7.0-36 C:\Users\JunKye\.gradle\caches\transforms-3\724bdf35021b231dd3a0ced648e473de\transformed\lifecycle-viewmodel-2.7.0\res
+com.plcoding.e_book.app-material3-release-37 C:\Users\JunKye\.gradle\caches\transforms-3\797cf8a88d1a137838db6e3d1ff37dec\transformed\material3-release\res
+com.plcoding.e_book.app-material-release-38 C:\Users\JunKye\.gradle\caches\transforms-3\7aed94394d126d61bd9e260b60621f1d\transformed\material-release\res
+com.plcoding.e_book.app-foundation-layout-release-39 C:\Users\JunKye\.gradle\caches\transforms-3\84232687542f0fa6d6653830a5145582\transformed\foundation-layout-release\res
+com.plcoding.e_book.app-datastore-release-40 C:\Users\JunKye\.gradle\caches\transforms-3\8eb8888a43d0e90cf97e8d5e721b42df\transformed\datastore-release\res
+com.plcoding.e_book.app-ui-tooling-preview-release-41 C:\Users\JunKye\.gradle\caches\transforms-3\942cf30b0638f08dde5364f2c8ad4853\transformed\ui-tooling-preview-release\res
+com.plcoding.e_book.app-lifecycle-viewmodel-savedstate-2.7.0-42 C:\Users\JunKye\.gradle\caches\transforms-3\98c1a42649b3325ca63d79b36ee8e752\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.plcoding.e_book.app-lifecycle-livedata-2.7.0-43 C:\Users\JunKye\.gradle\caches\transforms-3\9cd8e6298b86563873ee2bd1f94ef44c\transformed\lifecycle-livedata-2.7.0\res
+com.plcoding.e_book.app-annotation-experimental-1.4.0-44 C:\Users\JunKye\.gradle\caches\transforms-3\9e9c02d4c38974dca86e9ad241cfe10a\transformed\annotation-experimental-1.4.0\res
+com.plcoding.e_book.app-material-icons-core-release-45 C:\Users\JunKye\.gradle\caches\transforms-3\a63aac081b062e5b8a592e2d5573651a\transformed\material-icons-core-release\res
+com.plcoding.e_book.app-lifecycle-process-2.7.0-46 C:\Users\JunKye\.gradle\caches\transforms-3\a9505bdd4cd310adea164929a3d312b9\transformed\lifecycle-process-2.7.0\res
+com.plcoding.e_book.app-sqlite-framework-2.4.0-47 C:\Users\JunKye\.gradle\caches\transforms-3\b52de6a76d21767dfd68a3e17ca851f4\transformed\sqlite-framework-2.4.0\res
+com.plcoding.e_book.app-runtime-livedata-1.6.4-48 C:\Users\JunKye\.gradle\caches\transforms-3\b537db693661ba1e224c971257752f97\transformed\runtime-livedata-1.6.4\res
+com.plcoding.e_book.app-navigation-common-ktx-2.6.0-49 C:\Users\JunKye\.gradle\caches\transforms-3\ba06a0447b094647387b4a4d6d16d1d0\transformed\navigation-common-ktx-2.6.0\res
+com.plcoding.e_book.app-hilt-navigation-compose-1.0.0-50 C:\Users\JunKye\.gradle\caches\transforms-3\bbca899afd9c50acd9261a8537066ebd\transformed\hilt-navigation-compose-1.0.0\res
+com.plcoding.e_book.app-paging-compose-3.2.0-rc01-51 C:\Users\JunKye\.gradle\caches\transforms-3\bfffa1e34ff02f95565db8f6861c51fc\transformed\paging-compose-3.2.0-rc01\res
+com.plcoding.e_book.app-datastore-core-release-52 C:\Users\JunKye\.gradle\caches\transforms-3\c2cabe7f3f30ce565821c76fa64ba61e\transformed\datastore-core-release\res
+com.plcoding.e_book.app-activity-1.9.0-53 C:\Users\JunKye\.gradle\caches\transforms-3\c896e7405fe3f93efdf8c0cab843930c\transformed\activity-1.9.0\res
+com.plcoding.e_book.app-activity-ktx-1.9.0-54 C:\Users\JunKye\.gradle\caches\transforms-3\ca29083b1c8911764ade8d3a9a9944b9\transformed\activity-ktx-1.9.0\res
+com.plcoding.e_book.app-core-splashscreen-1.0.1-55 C:\Users\JunKye\.gradle\caches\transforms-3\d0dcc173c09ac492939b5e0fb2f764ee\transformed\core-splashscreen-1.0.1\res
+com.plcoding.e_book.app-startup-runtime-1.1.1-56 C:\Users\JunKye\.gradle\caches\transforms-3\d4ed437d9cd33044cc344d1f8105a8f6\transformed\startup-runtime-1.1.1\res
+com.plcoding.e_book.app-ui-geometry-release-57 C:\Users\JunKye\.gradle\caches\transforms-3\dc7a651d6f09b0f55edee47390dfa037\transformed\ui-geometry-release\res
+com.plcoding.e_book.app-ui-text-release-58 C:\Users\JunKye\.gradle\caches\transforms-3\dfa2a750b792d2b1200ad610a4e08c79\transformed\ui-text-release\res
+com.plcoding.e_book.app-recyclerview-1.2.1-59 C:\Users\JunKye\.gradle\caches\transforms-3\e6d169624aa2e896c13f0ae4ff86e3d5\transformed\recyclerview-1.2.1\res
+com.plcoding.e_book.app-savedstate-1.2.1-60 C:\Users\JunKye\.gradle\caches\transforms-3\e88e4570575c09f062b8d36bfd39d7e3\transformed\savedstate-1.2.1\res
+com.plcoding.e_book.app-ui-unit-release-61 C:\Users\JunKye\.gradle\caches\transforms-3\f53f3e385198b94088d9c0fc8c6ed443\transformed\ui-unit-release\res
+com.plcoding.e_book.app-material-ripple-release-62 C:\Users\JunKye\.gradle\caches\transforms-3\f5c81288a98b2436962a31312e315602\transformed\material-ripple-release\res
+com.plcoding.e_book.app-lifecycle-livedata-core-ktx-2.7.0-63 C:\Users\JunKye\.gradle\caches\transforms-3\f69802b48cb05ba1405fcff05f6c1a86\transformed\lifecycle-livedata-core-ktx-2.7.0\res
+com.plcoding.e_book.app-navigation-common-2.6.0-64 C:\Users\JunKye\.gradle\caches\transforms-3\fd857dca98a5598f64f2267551aa522e\transformed\navigation-common-2.6.0\res
+com.plcoding.e_book.app-ui-graphics-release-65 C:\Users\JunKye\.gradle\caches\transforms-3\fdbf58c6fb20fcb6223c98375f8c5c65\transformed\ui-graphics-release\res
+com.plcoding.e_book.app-resValues-66 C:\Users\JunKye\Desktop\Ebook-ver4\EBookApp\EBook\app\build\generated\res\resValues\debug
+com.plcoding.e_book.app-packageDebugResources-67 C:\Users\JunKye\Desktop\Ebook-ver4\EBookApp\EBook\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.plcoding.e_book.app-packageDebugResources-68 C:\Users\JunKye\Desktop\Ebook-ver4\EBookApp\EBook\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.plcoding.e_book.app-debug-69 C:\Users\JunKye\Desktop\Ebook-ver4\EBookApp\EBook\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.plcoding.e_book.app-debug-70 C:\Users\JunKye\Desktop\Ebook-ver4\EBookApp\EBook\app\src\debug\res
+com.plcoding.e_book.app-main-71 C:\Users\JunKye\Desktop\Ebook-ver4\EBookApp\EBook\app\src\main\res
+>>>>>>> 8b52d69a88919f7a8f123eed64f3f743f1acafad
